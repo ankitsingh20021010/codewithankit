@@ -21,6 +21,25 @@ body {
   padding: 1rem 0;
   color: #fff;
 }
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* vertical ban jaaye */
+    align-items: flex-start;
+    padding: 10px;
+  }
+  .navbar ul {
+    display: none; /* pehle menu hide karo */
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar.active ul {
+    display: flex; /* jab toggle ho to show karo */
+  }
+  .menu-toggle {
+    display: block; /* mobile me hamburger show karo */
+    cursor: pointer;
+  }
+}
 
 .navbar .logo {
   width: 80px;
