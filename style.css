@@ -17,10 +17,12 @@ body {
 }
 
 .navbar {
+
   background-color: #111;
   padding: 1rem 0;
   color: #fff;
 }
+
 .navbar .logo {
   width: 80px;
   vertical-align: middle;
@@ -32,6 +34,46 @@ body {
   justify-content: flex-end;
   gap: 2rem;
 }
+/* Default Navbar (Desktop & Tablet) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 30px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* ✅ Responsive for phones (still horizontal) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px;
+    flex-wrap: wrap; /* allow wrapping if too tight */
+  }
+
+  .navbar ul {
+    gap: 10px;
+    flex-wrap: wrap; /* wrap items if needed */
+    justify-content: center; /* center items in small screen */
+  }
+
+  .navbar ul li a {
+    font-size: 14px; /* smaller font */
+    padding: 5px;
+  }
+}
+
 
 .navbar .nav-links a {
   color: #fff;
