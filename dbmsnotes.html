@@ -1,1 +1,255 @@
 
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DBMS - Notes</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <style>
+      .notes-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .note-folder {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: 0.3s ease;
+      }
+
+      .note-folder:hover {
+        transform: scale(1.05);
+        background: #f0fff0;
+      }
+
+      .note-folder a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        display: block;
+      }
+
+      .note-folder img {
+        width: 50px;
+        margin-bottom: 9px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <img src="../../assets/logo.png" alt="Logo" class="logo" />
+        <ul class="nav-links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../index.html#about">About</a></li>
+          <li><a href="../../index.html#projects">Projects</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="#">📚 DBMS</a></li>
+        </ul>
+      </div>
+    </nav>
+<!-- DBMS Notes Section -->
+<section class="container">
+    <h1 style="text-align: center;">Database Management System</h1>
+    <h1 style="text-align: center;">Module-1</h1>
+  <h1></h1>
+
+  <h2>Data</h2>
+  <p>Raw, unprocessed facts or details without context or meaning. Data is unorganized and often collected from observations, measurements, or recordings.</p>
+  <p><B>Examples:</B> Numbers, dates, text, images, or symbols that need interpretation (e.g., "25," "2023-09-04," or "John").</p>
+
+  <h2>Information</h2>
+  <p>Processed, organized, or structured data that is meaningful and useful for decision-making or understanding. Information is data that has been
+interpreted, giving it context and significance.</p>
+  <p><B>Examples:</B> A report showing the average temperature, a summarized sales report, or an analyzed dataset showing trends.</p>
+<h2>Record</h2><p>Record is the collection of various types of data of similar field.</p>
+<h2>Data file:-</h2><p>Data file is the collection of record some time called table.</p>
+
+  <h2>Data Persistent </h2>
+  <p>Persistent data is information that is stored in a way that it
+remains available even after the system or device that created it is turned off or
+restarted.<br>
+Persistent data doesn't disappear when you turn off your computer or close an
+app. It's saved on storage devices like hard drives, SSDs, or databases.<br>
+Persistent data is crucial for things you need to keep over time, like files,
+settings, or records in a business..</p>
+
+  <h2>Database</h2>
+  <p>A database is an organized collection of data. The data can be anything
+from a list of names and phone numbers to detailed records of transactions in a
+company. Databases are structured to allow easy retrieval, insertion, updating, and
+deletion of data.</p>
+
+  <h2>File</h2>
+  <p>A file is a collection of data stored on a computer or other devices. Files can contain
+different types of data, such as text, images, videos, or software programs. Each file
+has a name and usually an extension that indicates the type of data it holds (e.g., .txt
+for text files, .jpg for images, .mp4 for videos).</p>
+
+  <h2>File Management System</h2>
+  <p>A file management system is a software that helps you organize, store, retrieve, and
+manage files on your computer or device. It provides tools to perform tasks like:</p>
+<ul>
+    <li><b>Creating file:</b><p>You can create new files for storing information.</p></li>
+    <li><b>Organizing files:</b><p>Files can be grouped into folders or directories, making them
+easier to find and manage.</p></li>
+    <li><b>Editing files:</b><p>You can open and make changes to the content of files.</p></li>
+    <li><b>Saving files:</b><p>Changes made to files can be saved to keep the information up to
+date.</p></li>
+    <li><b>Deletinf files:</b><p>You can remove files you no longer need.</p></li>
+    <li><b>Searching for files:</b><p>The system allows you to search for files by name, type, or
+other criteria.</p></li>
+    <li><b>Backing up files:</b><p>Important files can be copied to another location to prevent
+loss.</p></li>
+</ul>
+
+  <h2>File Structure</h2>
+  <p>File structure refers to the way data is arranged within a file. This arrangement can
+vary depending on the file type, but it typically involves a combination of headers,
+metadata, and data content.</p>
+<ul>
+    <li><b>Text Files:</b><p>Typically organized as a sequence of lines, each ending with a
+newline character.</p></li>
+    <li><b>Database Files:</b><p>Often have a structured format, such as a relational database
+that stores data in tables with rows and columns.</p></li>
+</ul>
+
+  <h2>File Organization</h2>
+  <p>File Structure refers to the way files are arranged on a storage device. This
+organization is often hierarchical, with files grouped into directories (or folders).</p>
+
+  <h2>Types of File Organization</h2>
+  <p>There are several types of file organization in database management systems (DBMS), each
+with its own advantages and disadvantages depending on the specific application
+requirements. Here are some of the most common types:</p>
+  <ul>
+    <h2><i>Sequential File Organization</i></h2>
+    <ul>
+        <li><b>Description</b><p>Records are stored in a sequential order based on a primary key.</p></li>
+        <li><b>Advantages:</b><p>Simple to implement and efficient for sequential access.</p></li>
+        <li><b>Disadvantages:</b><p>Inefficient for random access, insertions, and deletions.</p></li>
+    </ul>
+    <h2><i>Indexed Sequential File Organization:</i></h2>
+    <ul>
+        <li><b>Description:</b><p>Records are stored in a sequential order, but an index is maintained to
+provide efficient random access.</p></li>
+        <li><b>Advantages:</b><p>Efficient for both sequential and random access.</p></li>
+        <li><b>Disadvantages:</b><p>More complex to implement and requires additional storage for the
+index.</p></li>
+    </ul>
+    <h2>Direct File Organization:</h2>
+    <ul>
+        <li><b>Description:</b><p>Records are stored based on a calculated address using a hashing
+function.</p></li>
+        <li><b>Advantages:</b><p>Very efficient for random access.</p></li>
+        <li><b>Disadvantages:</b><p>Can suffer from collisions, which can lead to inefficient access.</p></li>
+        
+    </ul>
+     <h2>Clustered File Organization:</h2>
+    <ul>
+        <li><b>Description:</b><p>Records are grouped together based on a common attribute.</p></li>
+        <li><b>Advantages:</b><p>Efficient for queries involving the clustering attribute.</p></li>
+        <li><b>Disadvantages:</b><p>Less efficient for queries involving other attributes.</p></li>
+        
+    </ul>
+     <h2>Hash File Organization:</h2>
+    <ul>
+        <li><b>Description:</b><p>Similar to direct file organization, but uses a more complex hashing
+function to reduce collisions.</p></li>
+        <li><b>Advantages:</b><p>Very efficient for random access and has fewer collisions than direct file
+organization.</p></li>
+        <li><b>Disadvantages:</b><p>More complex to implement.</p></li>
+        
+    </ul>
+     <h2>Multi-level Indexing:</h2>
+    <ul>
+        <li><b>Description:</b><p>Uses multiple levels of indexes to provide efficient access to large
+datasets.</p></li>
+        <li><b>Advantages:</b><p>Can handle very large datasets efficiently.</p></li>
+        <li><b>Disadvantages:</b><p>More complex to implement and requires additional storage for the
+indexes.</p></li>
+        
+    </ul>
+
+  <h2>Database Management System (DBMS)</h2>
+  <p>It's like a digital librarian that helps you organize, store, and retrieve information
+efficiently. Imagine a library with countless books. A DBMS is the system that helps
+you find the exact book you need, even if it's buried among millions of others.</p>
+<!--    above all notes are already worked & completed        -->
+
+  <h2>Evolution of Databases and DBMS</h2>
+  <p><strong>Manual:</strong> Paper records and ledgers.</p>
+  <p><strong>Relational:</strong> Tables and SQL introduced by Edgar F. Codd.</p>
+  <p><strong>NoSQL:</strong> For large, flexible, scalable systems (MongoDB, Redis, etc.).</p>
+  <p><strong>Cloud:</strong> Cloud-hosted databases with low maintenance and high accessibility.</p>
+
+  <h2>Characteristics of Databases</h2>
+  <ul>
+    <li><strong>Organization:</strong> Structured tables, defined relationships.</li>
+    <li><strong>Consistency:</strong> Integrity and validation rules.</li>
+    <li><strong>Efficiency:</strong> Fast data access, indexing.</li>
+    <li><strong>Security:</strong> Access control and encryption.</li>
+    <li><strong>Reliability:</strong> Backup and recovery options.</li>
+    <li><strong>Scalability:</strong> Can handle growth in data and users.</li>
+    <li><strong>Data Independence:</strong> Logical/physical separation.</li>
+    <li><strong>Concurrency:</strong> Supports multiple users at once.</li>
+  </ul>
+
+  <h2>Approaches of DBMS</h2>
+  <ul>
+    <li><strong>Data Model:</strong> Relational, Object-Relational, NoSQL.</li>
+    <li><strong>Data Consistency:</strong> Strong, Eventual, Weak.</li>
+    <li><strong>Scalability:</strong> Horizontal and Vertical.</li>
+    <li><strong>Performance:</strong> Query speed, concurrency handling.</li>
+    <li><strong>Flexibility:</strong> Schema and data type adaptation.</li>
+    <li><strong>Reliability:</strong> Fault-tolerance, durability.</li>
+    <li><strong>Security:</strong> Access roles, encryption.</li>
+    <li><strong>Cost:</strong> Licensing, hardware, maintenance.</li>
+  </ul>
+
+  <h2>Components of DBMS</h2>
+  <ul>
+    <li>Data</li>
+    <li>Schema</li>
+    <li>Software</li>
+    <li>Hardware</li>
+    <li>Users</li>
+    <li>Procedures</li>
+  </ul>
+
+  <h2>Advantages of DBMS</h2>
+  <ul>
+    <li>Controls redundancy</li>
+    <li>Data sharing</li>
+    <li>Easy maintenance</li>
+    <li>Reduced development time</li>
+    <li>Backup and recovery support</li>
+    <li>Multiple user interfaces</li>
+  </ul>
+
+  <h2>Disadvantages of DBMS</h2>
+  <ul>
+    <li>High hardware/software cost</li>
+    <li>Large memory/storage usage</li>
+    <li>Complexity</li>
+    <li>High impact on failure</li>
+  </ul>
+</section>
+
+ <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 CodeWithAnkit. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
