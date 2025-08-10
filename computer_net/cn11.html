@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional portfolio of Ankit Singh, Web & AI Developer"
+    />
+    <title>Computer Network Module1.2</title>
+    <link rel="stylesheet" href="../style.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "_xUgA3znBltIseVRM",
+        });
+      })();
+    </script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3B82F6",
+              secondary: "#10B981",
+              dark: "#1F2937",
+              light: "#F9FAFB",
+              accent: "#6366F1",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      .nav-link {
+        position: relative;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #3b82f6;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body class="bg-light text-dark">
+    <!-- header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="#" class="flex items-center space-x-2">
+            <img src="../assest/logo.jpg" alt="Logo" class="h-10" />
+            <span class="text-xl font-bold text-primary">CodeWithAnkit</span>
+          </a>
+
+          <nav class="hidden md:flex items-center space-x-8">
+            <a
+              href="../index.html#home"
+              class="nav-link text-gray-600 hover:text-primary transition"
+              >Home</a
+            >
+            <a
+              href="../index.html#about"
+              class="nav-link text-gray-600 hover:text-primary transition"
+              >About</a
+            >
+            <a
+              href="../index.html#projects"
+              class="nav-link text-gray-600 hover:text-primary transition"
+              >Projects</a
+            >
+            <a
+              href="../index.html#contact"
+              class="nav-link text-gray-600 hover:text-primary transition"
+              >Contact</a
+            >
+            <a
+              href="../index.html#notes"
+              class="nav-link text-gray-600 hover:text-primary transition"
+              >All notes</a
+            >
+          </nav>
+
+          <button class="md:hidden focus:outline-none" id="menu-toggle">
+            <i class="fas fa-bars text-2xl text-gray-600"></i>
+          </button>
+        </div>
+
+        <!-- mobile menu -->
+        <div class="md:hidden hidden mt-4 py-2" id="mobile-menu">
+          <a
+            href="index.html#home"
+            class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded"
+            >Home</a
+          >
+          <a
+            href="index.html#about"
+            class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded"
+            >About</a
+          >
+          <a
+            href="index.html#projects"
+            class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded"
+            >Projects</a
+          >
+          <a
+            href="index.html#contact"
+            class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded"
+            >Contact</a
+          >
+          <a
+            href="#notes"
+            class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded"
+            >All-notes</a
+          >
+        </div>
+      </div>
+    </header>
+    <!---notes section-->
+
+    <!-- MODULE TABS (Now positioned below header correctly) -->
+    <ul
+      class="flex px-3 mt-0 space-x-4 border-b border-gray-300 bg-white sticky top-[72px] z-40 shadow-sm"
+    >
+      <li>
+        <a
+          href="#"
+          class="inline-block px-4 py-2 text-blue-600 border-b-4 border-blue-600 font-semibold"
+        >
+          Module 1
+        </a>
+      </li>
+      <li>
+        <a
+          href="cn12.html"
+          class="inline-block px-4 py-2 text-gray-600 hover:text-blue-600 hover:border-blue-600 border-b-4 border-transparent"
+        >
+          Module 2
+        </a>
+      </li>
+      <li>
+        <a
+          href="#module3"
+          class="inline-block px-4 py-2 text-gray-600 hover:text-blue-600 hover:border-blue-600 border-b-4 border-transparent"
+        >
+          Module 3
+        </a>
+      </li>
+      <li>
+        <a
+          href="#module4"
+          class="inline-block px-4 py-2 text-gray-600 hover:text-blue-600 hover:border-blue-600 border-b-4 border-transparent"
+        >
+          Module 4
+        </a>
+      </li>
+    </ul>
+
+    <!--notes section-->
+
+    <!--    notes-->
+    <main class="bg-white p-6 rounded shadow space-y-6">
+      <!-- Introduction -->
+      <section>
+        <h2 class="text-xl font-semibold text-blue-700 mb-2">Introduction</h2>
+        <p>
+          Data communications are the exchange of data between two devices via
+          some form of transmission medium such as a wire cable. The
+          effectiveness of a data communications system depends on
+          <span class="font-semibold text-blue-600"
+            >four fundamental characteristics</span
+          >: <span class="underline font-medium">delivery</span>,
+          <span class="underline font-medium">accuracy</span>,
+          <span class="underline font-medium">timeliness</span> and
+          <span class="underline font-medium">jitter</span>.
+        </p>
+      </section>
+
+      <!-- Characteristics -->
+      <section>
+        <h2 class="text-xl font-semibold text-blue-700 mb-2">
+          Characteristics
+        </h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li>
+            <span class="font-semibold text-blue-600">Delivery:</span> Data must
+            be received by the intended device or user.
+          </li>
+          <li>
+            <span class="font-semibold text-blue-600">Accuracy:</span> Data must
+            be accurate and unchanged.
+          </li>
+          <li>
+            <span class="font-semibold text-blue-600">Timeliness:</span> Data
+            must be delivered on time.
+          </li>
+          <li>
+            <span class="font-semibold text-blue-600">Jitter:</span> Uneven
+            delay in the delivery of audio/video packets.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Components -->
+      <section>
+        <h2 class="text-xl font-semibold text-blue-700 mb-2">Components</h2>
+        <p>
+          A data communications system has
+          <span class="font-semibold">five components</span>:
+        </p>
+        <ul class="list-decimal list-inside mt-2 space-y-1">
+          <li>
+            <span class="font-semibold text-blue-600">Message:</span> The data
+            to be communicated (text, number, audio, video, etc.).
+          </li>
+          <li>
+            <span class="font-semibold text-blue-600">Sender:</span> The device
+            that sends the message (e.g., computer, workstation).
+          </li>
+          <li>
+            <span class="font-semibold text-blue-600">Receiver:</span> The
+            device that receives the message.
+          </li>
+          <li>
+            <span class="font-semibold text-blue-600"
+              >Transmission medium:</span
+            >
+            The physical path (e.g., twisted-pair, fiber-optic, radio waves).
+          </li>
+          <li>
+            <span class="font-semibold text-blue-600">Protocol:</span> A set of
+            rules governing communication between devices.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Diagram -->
+      <section>
+        <h2 class="text-xl font-semibold text-blue-700 mb-2">
+          Communication Flow Diagram
+        </h2>
+        <!-- 👇 Image skipped as per your instruction -->
+        <img
+          src="https://media.geeksforgeeks.org/wp-content/uploads/20211018204909/communication.jpg"
+          alt="Data Communication Diagram"
+          class="mx-auto"
+        />
+        <p class="text-gray-500 italic">Data communication system diagram</p>
+      </section>
+
+      <!-- Transmission Modes Notes -->
+
+      <h2 class="text-2xl font-semibold text-red-700 mb-4">
+        Transmission modes
+      </h2>
+      <ul class="list-disc ml-5 space-y-2">
+        <li>
+          The way in which data is transmitted from one device to another device
+          is known as <span class="font-bold">transmission mode</span>.
+        </li>
+        <li>The transmission mode is also known as the communication mode.</li>
+        <li>
+          Each communication channel has a direction associated with it, and
+          transmission media provide the direction. Therefore, the transmission
+          mode is also known as a directional mode.
+        </li>
+        <li>The transmission mode is defined in the physical layer.</li>
+      </ul>
+
+      <p class="mt-6">
+        The Transmission mode is divided into three categories:
+      </p>
+
+      <div class="grid grid-cols-3 gap-4 text-center mt-4">
+        <div class="bg-yellow-200 p-3 rounded font-semibold">Simplex mode</div>
+        <div class="bg-green-200 p-3 rounded font-semibold">
+          Half-Duplex mode
+        </div>
+        <div class="bg-pink-200 p-3 rounded font-semibold">
+          Full-Duplex mode
+        </div>
+      </div>
+
+      <ul class="list-disc ml-5 space-y-2 mt-4">
+        <li>Simplex mode</li>
+
+        <li>Half-duplex mode</li>
+        <li>Full-duplex mode</li>
+      </ul>
+
+      <h3 class="text-xl text-pink-700 italic font-semibold mt-8">
+        Simplex mode
+      </h3>
+      <!-- Diagram image skipped -->
+      <img
+        src="https://i.pinimg.com/736x/75/90/ca/7590cacc6c299faf35c5d50327f1a75b.jpg"
+        alt="Transmission mode diagram"
+      />
+
+      <!-- Simplex image skipped -->
+      <!-- <img src="simplex_mode_image.png" alt="Simplex mode image"> -->
+
+      <ul class="list-disc ml-5 space-y-2 mt-4">
+        <li>
+          In Simplex mode, the communication is unidirectional, i.e., the data
+          flow in one direction.
+        </li>
+        <li>
+          A device can only send the data but cannot receive it or it can
+          receive the data but cannot send the data.
+        </li>
+        <li>
+          This transmission mode is not very popular as mainly communications
+          require the two-way exchange of data.
+        </li>
+        <li>
+          The simplex mode is used in the business field as in sales that do not
+          require any corresponding reply.
+        </li>
+        <li>
+          The radio station is a simplex channel as it transmits the signal to
+          the listeners but never allows them to transmit back.
+        </li>
+        <li>
+          Keyboard and Monitor are the examples of the simplex mode as a
+          keyboard can only accept the data from the user and monitor can only
+          be used to display the data on the screen.
+        </li>
+        <li>
+          The main advantage of the simplex mode is that the full capacity of
+          the communication channel can be utilized during transmission.
+        </li>
+      </ul>
+
+      <!---next-->
+      <h3 class="text-xl text-blue-700 font-semibold mb-4">
+        Advantage of Simplex mode:
+      </h3>
+      <ul class="list-disc ml-5 mb-6 space-y-2">
+        <li>
+          In simplex mode, the station can utilize the entire bandwidth of the
+          communication channel, so that more data can be transmitted at a time.
+        </li>
+      </ul>
+
+      <h3 class="text-xl text-purple-700 font-semibold mb-4">
+        Disadvantage of Simplex mode:
+      </h3>
+      <ul class="list-disc ml-5 mb-6 space-y-2">
+        <li>
+          Communication is unidirectional, so it has no inter-communication
+          between devices.
+        </li>
+      </ul>
+
+      <h3 class="text-xl text-purple-700 italic font-semibold mt-8">
+        Half-Duplex mode
+      </h3>
+
+      <!-- Half-Duplex image skipped -->
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiuXe0EHJfX9Ub4EQU_DF1w2AseTHbLJvnuA&s"
+        alt="Half Duplex Mode Diagram"
+      />
+
+      <ul class="list-disc ml-5 mt-4 space-y-2">
+        <li>
+          In a Half-duplex channel, direction can be reversed, i.e., the station
+          can transmit and receive the data as well.
+        </li>
+        <li>Messages flow in both the directions, but not at the same time.</li>
+        <li>
+          The entire bandwidth of the communication channel is utilized in one
+          direction at a time.
+        </li>
+        <li>
+          In half-duplex mode, it is possible to perform the error detection,
+          and if any error occurs, then the receiver requests the sender to
+          retransmit the data.
+        </li>
+        <li>
+          A <span class="italic font-semibold">Walkie-talkie</span> is an
+          example of the Half-duplex mode. In Walkie-talkie, one party speaks,
+          and another party listens. After a pause, the other speaks and first
+          party listens. Speaking simultaneously will create the distorted sound
+          which cannot be understood.
+        </li>
+      </ul>
+
+      <h3 class="text-xl text-blue-700 font-semibold mt-8">
+        Advantage of Half-duplex mode:
+      </h3>
+      <ul class="list-disc ml-5 mb-6 space-y-2">
+        <li>
+          In half-duplex mode, both the devices can send and receive the data
+          and also can utilize the entire bandwidth of the communication channel
+          during the transmission of data.
+        </li>
+      </ul>
+
+      <h3 class="text-xl text-purple-700 font-semibold mb-4">
+        Disadvantage of Half-Duplex mode:
+      </h3>
+      <ul class="list-disc ml-5 mb-6 space-y-2">
+        <li>
+          In half-duplex mode, when one device is sending the data, then another
+          has to wait, this causes the delay in sending the data at the right
+          time.
+        </li>
+      </ul>
+
+      <h3 class="text-xl text-purple-700 italic font-semibold mt-8">
+        Full-duplex mode
+      </h3>
+
+      <!-- Full-Duplex image skipped -->
+      <img
+        src="https://media.geeksforgeeks.org/wp-content/uploads/fullduplex.png"
+        alt="Full Duplex Mode Diagram"
+      />
+
+      <ul class="list-disc ml-5 mt-4 space-y-2">
+        <li>
+          In Full duplex mode, communication is bi-directional, i.e., the data
+          flow in both the directions.
+        </li>
+        <li>
+          Both the stations can send and receive the message simultaneously.
+        </li>
+        <li>
+          This mode is the fastest mode of communication. One channel has
+          traffic moving in one direction, and another channel has traffic
+          flowing in the opposite direction.
+        </li>
+        <li>
+          Full-duplex mode is the fastest mode of communication between devices.
+        </li>
+        <li>
+          The most common example of the full-duplex mode is a telephone
+          network. When two people are communicating with each other by a
+          telephone line, both can talk and listen at the same time.
+        </li>
+      </ul>
+      <!---new -->
+      <h3 class="text-xl text-blue-700 font-semibold mb-4">
+        Advantage of <span class="text-purple-700">Full-duplex mode</span>:
+      </h3>
+      <ul class="list-disc ml-5 mb-6 space-y-2">
+        <li>
+          <span class="font-semibold">Both the stations</span> can send and
+          receive the data at the same time.
+        </li>
+      </ul>
+
+      <h3 class="text-xl text-purple-700 font-semibold mb-4">
+        Disadvantage of <span class="text-purple-700">Full-duplex mode</span>:
+      </h3>
+      <ul class="list-disc ml-5 mb-6 space-y-2">
+        <li>
+          If there is
+          <span class="font-semibold">no dedicated path</span> exists between
+          the devices, then the capacity of the communication channel is divided
+          into two parts.
+        </li>
+      </ul>
+
+      <h3 class="text-lg font-bold mt-8 text-gray-800">
+        Difference Between <span class="text-blue-700">Synchronous</span> and
+        <span class="text-green-600">Asynchronous Transmission</span>
+      </h3>
+      <p class="mt-4">
+        In the world of computers and communication, how information travels
+        from one place to another can happen in different ways. Two common
+        methods are <span class="font-semibold">synchronous</span> and
+        <span class="font-semibold">asynchronous transmission</span>. In this
+        article, we are going to discuss the difference between synchronous and
+        asynchronous transmission in detail.
+      </p>
+
+      <h4 class="text-md font-semibold mt-6 text-blue-700">
+        What is <span class="italic">Synchronous Transmission</span>?
+      </h4>
+      <p class="mt-2">
+        In <span class="font-semibold">Synchronous Transmission</span>, data is
+        sent in the form of <span class="italic">blocks or frames</span>. This
+        transmission is the <span class="font-semibold">full-duplex</span> type.
+        Between sender and receiver,
+        <span class="italic text-purple-700">synchronization is compulsory</span
+        >. There is no time gap present between data. It is more efficient and
+        more reliable than asynchronous transmission to transfer a large amount
+        of data.
+      </p>
+
+      <p class="mt-2">
+        Both the sender and receiver are
+        <span class="font-semibold"
+          >synchronized with a common clock signal</span
+        >. This means they operate at the same speed and know exactly when to
+        send and receive data. Data is sent in a
+        <span class="italic">continuous stream</span>, with each byte or chunk
+        of data following the previous one without any gaps. It’s efficient for
+        <span class="font-semibold">large amounts of data</span> because there’s
+        less overhead (extra bits) needed to start and stop the transmission.
+      </p>
+
+      <p class="mt-4 font-semibold text-gray-800">Example:</p>
+      <ul class="list-disc ml-5 mb-6 space-y-1">
+        <li><span class="text-gray-700">Chat Rooms</span></li>
+        <li><span class="text-gray-700">Telephonic Conversations</span></li>
+        <li><span class="text-gray-700">Video Conferencing</span></li>
+      </ul>
+
+      <h4 class="text-md font-semibold mt-6 text-green-700">
+        What is <span class="italic">Asynchronous Transmission</span>?
+      </h4>
+      <p class="mt-2">
+        In <span class="font-semibold">Asynchronous Transmission</span>, data is
+        sent in form of <span class="italic">byte or character</span>. This
+        transmission is the <span class="font-semibold">half-duplex type</span>.
+        Start bits and stop bits are added with data. It
+        <span class="italic font-medium text-red-600"
+          >does not require synchronization</span
+        >.
+        <span class="text-purple-700 font-semibold"
+          >Asynchronous transmission</span
+        >
+        is like sending individual text messages without knowing exactly when
+        the other person will read them.
+      </p>
+
+      <p class="mt-2">
+        The sender and receiver
+        <span class="font-semibold">do not share a common clock signal</span>.
+        Instead, data is sent one byte or character at a time, with start and
+        stop bits indicating the beginning and end of each byte. Each piece of
+        data is sent <span class="italic">independently</span>, with gaps in
+        between, allowing the receiver to process each byte as it arrives. It’s
+        <span class="font-semibold">flexible and simpler to implement</span>,
+        especially useful for communications where data is sent intermittently.
+      </p>
+
+      <p class="mt-4 font-semibold text-gray-800">Example:</p>
+      <ul class="list-disc ml-5 space-y-1">
+        <li><span class="text-gray-700">Email</span></li>
+        <li><span class="text-gray-700">Forums</span></li>
+        <li><span class="text-gray-700">Letters</span></li>
+      </ul>
+     
+  <h1 class="text-3xl font-semibold text-gray-800 mb-6">Transmission medium</h1>
+
+  <ul class="list-disc ml-5 mb-6 space-y-2">
+    <li>can be broadly defined as anything that can carry information from a source to a destination.</li>
+  </ul>
+
+  <!-- Diagram image skipped -->
+   <img src="https://miro.medium.com/v2/resize:fit:1354/1*U34YGbiqCms6Kr_v0YA54g.png" alt="Transmission medium diagram"> 
+
+  <p class="mt-4"><span class="font-semibold text-gray-800">Guided Media</span><br>
+    <span class="text-sm">: Guided media, which are those that provide a medium from one device to another, include twisted-pair cable, coaxial cable, and fiber-optic cable.</span>
+  </p>
+
+  <p class="mt-4 font-semibold text-gray-800">Twisted-Pair Cable</p>
+
+  <!-- Twisted pair image skipped -->
+   <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210817095055/cables-660x387.jpg" alt="Twisted pair cable">
+
+  <ul class="list-disc ml-5 mt-2 space-y-2">
+    <li>A <span class="font-semibold">twisted pair</span> consists of two conductors (normally copper), each with its own plastic insulation, twisted together. One of the wires is used to carry signals to the receiver, and the other is used only as a ground reference.</li>
+  </ul>
+
+  <h4 class="text-md font-semibold mt-6 text-purple-700">Unshielded Versus Shielded Twisted-Pair Cable</h4>
+  <ul class="list-disc ml-5 mt-2 space-y-2">
+    <li>The most common <span class="font-semibold">twisted-pair cable</span> used in communications is referred to as <span class="font-semibold">unshielded twisted-pair (UTP)</span>.</li>
+    <li><span class="font-semibold">STP</span> cable has a metal foil or braided mesh covering that encases each pair of insulated conductors.</li>
+    <li>Although metal casing improves the quality of cable by preventing the penetration of noise or crosstalk, it is bulkier and more expensive.</li>
+    <li>The most common UTP connector is <span class="font-semibold">RJ45</span> (RJ stands for registered jack).</li>
+  </ul>
+
+  <h4 class="text-md font-semibold mt-6 text-blue-700">Applications</h4>
+  <ul class="list-disc ml-5 mt-2 space-y-2">
+    <li><span class="font-semibold">Twisted-pair cables</span> are used in telephone lines to provide voice and data channels.</li>
+    <li>Local-area networks, such as <span class="font-semibold">10Base-T</span> and <span class="font-semibold">100Base-T</span>, also use twisted-pair cables.</li>
+  </ul>
+<!-----new-->
+<h2 class="text-2xl font-bold mb-4">Unshielded Versus Shielded Twisted-Pair Cable</h2>
+<ul class="list-disc ml-6 space-y-2">
+  <li>
+    The most common twisted-pair cable used in communications is referred to as 
+    <span class="font-semibold text-blue-600">unshielded twisted-pair (UTP)</span>. 
+    <span class="font-semibold text-blue-600">STP cable</span> has a metal foil or braided mesh covering that 
+    encases each pair of insulated conductors.
+  </li>
+  <li>
+    The most common <span class="font-semibold text-blue-600">UTP connector</span> is 
+    <span class="font-semibold text-blue-600">RJ45</span> (RJ stands for registered jack).
+  </li>
+</ul>
+
+<h2 class="text-2xl font-bold mt-6 mb-2">Applications</h2>
+<ul class="list-disc ml-6 space-y-1">
+  <li>Twisted-pair cables are used in telephone lines to provide voice and data channels.</li>
+  <li>Local-area networks, such as <span class="font-semibold text-blue-600">10Base-T</span> and 
+      <span class="font-semibold text-blue-600">100Base-T</span>, also use twisted-pair cables.</li>
+</ul>
+
+<h2 class="text-2xl font-bold mt-6 mb-4">Coaxial Cable</h2>
+<p>
+  <span class="font-semibold text-blue-600">Coaxial cable (or coax)</span> carries signals of higher 
+  frequency ranges than those in twisted pair cable.
+</p>
+<img src="https://www.telnetww.com/wp-content/uploads/2020/05/coaxial-cable-diagram-1-1024x686.png" alt="Coaxial Cable Structure" class="my-4">
+
+<h3 class="text-xl font-semibold mt-4 mb-2">Applications</h3>
+<ul class="list-disc ml-6 space-y-1">
+  <li>Coaxial cable was widely used in analog telephone networks, digital telephone networks.</li>
+  <li>Cable TV networks also use coaxial cables.</li>
+  <li>Another common application of coaxial cable is in traditional Ethernet LANs.</li>
+</ul>
+
+<h2 class="text-2xl font-bold mt-6 mb-4">Fiber-Optic Cable</h2>
+<ul class="list-disc ml-6 space-y-2">
+  <li>A <span class="font-semibold text-blue-600">fiber-optic cable</span> is made of glass or plastic and transmits signals in the form of light.</li>
+  <li>Light travels in a straight line as long as it is moving through a single uniform substance.</li>
+  <li>
+    If a ray of light traveling through one substance suddenly enters another substance (of a different density), the ray changes direction. 
+    <span class="italic text-blue-600">Bending of light ray</span>
+  </li>
+  <li>
+    Optical fibers use <span class="font-semibold text-blue-600">reflection</span> to guide light through a channel. 
+    A glass or plastic core is surrounded by a cladding of less dense glass or plastic.
+  </li>
+</ul>
+<img src="https://www.zayo.com/wp-content/uploads/AdobeStock_603729797-1920x1344.jpeg" alt="Fiber Optic Cable" class="my-4">
+
+<h2 class="text-2xl font-bold mt-6 mb-2">Unguided Media: Wireless</h2>
+<p>
+  Unguided media transport electromagnetic waves without using a physical conductor. 
+  This type of communication is often referred to as <span class="font-semibold text-blue-600">wireless communication</span>.
+</p>
+<ul class="list-disc ml-6 mt-2 space-y-1">
+  <li>Radio Waves</li>
+  <li>Microwaves</li>
+  <li>Infrared</li>
+</ul>
+
+<div class="mb-10">
+    <h3 class="text-xl font-semibold mb-2 text-blue-600">📻 Radio Waves</h3>
+    <p class="mb-2">
+      Electromagnetic waves ranging in frequencies between <span class="font-semibold">3 kHz</span> and <span class="font-semibold">1 GHz</span> are normally called radio waves.
+    </p>
+    <ul class="list-disc list-inside mb-2">
+      <li>
+        Radio waves are <span class="font-bold text-purple-700">omni directional</span>. When an antenna transmits radio waves, they are propagated in all directions. This means that the sending and receiving antennas do not have to be aligned.
+      </li>
+    </ul>
+    <p class="italic text-gray-600 mb-2">Applications:</p>
+    <p class="mb-4">
+      The <span class="font-semibold">omnidirectional</span> characteristics of radio waves make them useful for <span class="font-semibold text-green-600">multicasting</span>, in which there is one sender but many receivers.
+      <br />
+      <span class="text-gray-700">Examples:</span> AM and FM radio, television, maritime radio, cordless phones, and paging.
+    </p>
+    <img src="https://static.vecteezy.com/system/resources/previews/008/131/539/non_2x/radio-tuner-tower-and-wave-vector.jpg" alt="Radio Wave Tower" class="w-full md:w-1/2 rounded shadow mb-6" />
+  </div>
+
+  <!-- Microwaves -->
+  <div class="mb-10">
+    <h3 class="text-xl font-semibold mb-2 text-blue-600">📡 Microwaves</h3>
+    <p class="mb-2">
+      Electromagnetic waves having frequencies between <span class="font-semibold">1 and 300 GHz</span> are called microwaves.
+    </p>
+    <ul class="list-disc list-inside mb-2">
+      <li>
+        Microwaves are <span class="font-bold text-purple-700">unidirectional</span>. The sending and receiving antennas need to be aligned.
+      </li>
+    </ul>
+    <p class="italic text-gray-600 mb-2">Applications:</p>
+    <p class="mb-4">
+      Microwaves are used for <span class="font-semibold text-green-600">unicast communication</span> such as:
+      <br />
+      Cellular telephones, satellite networks, and wireless LANs.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <img src="https://ars.els-cdn.com/content/image/3-s2.0-B9780128186015000172-gr001.jpg" alt="Dish Antenna" class="rounded shadow" />
+      <p>Dish Antenna</p>
+      <img src="https://electronicsdesk.com/wp-content/uploads/2020/04/horn-antenna1.jpg" alt="Horn Antenna" class="rounded shadow" />
+    </div>
+  </div>
+
+  <!-- Infrared -->
+  <div>
+    <h3 class="text-xl font-semibold mb-2 text-blue-600">🌈 Infrared</h3>
+    <p class="mb-2">
+      Infrared waves, with frequencies from <span class="font-semibold">300 GHz to 400 THz</span> (wavelengths from 1 mm to 770 nm), can be used for <span class="text-green-600 font-semibold">short-range communication</span>.
+      Infrared waves, having high frequencies, <span class="text-red-600 font-semibold">cannot penetrate walls</span>.
+    </p>
+    <p class="italic text-gray-600 mb-2">Applications:</p>
+    <p>
+      <span class="font-bold text-green-700">Infrared signals can be used for short-range communication</span> in a closed area using <span class="font-semibold text-purple-700">line-of-sight propagation</span>.
+    </p>
+  </div>
+   <h1 class="text-2xl font-bold text-center mb-4 border-b pb-2">Computer Network</h1>
+    <p class="text-justify mb-4">
+      A <span class="font-semibold text-blue-600">computer network</span> is an interconnected collection of autonomous computers able to exchange information.
+      A computer network is a set of devices connected through <span class="font-semibold text-purple-600">links</span>.
+      A <span class="font-semibold text-green-600">node</span> can be computer, printer, or any other device capable of sending or receiving the data.
+      The links connecting the nodes are known as <span class="font-semibold text-yellow-600">communication channels</span>.
+      Computer Network uses distributed process computers. Instead, a single computer handles an entire task, each separate computer handles a subset.
+    </p>
+    <p class="mb-6">
+      <span class="font-bold text-red-500">Internet</span> being the most well-known example of a network of networks.
+    </p>
+
+    <!-- Goal of Computer Network -->
+    <h2 class="text-xl font-semibold text-center text-gray-700 mb-4">Goal of Computer Network</h2>
+
+    <div class="space-y-2 mb-6">
+      <div class="bg-pink-400 text-white px-4 py-2 rounded-md font-semibold w-max">Features Of Computer Network</div>
+      <div class="bg-blue-300 px-4 py-2 rounded-md w-max">➡️ <span class="font-semibold">Communication speed</span></div>
+      <div class="bg-green-300 px-4 py-2 rounded-md w-max">➡️ <span class="font-semibold">File sharing</span></div>
+      <div class="bg-yellow-300 px-4 py-2 rounded-md w-max">➡️ <span class="font-semibold">Back up and Roll back</span></div>
+      <div class="bg-purple-300 px-4 py-2 rounded-md w-max">➡️ <span class="font-semibold">Hardware & Software sharing</span></div>
+      <div class="bg-red-300 px-4 py-2 rounded-md w-max">➡️ <span class="font-semibold">Security</span></div>
+      <div class="bg-gray-300 px-4 py-2 rounded-md w-max">➡️ <span class="font-semibold">Scalability</span></div>
+      <div class="bg-yellow-500 px-4 py-2 rounded-md w-max">➡️ <span class="font-semibold">Reliability</span></div>
+    </div>
+
+    <!-- Explanations -->
+    <div class="space-y-4">
+      <div>
+        <h3 class="font-semibold text-lg text-blue-600">Communication speed</h3>
+        <p class="text-justify">
+          Network provides us to communicate over the network in a <span class="font-bold text-green-600">fast and efficient</span> manner.
+          For example, we can do video conferencing, email messaging, etc. over the internet.
+          Therefore, the computer network is a great way to share our knowledge and ideas.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-lg text-green-600">File sharing</h3>
+        <p class="text-justify">
+          File sharing is one of the major advantages of the computer network.
+          It provides us the ability to <span class="font-bold">share files</span> with each other easily.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-lg text-yellow-600">Back up and Roll back</h3>
+        <p class="text-justify">
+          Since the files are stored in the <span class="font-semibold text-purple-700">main server</span>, it is easy to take back up from the server centrally.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold text-lg text-purple-600">Software and Hardware Sharing</h3>
+        <p class="text-justify">
+          We can install the applications on the main server, therefore, the user can access the applications centrally.
+          So, we do not need to install the software on every machine. Similarly, <span class="font-semibold">hardware can also be shared</span>.
+        </p>
+           <h3 class="font-semibold text-lg text-purple-600">Security</h3>
+        <p class="text-justify">
+Network allows the security by ensuring that the user has the right to access the certain files and
+applications.
+<h3 class="font-semibold text-lg text-purple-600">Scalability</h3>
+<p>
+Scalability means that we can add the new components on the network. Network must be
+scalable so that we can extend the network by adding new devices. But, it decreases the speed of
+the connection and data of the transmission speed also decreases, this increases the chances of
+error occurring. This problem can be overcome by using the routing or switching devices.</p>
+<h3 class="font-semibold text-lg text-purple-600">Reliability</h3>
+
+Computer network can use the alternative source for the data communication in case of any
+hardware failure.</p>
+      </div>
+    </div>
+   
+  <h2 class="text-2xl text-blue-700 font-bold mb-4">Uses of Computer Networks</h2>
+  <p class="mb-4">
+    Had it not been of high importance, nobody would have bothered connecting computers over a network. Let's start exploring the 
+    <strong>uses of Computer Networks</strong> with some traditional use cases at companies and for individuals and then move on to 
+    the recent developments in the area of mobile users and home networking.
+  </p>
+
+  <h3 class="text-xl text-blue-600 font-semibold mb-2">Computer Networks: Business Applications</h3>
+  <p class="mb-4">Following are some <strong>business applications</strong> of computer networks:</p>
+
+  <div class="space-y-4">
+
+    <div>
+      <h4 class="font-semibold text-lg text-gray-800">1. Resource Sharing:</h4>
+      <p>
+        The goal is to make all programs, equipments (like <strong>printers</strong> etc), and especially 
+        <strong>data</strong>, available to anyone on the network without regard to the physical location of the resource and the user.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-lg text-gray-800">2. Server-Client model:</h4>
+      <p>
+        One can imagine a company’s <strong>information system</strong> as consisting of one or more <strong>databases</strong> and some 
+        employees who need to access it remotely. In this model, the data is stored on powerful computers called <strong>Servers</strong>. 
+        Often these are centrally housed and maintained by a <strong>system administrator</strong>. In contrast, the employees have 
+        simple machines, called <strong>Clients</strong>, on their desks, using which they access remote data.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-lg text-gray-800">3. Communication Medium:</h4>
+      <p>
+        A computer network can provide a powerful <strong>communication medium</strong> among employees.
+        Virtually every company that has two or more computers now has <strong>e-mail</strong> (electronic mail),
+        which employees generally use for a great deal of daily communication.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-lg text-gray-800">4. eCommerce:</h4>
+      <p>
+        A goal that is starting to become more important in businesses is <strong>doing business with consumers</strong> over the 
+        <strong>Internet</strong>. Airlines, bookstores, and music vendors have discovered that many customers like the convenience 
+        of shopping from home. This sector is expected to grow quickly in the future.
+      </p>
+    </div>
+    
+  </div>
+  
+  <h3 class="text-xl text-blue-600 font-semibold mb-2">Computer Networks: Home Applications</h3>
+
+   <h2 class="text-2xl font-bold text-blue-700 mb-4">Computer Networks: Home Applications</h2>
+    
+    <p class="mb-4">Some of the most important uses of the <span class="font-semibold text-gray-900">Internet for home users</span> are as follows:</p>
+    
+    <ul class="list-disc list-inside space-y-2 pl-4">
+      <li><span class="font-medium text-gray-800">Access to remote information</span></li>
+      <li><span class="font-medium text-gray-800">Person-to-person communication</span></li>
+      <li><span class="font-medium text-gray-800">Interactive entertainment</span></li>
+      <li><span class="font-medium text-gray-800">Electronic commerce</span></li>
+    </ul>
+
+    <hr class="my-6 border-gray-300" />
+
+    <h2 class="text-2xl font-bold text-blue-700 mb-4">Computer Networks: Mobile Users</h2>
+    
+    <p>
+      <span class="font-semibold text-gray-900">Mobile computers</span>, such as 
+      <span class="font-semibold">notebook computers</span> and 
+      <span class="font-semibold">mobile phones</span>, are one of the 
+      <span class="text-blue-600 font-semibold">fastest-growing segments</span> 
+      of the entire computer industry.
+    </p>
+
+
+  
+  <h2 class="text-2xl md:text-3xl font-bold text-purple-700 mb-6 border-b-2 border-purple-400 inline-block">
+    Difference Between Point-to-Point and Multi-Point Communication
+  </h2>
+
+  <p class="mb-6">
+    <strong class="text-purple-600">Communication</strong>, as we all know, is the process of sending information 
+    from a source to a destination using any available media like audio, video, signal, or even text. This 
+    communication could be simple, including only one sender and one receiver, or it could involve several 
+    senders and receivers. We can distinguish between 
+    <span class="font-semibold text-purple-600">Point-to-Point</span> and 
+    <span class="font-semibold text-purple-600">Multi-Point</span> communication based on the number of 
+    senders and receivers in a communication.
+  </p>
+
+  <!-- Point-to-Point Communication -->
+  <div class="mb-10">
+    <h3 class="text-xl font-bold text-blue-700 mb-3">Point-to-Point Communication</h3>
+    
+    <div class="bg-blue-100 rounded-lg p-4 mb-4 shadow">
+      <div class="flex flex-col md:flex-row items-center justify-around text-center font-medium">
+        <span class="bg-white px-4 py-2 rounded shadow">Mainframe</span>
+        <span class="text-gray-600">➡️ Link</span>
+        <span class="bg-white px-4 py-2 rounded shadow">Workstation</span>
+      </div>
+    </div>
+
+    <p class="mb-3">
+      A point-to-point communication is also known as 
+      <span class="font-semibold text-purple-700">P2P</span>. In the context of 
+      <strong class="text-purple-600">telecommunication</strong>, it is an established connection between 
+      two nodes that may be used to communicate back and forth.
+    </p>
+    <p class="mb-3">
+      These <span class="font-semibold text-purple-700">P2P</span> connections were first established using 
+      <strong class="text-purple-600">circuit-switched</strong> landlines. Modern versions use complex 
+      <strong class="text-purple-600">fibre-optic networks</strong>. P2P communication can transmit 
+      various types of data, including 
+      <span class="font-semibold text-purple-700">digital</span> and 
+      <span class="font-semibold text-purple-700">analog signals</span>.
+    </p>
+    <p class="mb-3">
+      It is a <span class="font-semibold text-purple-700">unicast</span> connection, where a dedicated link 
+      exists between sender and receiver. The entire channel is 
+      <span class="font-semibold text-purple-700">reserved solely</span> for packet transmission.
+    </p>
+  </div>
+
+  <!-- Multi-Point Communication -->
+  <div>
+    <h3 class="text-xl font-bold text-red-700 mb-3">Multipoint Communication</h3>
+    
+    <div class="bg-red-100 rounded-lg p-4 mb-4 shadow">
+      <div class="grid grid-cols-2 gap-4 text-center font-medium">
+        <div class="bg-white px-4 py-2 rounded shadow">Node1</div>
+        <div class="bg-white px-4 py-2 rounded shadow">Node2</div>
+        <div class="col-span-2 flex justify-center text-gray-600">⬇️ Link ⬇️</div>
+        <div class="col-span-2 flex justify-center">
+          <div class="bg-white px-4 py-2 rounded shadow">Mainframe</div>
+        </div>
+        <div class="col-span-2 flex justify-center">
+          <div class="bg-white px-4 py-2 rounded shadow">Node3</div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      In multipoint communication, the link is shared among multiple devices. Instead of a dedicated 
+      path, the communication media is divided or accessed either spatially or in time slots by multiple 
+      devices. As a result, this type of connection is more efficient in terms of resource usage, but may 
+      involve delay.
+    </p>
+  </div>
+
+
+
+    </main>
+
+    <h1 class="text-4xl font-bold text-center text-primary mb-4">
+      <b>Working....</b>
+    </h1>
+
+    <!---footer-->
+    <!-- foot -->
+    <footer class="bg-dark text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <a href="#" class="flex items-center space-x-2 mb-4">
+              <img
+                style="border-radius: 50%"
+                src="../assest/logo.jpg"
+                alt="Logo"
+                class="h-8"
+              />
+              <span class="text-xl font-bold">CodeWithAnkit</span>
+            </a>
+            <p class="text-gray-400">
+              Empowering students through technology and education.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="../index.html#home"
+                  class="text-gray-400 hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../index.html#about"
+                  class="text-gray-400 hover:text-white transition"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../index.html#projects"
+                  class="text-gray-400 hover:text-white transition"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../index.html#contact"
+                  class="text-gray-400 hover:text-white transition"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Resources</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="../all_notes.html"
+                  class="text-gray-400 hover:text-white transition"
+                  >Study Notes</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+            <p class="text-gray-400 mb-4">
+              Subscribe to get updates on new resources and projects.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 mb-4 md:mb-0">
+            © 2025 CodeWithAnkit. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+
+          const icon = this.querySelector("i");
+          if (icon.classList.contains("fa-bars")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-times");
+          } else {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+          }
+        });
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (!mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+              const menuToggle = document.getElementById("menu-toggle");
+              const icon = menuToggle.querySelector("i");
+              icon.classList.remove("fa-times");
+              icon.classList.add("fa-bars");
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

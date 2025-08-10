@@ -1,0 +1,1041 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python - Notes Module-1</title>
+      <style>
+    .custom-img {
+      max-width: 400px;
+      height: auto;
+      margin: auto;
+      display: block;
+    }
+  </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+      <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Logo" class="logo">
+
+
+  
+        <ul class="nav-links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../index.html#about">About</a></li>
+          <li><a href="../../index.html#projects">Projects</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="#">📚 Python</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    
+<div class="container mt-4">
+  <ul class="nav nav-tabs overflow-auto flex-nowrap">
+    <li class="nav-item">
+      <a class="nav-link active " href="#">Module 1.1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="/">Module 1.2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="python_note3.html">Module 1.3</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#module3">Module 2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#module3">Module 3</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#module4">Module 4</a>
+    </li>
+   
+    <!-- aur bhi modules add kar sakte ho -->
+  </ul>
+   
+<!-- Python  Notes Section -->
+
+  <section>
+    <div class="container mt-5">
+    <div class="custom-heading">
+     <h1> Python Introduction</h1>
+    </div>
+  </div>
+    
+  </section>
+
+  </ul>
+<!-- Python Notes Section -->
+
+<div class="container mt-5">
+
+  <!-- Heading -->
+  <h2 class="fw-bold text-dark" style="background-color: #e3efff; display: inline-block; padding: 4px 8px;">
+    What is python exactly?
+  </h2>
+
+  <!-- Paragraph 1 -->
+  <p class="mt-3">
+    • Python is one of the easiest yet most useful 
+    <span class="text-success fw-bold">high-level</span>, 
+    <span class="text-info fw-bold">Interpreter</span> 
+    <span class="text-danger fw-bold">programming language</span> 
+    which is widely used in the software industry.
+  </p>
+
+  <!-- Paragraph 2 -->
+  <p class="fw-bold mt-4">
+    But what is a programming language?
+  </p>
+
+  <!-- Paragraph 3 -->
+  <p>
+    A programming language is a 
+    <span class="text-primary fw-semibold">set of instructions and syntax</span> 
+    used to create 
+    <span class="text-primary fw-semibold">software programs</span>.
+  </p>
+
+  <!-- Image on right side -->
+  
+
+</div>
+<div class="container mt-5">
+
+  <!-- Heading -->
+  <h3 class="fw-bold mb-4">Where did it came from?</h3>
+
+  <div class="row align-items-start">
+
+    <!-- Text Content -->
+    <div class="col-md-8">
+      <p>• Python is developed by 
+        <span class="text-primary fw-semibold">Guido van Rossum</span> in 1991.
+      </p>
+
+      <p>• Rossum was a fan of a comedy series from late seventies. The name 
+        <span class="fw-bold">"Python"</span> was adopted from the same series 
+        <span class="fst-italic">"Monty Python's Flying Circus"</span>.
+      </p>
+    </div>
+
+  
+
+  </div>
+</div>
+<!----why use python-->
+<div class="container mt-5">
+  <h3 class="fw-bold">Why Python?</h3>
+  <p>
+    There are multiple 
+    <span class="fw-bold px-1" style="background-color: yellow;">Features of python</span>
+    which makes it easy and interesting.
+  </p>
+
+  <ul class="mt-3">
+    <li>
+      <span class="text-success fw-bold">Readable:</span> Uses of words instead of symbols.<br>
+      &nbsp;&nbsp;&nbsp;Example - 1000 + 1 is 1001 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output - true
+    </li>
+    <li>
+      <span class="text-success fw-bold">Easy to Learn:</span> High level programming language (User friendly)
+    </li>
+    <li>
+      <span class="text-success fw-bold">Cross platform:</span> Can be used with various operating systems such as Mac, Windows, Linux, Unix etc.
+    </li>
+    <li>
+      <span class="text-success fw-bold">Open Source:</span> FLOSS (Free/Libre Open Source Software) - Openly available, modifiable, co-developed.
+    </li>
+  </ul>
+</div>
+<!-----what can we do -->
+<div class="container mt-5">
+  <h3 class="fw-bold">What Can You Do with Python?</h3>
+
+  <ul class="mt-3">
+    <li><span class="text-danger">Web development</span> (Django, streamlit)</li>
+    <li><span class="text-danger">Machine learning</span> (sci-kit learn)</li>
+    <li><span class="text-danger">Data Analysis</span> (numpy, pandas)</li>
+    <li><span class="text-danger">Scripting</span></li>
+    <li><span class="text-danger">Game development</span> ( Pygame)</li>
+    <li><span class="text-danger">Desktop applications</span> (Kivy, tkinter)</li>
+    <li><span class="text-danger">Deep Learning</span> (TF, keras) : Teaches computers to perform tasks by learning from examples</li>
+    <li>
+      <span class="text-danger">Selenium :</span> Selenium is an open source umbrella project for a range of tools and libraries aimed at supporting browser automation. It provides a playback tool for authoring functional tests without the need to learn a test scripting language
+    </li>
+  </ul>
+</div>
+<!---who can use-->
+<div class="container mt-5">
+  <h3 class="fw-bold">Who uses Python?</h3>
+
+  <ul class="mt-3">
+    <li><span class="text-danger">Google</span> used python on <strong>backend</strong>.</li>
+    <li><span class="text-danger">YouTube</span>, the popular video-sharing website on <strong>backend</strong>.</li>
+    <li><span class="text-danger">Facebook</span> - python and php on <strong>backer</strong></li>
+    <li><span class="text-danger">Instagram</span> is a free photo sharing <strong>application</strong>.</li>
+    <li><span class="text-danger">Pinterest</span> is a social bookmarking site, Pinterest is written with -- Django, a web <strong>application</strong> framework that uses the Python programming language.</li>
+    <li><span class="text-danger">Dropbox</span> is a cloud storage provider that is frequently used as a file-sharing service.</li>
+  </ul>
+</div>
+
+<!---________interpreter _________---->
+<div class="container my-5">
+  <h4 class="mb-4 text-center">Okay...But what is the meaning of Interpreter language?</h4>
+
+  <div class="table-responsive">
+    <table class="table table-bordered text-center align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th class="text-start">Interpreter</th>
+          <th class="text-end">Compiler</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-start">Translates program one statement at a time.</td>
+          <td class="text-end">Scans the entire program and translates it as a whole into machine code.</td>
+        </tr>
+        <tr>
+          <td class="text-start">
+            Interpreters usually take less amount of time to analyze the source code. However, the 
+            <strong>overall execution time is comparatively slower</strong> than compilers.
+          </td>
+          <td class="text-end">
+            Compilers usually take a large amount of time to analyze the source code. However, the 
+            <strong>overall execution time is comparatively faster</strong> than interpreters.
+          </td>
+        </tr>
+        <tr>
+          <td class="text-start">
+            <strong>No Object Code</strong> is generated, hence are <strong>memory efficient</strong>.
+          </td>
+          <td class="text-end">
+            Generates Object Code which further requires linking, hence <strong>requires more memory</strong>.
+          </td>
+        </tr>
+        <tr>
+          <td class="text-start">
+            Programming languages like <strong>JavaScript, Python, Ruby</strong> use interpreters.
+          </td>
+          <td class="text-end">
+            Programming languages like <strong>C, C++, Java</strong> use compilers.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<h3>New topic</h3>
+<!---new topic keyword-->
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <div class="p-4" style="background: linear-gradient(to bottom, #ffffff, #99ccff); border: 2px solid black;">
+    <ul class="list-inline m-0">
+      <li class="list-inline-item mx-3" style="color: red; font-weight: bold; font-size: 1.5rem;">• Keywords</li>
+      <li class="list-inline-item mx-3" style="color: red; font-weight: bold; font-size: 1.5rem;">• Identifiers</li>
+      <li class="list-inline-item mx-3" style="color: red; font-weight: bold; font-size: 1.5rem;">• Variables</li>
+      <li class="list-inline-item mx-3" style="color: red; font-weight: bold; font-size: 1.5rem;">• Literals</li>
+      <li class="list-inline-item mx-3" style="color: red; font-weight: bold; font-size: 1.5rem;">• Casting</li>
+      <li class="list-inline-item mx-3" style="color: red; font-weight: bold; font-size: 1.5rem;">• Operators</li>
+    </ul>
+  </div>
+</div>
+
+
+<!------>
+<div class="container mt-5">
+  <!-- Section 1: Keywords List with Description -->
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="mb-4">Python Reserved Keywords</h3>
+      <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>Keyword</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><code>from</code></td><td>To import specific parts of a module</td></tr>
+          <tr><td><code>global</code></td><td>To declare a global variable</td></tr>
+          <tr><td><code>if</code></td><td>To make a conditional statement</td></tr>
+          <tr><td><code>import</code></td><td>To import a module</td></tr>
+          <tr><td><code>in</code></td><td>To check if a value is present in a list, tuple, etc.</td></tr>
+          <tr><td><code>is</code></td><td>To test if two variables are equal</td></tr>
+          <tr><td><code>lambda</code></td><td>To create an anonymous function</td></tr>
+          <tr><td><code>None</code></td><td>Represents a null value</td></tr>
+          <tr><td><code>nonlocal</code></td><td>To declare a non-local variable</td></tr>
+          <tr><td><code>not</code></td><td>A logical operator</td></tr>
+          <tr><td><code>or</code></td><td>A logical operator</td></tr>
+          <tr><td><code>pass</code></td><td>A null statement, a statement that will do nothing</td></tr>
+          <tr><td><code>raise</code></td><td>To raise an exception</td></tr>
+          <tr><td><code>return</code></td><td>To exit a function and return a value</td></tr>
+          <tr><td><code>True</code></td><td>Boolean value, result of comparison operations</td></tr>
+          <tr><td><code>try</code></td><td>To make a try...except statement</td></tr>
+          <tr><td><code>while</code></td><td>To create a while loop</td></tr>
+          <tr><td><code>with</code></td><td>Used to simplify exception handling</td></tr>
+          <tr><td><code>yield</code></td><td>To return a list of values from a generator</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Section 2: More Keywords -->
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <h4 class="mb-4">Keyword Description</h4>
+      <table class="table table-striped">
+        <tbody>
+          <tr><td><code>and</code></td><td>A logical operator</td></tr>
+          <tr><td><code>as</code></td><td>To create an alias</td></tr>
+          <tr><td><code>assert</code></td><td>For debugging</td></tr>
+          <tr><td><code>break</code></td><td>To break out of a loop</td></tr>
+          <tr><td><code>class</code></td><td>To define a class</td></tr>
+          <tr><td><code>continue</code></td><td>To continue to the next iteration of a loop</td></tr>
+          <tr><td><code>def</code></td><td>To define a function</td></tr>
+          <tr><td><code>del</code></td><td>To delete an object</td></tr>
+          <tr><td><code>elif</code></td><td>Used in conditional statements, same as else if</td></tr>
+          <tr><td><code>else</code></td><td>Used in conditional statements</td></tr>
+          <tr><td><code>except</code></td><td>Used with exceptions, what to do when an exception occurs</td></tr>
+          <tr><td><code>False</code></td><td>Boolean value, result of comparison operations</td></tr>
+          <tr><td><code>finally</code></td><td>Used with exceptions, a block of code that will be executed no matter if there is an exception or not</td></tr>
+          <tr><td><code>for</code></td><td>To create a for loop</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Section 3: Code Example -->
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <h4 class="mb-3">Python Reserved Words</h4>
+      <p>Python has a set of keywords that are <strong class="text-danger">reserved words</strong> that cannot be used as variable names, function names or any other identifiers:</p>
+
+      <pre class="bg-light p-3"><code>import keyword
+k = keyword.kwlist
+print(k)</code></pre>
+
+      <p>Output:</p>
+
+      <pre class="bg-dark text-white p-3"><code>[
+'False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class',
+'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global',
+'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise',
+'return', 'try', 'while', 'with', 'yield'
+]</code></pre>
+
+      <p>Use <code>len(k)</code> to get the total number of keywords (e.g., <strong>35</strong>).</p>
+    </div>
+  </div>
+</div>
+
+<!----identifiers-->
+<div class="container mt-5">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="mb-3">Identifiers</h3>
+      <p>An Identifier is a <span class="text-danger">user-defined name</span> given to variables, functions, classes, objects, etc.</p>
+      <h5 class="text-danger mt-4">Rules:</h5>
+      <ul>
+        <li><span class="text-danger">Keywords cannot be used</span> as identifier names. If you try, it will throw Syntax Error.</li>
+        <li>Python identifiers can contain letters in a <span class="text-danger">small case</span> (a-z), <span class="text-danger">upper case</span> (A-Z), <span class="text-danger">digits</span> (0-9), and <span class="text-danger">underscore (_)</span>.</li>
+        <li>Identifiers <span class="text-danger">cannot begin</span> with a digit.</li>
+        <li>Python identifiers <span class="text-danger">can’t contain only digits</span>.</li>
+        <li>Python identifier names can start with an <span class="text-danger">underscore</span>.</li>
+        <li>There is <span class="text-danger">no limit</span> on the length of the identifier name. But it is better kept short.</li>
+        <li>Python identifier names are <span class="text-danger">case-sensitive</span>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section: Case Sensitivity -->
+  <div class="row mt-5">
+    <div class="col-md-8">
+      <h3 class="mb-3">Case Sensitive</h3>
+      <p>• Python is a <span class="text-primary">case-sensitive language</span>.</p>
+      <p class="ms-4">This means, <code>Variable</code> and <code>variable</code> are not the same.</p>
+      <p class="text-danger fw-bold mt-3">• Remember this while naming identifiers:</p>
+      <p>Always give the identifiers a name that <span class="text-primary">makes sense</span>.</p>
+      <p>For example –</p>
+      <ul>
+        <li><code>c = 10</code> is a valid name,</li>
+        <li>but writing <code>count = 10</code> would make more sense,<br>
+            and it would be easier to figure out what it represents when you look at your code after a long gap.</li>
+      </ul>
+    </div>
+    <div class="col-md-4 text-center">
+      <!-- Replace the src below with actual image path -->
+      <img src="../assets/caseS.png" alt="Case Sensitivity Example" class="img-fluid border rounded shadow-sm">
+    </div>
+  </div>
+</div>
+
+
+<div class="container my-4">
+  <h3 class="fw-bold">Types of Literals</h3>
+  
+  <ol>
+    <li>
+      <span class="fw-bold bg-success text-white px-2 py-1 rounded">String literals:</span>
+      <p class="mt-2">
+        A string is literal and can be created by 
+        <span class="text-danger fw-bold">writing a text</span> 
+        (a group of Characters) surrounded by a single(‘), double(“), or triple quotes.
+      </p>
+    </li>
+  </ol>
+
+  <div class="row">
+    <div class="col-md-6">
+      <pre class="bg-light p-3 border rounded">
+# in single quote
+s = 'codewithankit'
+
+# in double quotes
+t = "codewithankit"
+
+# multi-line String
+m = """code
+with
+ankit"""
+
+print(s)
+print(t)
+print(m)
+      </pre>
+    </div>
+    <div class="col-md-6">
+      <strong>Output:</strong><br>
+      <code>codewithankit<br>codewithankit<br>code<br>with<br>ankit</code>
+    </div>
+  </div>
+</div>
+
+<div class="container my-4">
+
+  <!-- Types of Literals -->
+  <h3 class="fw-bold">Types of Literals</h3>
+
+  <!-- String Literal -->
+  <ol>
+    <li>
+      <span class="fw-bold bg-success text-white px-2 py-1 rounded">String literals:</span>
+      <p>
+        A string is literal and can be created by 
+        <span class="text-danger">writing a text</span> 
+        (a group of Characters) surrounded by a single(‘), double(“), or triple quotes.
+      </p>
+      <div class="row">
+        <div class="col-md-6">
+          <pre class="bg-light p-3 border rounded">
+# in single quote
+s = 'codewithankit'
+
+# in double quotes
+t = "codewithankit"
+
+# multi-line String
+m = """code
+with
+ankit"""
+
+print(s)
+print(t)
+print(m)
+          </pre>
+        </div>
+        <div class="col-md-6">
+          <strong>Output:</strong><br>
+          <code>codewithankit<br>codewithankit<br>code<br>with<br>ankit</code>
+        </div>
+      </div>
+    </li>
+
+    <!-- Numeric Literals -->
+    <li class="mt-4">
+      <span class="fw-bold bg-success text-white px-2 py-1 rounded">Numeric literal:</span> 
+      <span>(Integer, Float, Complex)</span>
+
+      <p class="mt-2"><span class="text-danger">• Integer</span>: Both <span class="text-danger">positive and negative</span> numbers <span class="text-danger">including 0</span>. There should not be any fractional part. We assigned integer literals (0b10100, 50, 0o320, 0x12b) into different variables. Here, ‘a‘ is a binary literal, ‘b’ is a decimal literal, ‘c‘ is an octal literal, and ‘d‘ is a hexadecimal literal.</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <pre class="bg-light p-3 border rounded">
+# integer literal
+
+# Binary Literals
+a = 0b10100
+
+# Decimal Literal
+b = 50
+
+# Octal Literal
+c = 0o320
+
+# Hexadecimal Literal
+d = 0x12b
+
+print(a, b, c, d)
+          </pre>
+        </div>
+        <div class="col-md-6">
+          <strong>Output:</strong><br>
+          <code>20 50 208 299</code>
+        </div>
+      </div>
+
+      <p class="mt-4"><span class="text-danger">• Float</span>: These are <span class="text-danger">real</span> numbers having both <span class="text-danger">integer and fractional</span> parts.</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <pre class="bg-light p-3 border rounded">
+# Float Literal
+e = 24.8
+f = 45.0
+
+print(e, f)
+          </pre>
+        </div>
+        <div class="col-md-6">
+          <strong>Output:</strong><br>
+          <code>24.8 45.0</code>
+        </div>
+      </div>
+
+      <p class="mt-4"><span class="text-danger">• Complex</span>: The numerals will be in the form of <b>a + bj</b>, where ‘a’ is the real part and ‘b’ is the complex part.</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <pre class="bg-light p-3 border rounded">
+z = 7 + 5j
+
+# real part is 0 here.
+k = 7j
+
+print(z, k)
+          </pre>
+        </div>
+        <div class="col-md-6">
+          <strong>Output:</strong><br>
+          <code>(7+5j) 7j</code>
+        </div>
+      </div>
+    </li>
+
+    <!-- Boolean Literal -->
+    <li class="mt-4">
+      <span class="fw-bold bg-success text-white px-2 py-1 rounded">Boolean literals:</span>
+      <p>
+        • There are only <span class="text-danger">two Boolean</span> literals in Python. They are true and false.<br>
+        • <span class="text-danger">True</span> represents the value as <b>1</b>, and <span class="text-danger">False</span> represents the value as <b>0</b>.
+      </p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Boolean-example.png" alt="Boolean True False" class="img-fluid" style="max-width: 200px;">
+    </li>
+
+    <!-- Special Literal -->
+    <li class="mt-4">
+      <span class="fw-bold bg-success text-white px-2 py-1 rounded">Special literal:</span>
+      <p>
+        Python contains one special literal (<b>None</b>). ‘None’ is used to define a null variable.<br>
+        If ‘None’ is compared with anything else other than a ‘None’, it will return false.
+      </p>
+      <div class="row">
+        <div class="col-md-6">
+          <pre class="bg-light p-3 border rounded">
+water_remain = None
+print(water_remain)
+          </pre>
+        </div>
+        <div class="col-md-6">
+          <strong>Output:</strong><br>
+          <code>None</code>
+        </div>
+      </div>
+    </li>
+  </ol>
+
+  <!-- Statement and Expression -->
+  <h3 class="fw-bold mt-5">Statement and Expression</h3>
+
+  <p>
+    <span class="text-danger fw-bold">• Statement:</span><br>
+    A statement is an <span class="text-primary">instruction</span> that a Python interpreter can 
+    <span class="text-primary">execute</span>. So, in simple words, we can say anything written in Python is a statement.
+  </p>
+
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <pre class="bg-primary-subtle p-3 border rounded">
+a = 2
+print(a)
+      </pre>
+    </div>
+    <div class="col-md-6">
+      <strong>2</strong>
+    </div>
+  </div>
+
+  <p>
+    <span class="text-danger fw-bold">• Expression:</span><br>
+    An expression is a combination of <span class="text-primary">operators</span> and 
+    <span class="text-primary">operands</span> that is <span class="text-primary">interpreted</span> 
+    to produce some other value.
+  </p>
+
+  <div class="row">
+    <div class="col-md-6">
+      <pre class="bg-primary-subtle p-3 border rounded">
+b = 2 + 4
+print(b)
+      </pre>
+    </div>
+    <div class="col-md-6">
+      <strong>6</strong>
+    </div>
+  </div>
+
+</div>
+<!-----Operator-->
+<!-- BEGIN main content between <body> and </body>, excluding header/footer -->
+
+<div class="container my-4">
+
+  <!-- Section: Introduction to Operators -->
+  <section class="mb-5">
+    <h2 class="mb-3">Operators</h2>
+    <p>Operators in Python are <span class="text-danger">special symbols</span> that carry arithmetic or logical operations. The value that the operator operates on is called the operand.</p>
+
+    <!-- Simple flowchart using Bootstrap grid and icons -->
+    <div class="d-flex align-items-center justify-content-center my-4 gap-3 flex-wrap">
+      <div class="text-center">
+        <h5>Operand</h5>
+        <div class="fs-3 fw-bold border rounded-circle p-3 bg-light">3</div>
+      </div>
+
+      <div class="text-center">
+        <h5>Operator</h5>
+        <div class="fs-3 fw-bold border rounded-circle p-3 bg-light">+</div>
+      </div>
+
+      <div class="text-center">
+        <h5>Operand</h5>
+        <div class="fs-3 fw-bold border rounded-circle p-3 bg-light">2</div>
+      </div>
+
+      <div class="text-center">
+        <h5>= Result</h5>
+        <div class="fs-3 fw-bold border rounded-circle p-3 bg-light">5</div>
+      </div>
+    </div>
+
+    <!-- Operator categories in row format -->
+    <div class="row text-center">
+      <div class="col border py-2">Assignment Operators</div>
+      <div class="col border py-2">Arithmetic Operators</div>
+      <div class="col border py-2">Comparison Operators</div>
+      <div class="col border py-2">Logical Operators</div>
+      <div class="col border py-2">Identity Operators</div>
+      <div class="col border py-2">Membership Operators</div>
+      <div class="col border py-2">Bitwise Operators</div>
+    </div>
+  </section>
+
+  <!-- Section 1: Arithmetic Operator -->
+  <section class="mb-5">
+    <h2 class="mb-3">1. ARITHMETIC OPERATOR</h2>
+    <p>Python Arithmetic operators are used to perform basic <span class="text-danger">mathematical operations</span> like addition, subtraction, multiplication, and division.</p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <pre><code class="language-python">
+a, b = 9, 4
+add = a + b
+sub = a - b
+mul = a * b
+mod = a % b
+p = a ** b
+print(add)
+print(sub)
+print(mul)
+print(mod)
+print(p)
+        </code></pre>
+      </div>
+
+      <div class="col-md-6">
+        <table class="table table-bordered table-striped">
+          <thead class="table-primary">
+            <tr>
+              <th>Operator</th>
+              <th>Operation</th>
+              <th>Example</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>+</td><td>Addition</td><td>a+b</td><td>Adds a and b</td></tr>
+            <tr><td>-</td><td>Subtraction</td><td>a-b</td><td>Subtracts b from a</td></tr>
+            <tr><td>*</td><td>Multiplication</td><td>a*b</td><td>Multiplies a and b</td></tr>
+            <tr><td>/</td><td>Division</td><td>a/b</td><td>Divides a and b</td></tr>
+            <tr><td>%</td><td>Modulus</td><td>a%b</td><td>Gives remainder after dividing a from b</td></tr>
+            <tr><td>**</td><td>Exponential</td><td>3**2=9</td><td>Ignores the decimal value if present</td></tr>
+            <tr><td>//</td><td>Floor Division</td><td>15//2=7</td><td>Gives the result of 3 to the power of 2</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <strong>Output:</strong>
+      <pre>13
+5
+36
+1
+6561</pre>
+    </div>
+  </section>
+
+  <!-- Section 2: Assignment Operator -->
+  <section class="mb-5">
+    <h2 class="mb-3">2. ASSIGNMENT OPERATOR</h2>
+    <p>These are operators used for <span class="text-danger">assigning values</span> to a variable. The values to be assigned must be on the right side, and the variable must be on the left-hand side of the operator.</p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <pre><code class="language-python">
+a = 10
+b = a
+print(b)
+b += a
+print(b)
+b -= a
+print(b)
+b *= a
+print(b)
+b <<= a
+print(b)
+        </code></pre>
+      </div>
+
+      <div class="col-md-6">
+        <table class="table table-bordered table-striped">
+          <thead class="table-primary">
+            <tr>
+              <th>Operator</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>=</td><td>Assigns right side operands to left variable.</td><td>&gt;&gt;&gt;'number'=10</td></tr>
+            <tr><td>+=</td><td>Added and assign back the result to left operand.</td><td>&gt;&gt;&gt;'number' += 20 # 'number'='number'+20</td></tr>
+            <tr><td>-=</td><td>Subtracted and assign back the result to left operand.</td><td>&gt;&gt;&gt;'number' -= 5</td></tr>
+            <tr><td>*=</td><td>Multiplied and assign back the result to left operand.</td><td>&gt;&gt;&gt;'number' *= 5</td></tr>
+            <tr><td>/=</td><td>Divide and assign back the result to left operand.</td><td>&gt;&gt;&gt;'number' /= 2</td></tr>
+            <tr><td>%=</td><td>Taken modulus (Remainder) using two operands and assign the result to left operand.</td><td>&gt;&gt;&gt;'number' %= 3</td></tr>
+            <tr><td>**=</td><td>Performed exponential (power) calculation on operators and assign value to the left operand.</td><td>&gt;&gt;&gt;'number' **= 2</td></tr>
+            <tr><td>//=</td><td>Performed floor division on operators and assign value to the left operand.</td><td>&gt;&gt;&gt;'number' //= 3</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <strong>Output:</strong>
+      <pre>10
+20
+10
+100
+102400</pre>
+    </div>
+  </section>
+
+  <!-- Section 3: Comparison Operator -->
+  <section class="mb-5">
+    <h2 class="mb-3">3. COMPARISON OPERATOR</h2>
+    <p>In Python, the comparison operators have <span class="text-danger">lower precedence</span> than the arithmetic operators.</p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <pre><code class="language-python">
+a = 13
+b = 33
+print(a > b)
+print(a < b)
+print(a == b)
+print(a != b)
+print(a >= b)
+print(a <= b)
+        </code></pre>
+      </div>
+
+      <div class="col-md-6">
+        <table class="table table-bordered table-striped">
+          <thead class="table-primary">
+            <tr>
+              <th>Operator</th>
+              <th>Description</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>==</td><td>If the values of two operands are equal, then the condition becomes true.</td><td>(a==b) is not true.</td></tr>
+            <tr><td>!=</td><td>If the values of two operands are not equal, then the condition becomes true.</td><td>(a!=b) is true.</td></tr>
+            <tr><td>&lt;&gt;</td><td>If the values of two operands are not equal, then the condition becomes true.</td><td>(a&lt;&gt;b) is true. This is similar to != operator</td></tr>
+            <tr><td>&gt;</td><td>If the values of left operand is greater than the value of right operand, the condition is true.</td><td>(a&gt;b) is not true.</td></tr>
+            <tr><td>&lt;</td><td>If the values of left operand is less than the value of right operand, the condition is true.</td><td>(a&lt;b) is true.</td></tr>
+            <tr><td>&gt;=</td><td>If the values of left operand is greater than or equal to the value of right operand, the condition is true.</td><td>(a&gt;=b) is not true.</td></tr>
+            <tr><td>&lt;=</td><td>If the values of left operand is less than or equal to the value of right operand, the condition is true.</td><td>(a&lt;=b) is true.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <strong>Output:</strong>
+      <pre>False
+True
+False
+True
+False
+True</pre>
+    </div>
+  </section>
+
+  <!-- Section 4: Logical Operator -->
+  <section class="mb-5">
+    <h2 class="mb-3">4. LOGICAL OPERATOR</h2>
+    <p>Python logical operators are used to combine <span class="text-danger">conditional statements</span>, allowing you to perform operations based on multiple conditions.</p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <pre><code class="language-python">
+a = True
+b = False
+print(a and b)
+print(a or b)
+print(not a)
+        </code></pre>
+      </div>
+
+      <div class="col-md-6">
+        <table class="table table-bordered table-striped bg-info text-white">
+          <thead>
+            <tr>
+              <th>Operator</th>
+              <th>Description</th>
+              <th>Syntax</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>and</td>
+              <td>Logical AND: True if both the operands are true</td>
+              <td>x and y</td>
+            </tr>
+            <tr>
+              <td>or</td>
+              <td>Logical OR: True if either of the operands is true</td>
+              <td>x or y</td>
+            </tr>
+            <tr>
+              <td>not</td>
+              <td>Logical NOT: True if the operand is false</td>
+              <td>not x</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <strong>Output:</strong>
+      <pre>False
+True
+False</pre>
+    </div>
+  </section>
+
+</div>
+<div class="container my-4">
+  <h4 class="text-success">5. BITWISE OPERATOR</h4>
+  <p>Bitwise operators are used to perform bit-level operations on integers.</p>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table table-bordered table-striped">
+        <thead class="table-primary">
+          <tr>
+            <th>Operator</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&amp;</td>
+            <td>Bitwise AND: Sets each bit to 1 if both bits are 1</td>
+            <td>5 &amp; 3 = 1</td>
+          </tr>
+          <tr>
+            <td>|</td>
+            <td>Bitwise OR: Sets each bit to 1 if one of two bits is 1</td>
+            <td>5 | 3 = 7</td>
+          </tr>
+          <tr>
+            <td>^</td>
+            <td>Bitwise XOR: Sets each bit to 1 if only one of two bits is 1</td>
+            <td>5 ^ 3 = 6</td>
+          </tr>
+          <tr>
+            <td>~</td>
+            <td>Bitwise NOT: Inverts all the bits</td>
+            <td>~5 = -6</td>
+          </tr>
+          <tr>
+            <td>&lt;&lt;</td>
+            <td>Left Shift: Shifts bits to the left, adding zeros from right</td>
+            <td>5 &lt;&lt; 1 = 10</td>
+          </tr>
+          <tr>
+            <td>&gt;&gt;</td>
+            <td>Right Shift: Shifts bits to the right, discarding bits</td>
+            <td>5 &gt;&gt; 1 = 2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+      <div style="font-size: 14px; color: #444;">
+        <p><strong>Example Code:</strong></p>
+        <pre>
+a = 5  # 0b0101
+b = 3  # 0b0011
+
+print(a & b)  # Output: 1 (0b0001)
+print(a | b)  # Output: 7 (0b0111)
+print(a ^ b)  # Output: 6 (0b0110)
+print(~a)     # Output: -6 (invert bits)
+print(a << 1) # Output: 10 (shift left)
+print(a >> 1) # Output: 2 (shift right)
+        </pre>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Identity Operators Section -->
+<div class="container my-4">
+  <h4 class="text-success">6. IDENTITY OPERATORS</h4>
+  <p>Identity operators are used to compare the memory locations of two objects.</p>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table table-bordered table-striped">
+        <thead class="table-primary">
+          <tr>
+            <th>Operator</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>is</td>
+            <td>Returns True if both variables point to the same object</td>
+            <td>a is b</td>
+          </tr>
+          <tr>
+            <td>is not</td>
+            <td>Returns True if both variables do not point to the same object</td>
+            <td>a is not b</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+      <div style="font-size: 14px; color: #444;">
+        <p><strong>Example Code:</strong></p>
+        <pre>
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+
+print(a is b)      # True
+print(a is c)      # False
+print(a is not c)  # True
+        </pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Membership Operators Section -->
+<div class="container my-4">
+  <h4 class="text-success">7. MEMBERSHIP OPERATORS</h4>
+  <p>Membership operators test whether a value or variable is found in a sequence (string, list, tuple, set, etc.).</p>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table table-bordered table-striped">
+        <thead class="table-primary">
+          <tr>
+            <th>Operator</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>in</td>
+            <td>Returns True if a value is found in the sequence</td>
+            <td>5 in list</td>
+          </tr>
+          <tr>
+            <td>not in</td>
+            <td>Returns True if a value is not found in the sequence</td>
+            <td>5 not in list</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+      <div style="font-size: 14px; color: #444;">
+        <p><strong>Example Code:</strong></p>
+        <pre>
+list = [1, 2, 3, 4, 5]
+
+print(3 in list)       # True
+print(6 not in list)   # True
+        </pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+ <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 CodeWithAnkit. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

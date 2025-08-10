@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of Ankit Singh, Web & AI Developer">
+    <title>Python Module-1</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "_xUgA3znBltIseVRM",
+      });
+   })();
+</script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1F2937',
+                        light: '#F9FAFB',
+                        accent: '#6366F1',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3B82F6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-light text-dark">
+    <!-- header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="flex items-center space-x-2">
+                    <img src="../assest/logo.jpg" alt="Logo" class="h-10">
+                    <span class="text-xl font-bold text-primary">CodeWithAnkit</span>
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#home" class="nav-link text-gray-600 hover:text-primary transition">Home</a>
+                    <a href="../index.html#about" class="nav-link text-gray-600 hover:text-primary transition">About</a>
+                    <a href="../index.html#projects" class="nav-link text-gray-600 hover:text-primary transition">Projects</a>
+                    <a href="../index.html#contact" class="nav-link text-gray-600 hover:text-primary transition">Contact</a>
+                    <a href="../index.html#notes" class="nav-link text-gray-600 hover:text-primary transition">All notes</a>
+                    
+                </nav>
+
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <i class="fas fa-bars text-2xl text-gray-600"></i>
+                </button>
+            </div>
+
+            <!-- mobile menu -->
+            <div class="md:hidden hidden mt-4 py-2" id="mobile-menu">
+                <a href="index.html#home" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">Home</a>
+                <a href="index.html#about" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">About</a>
+                <a href="index.html#projects" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">Projects</a>
+                <a href="index.html#contact" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">Contact</a>
+                <a href="../all_notes.html" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">All-notes</a>
+                <a href="#notes" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">Python</a>
+                
+            </div>
+        </div>
+    </header>
+<!---notes section-->
+
+
+<!-- MODULE TABS (Now positioned below header correctly) -->
+<ul class="flex px-3 mt-0 space-x-4 border-b border-gray-300 bg-white sticky top-[72px] z-40 shadow-sm">
+  <li>
+    <a href="python11.html"
+      class="inline-block px-4 py-2 text-blue-600 border-b-4 border-blue-600 font-semibold">
+       Module 1
+    </a>
+  </li>
+  <li>
+    <a href="python12.html"
+      class="inline-block px-4 py-2 text-gray-600 hover:text-blue-600 hover:border-blue-600 border-b-4 border-transparent">
+       Module 2
+    </a>
+  </li>
+  <li>
+    <a href="#module3"
+       class="inline-block px-4 py-2 text-gray-600 hover:text-blue-600 hover:border-blue-600 border-b-4 border-transparent">
+      Module 3
+    </a>
+  </li>
+  <li>
+    <a href="#module4"
+       class="inline-block px-4 py-2 text-gray-600 hover:text-blue-600 hover:border-blue-600 border-b-4 border-transparent">
+      Module 4
+    </a>
+  </li>
+</ul>
+
+
+
+
+<!--notes section-->
+
+  <section class="">
+    <div class="container mx-auto mt-5">
+    <div class="/* custom-heading not found */">
+     <h1 class=""> Python Introduction</h1>
+    </div>
+  </div>
+    
+  </section>
+
+  
+<!-- Python Notes Section -->
+
+<div class="container mx-auto mt-5">
+
+  <!-- Heading -->
+  <h2 class="/* fw-bold not found */ text-gray-800" style="background-color: #e3efff; display: inline-block; padding: 4px 8px;">
+    What is python exactly?
+  </h2>
+
+  <!-- Paragraph 1 -->
+  <p class="mt-3">
+    • Python is one of the easiest yet most useful 
+    <span class="text-green-500 /* fw-bold not found */">high-level</span>, 
+    <span class="text-teal-500 /* fw-bold not found */">Interpreter</span> 
+    <span class="text-red-500 /* fw-bold not found */">programming language</span> 
+    which is widely used in the software industry.
+  </p>
+
+  <!-- Paragraph 2 -->
+  <p class="/* fw-bold not found */ mt-4">
+    But what is a programming language?
+  </p>
+
+  <!-- Paragraph 3 -->
+  <p class="">
+    A programming language is a 
+    <span class="text-blue-500 /* fw-semibold not found */">set of instructions and syntax</span> 
+    used to create 
+    <span class="text-blue-500 /* fw-semibold not found */">software programs</span>.
+  </p>
+
+  <!-- Image on right side -->
+  
+
+</div>
+<div class="container mx-auto mt-5">
+
+  <!-- Heading -->
+  <h3 class="/* fw-bold not found */ mb-4">Where did it came from?</h3>
+
+  <div class="flex flex-wrap -mx-2 items-start">
+
+    <!-- Text Content -->
+    <div class="md:w-8/12 px-2">
+      <p class="">• Python is developed by 
+        <span class="text-blue-500 /* fw-semibold not found */">Guido van Rossum</span> in 1991.
+      </p>
+
+      <p class="">• Rossum was a fan of a comedy series from late seventies. The name 
+        <span class="/* fw-bold not found */">"Python"</span> was adopted from the same series 
+        <span class="/* fst-italic not found */">"Monty Python's Flying Circus"</span>.
+      </p>
+    </div>
+
+  
+
+  </div>
+</div>
+<!----why use python-->
+<div class="container mx-auto mt-5">
+  <h3 class="/* fw-bold not found */">Why Python?</h3>
+  <p class="">
+    There are multiple 
+    <span class="/* fw-bold not found */ px-1" style="background-color: yellow;">Features of python</span>
+    which makes it easy and interesting.
+  </p>
+
+  <ul class="mt-3">
+    <li class="">
+      <span class="text-green-500 /* fw-bold not found */">Readable:</span> Uses of words instead of symbols.<br class="">
+      &nbsp;&nbsp;&nbsp;Example - 1000 + 1 is 1001 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output - true
+    </li>
+    <li class="">
+      <span class="text-green-500 /* fw-bold not found */">Easy to Learn:</span> High level programming language (User friendly)
+    </li>
+    <li class="">
+      <span class="text-green-500 /* fw-bold not found */">Cross platform:</span> Can be used with various operating systems such as Mac, Windows, Linux, Unix etc.
+    </li>
+    <li class="">
+      <span class="text-green-500 /* fw-bold not found */">Open Source:</span> FLOSS (Free/Libre Open Source Software) - Openly available, modifiable, co-developed.
+    </li>
+  </ul>
+</div>
+<!-----what can we do -->
+<div class="container mx-auto mt-5">
+  <h3 class="/* fw-bold not found */">What Can You Do with Python?</h3>
+
+  <ul class="mt-3">
+    <li class=""><span class="text-red-500">Web development</span> (Django, streamlit)</li>
+    <li class=""><span class="text-red-500">Machine learning</span> (sci-kit learn)</li>
+    <li class=""><span class="text-red-500">Data Analysis</span> (numpy, pandas)</li>
+    <li class=""><span class="text-red-500">Scripting</span></li>
+    <li class=""><span class="text-red-500">Game development</span> ( Pygame)</li>
+    <li class=""><span class="text-red-500">Desktop applications</span> (Kivy, tkinter)</li>
+    <li class=""><span class="text-red-500">Deep Learning</span> (TF, keras) : Teaches computers to perform tasks by learning from examples</li>
+    <li class="">
+      <span class="text-red-500">Selenium :</span> Selenium is an open source umbrella project for a range of tools and libraries aimed at supporting browser automation. It provides a playback tool for authoring functional tests without the need to learn a test scripting language
+    </li>
+  </ul>
+</div>
+<!---who can use-->
+<div class="container mx-auto mt-5">
+  <h3 class="/* fw-bold not found */">Who uses Python?</h3>
+
+  <ul class="mt-3">
+    <li class=""><span class="text-red-500">Google</span> used python on <strong class="">backend</strong>.</li>
+    <li class=""><span class="text-red-500">YouTube</span>, the popular video-sharing website on <strong class="">backend</strong>.</li>
+    <li class=""><span class="text-red-500">Facebook</span> - python and php on <strong class="">backer</strong></li>
+    <li class=""><span class="text-red-500">Instagram</span> is a free photo sharing <strong class="">application</strong>.</li>
+    <li class=""><span class="text-red-500">Pinterest</span> is a social bookmarking site, Pinterest is written with -- Django, a web <strong class="">application</strong> framework that uses the Python programming language.</li>
+    <li class=""><span class="text-red-500">Dropbox</span> is a cloud storage provider that is frequently used as a file-sharing service.</li>
+  </ul>
+</div>
+
+<!---________interpreter _________---->
+<div class="container mx-auto my-5">
+  <h4 class="mb-4 text-center">Okay...But what is the meaning of Interpreter language?</h4>
+
+  <div class="/* table-responsive not found */">
+    <table class="/* table not found */ /* table-bordered not found */ text-center /* align-middle not found */">
+      <thead class="/* table-dark not found */">
+        <tr class="">
+          <th class="/* text-start not found */">Interpreter</th>
+          <th class="/* text-end not found */">Compiler</th>
+        </tr>
+      </thead>
+      <tbody class="">
+        <tr class="">
+          <td class="/* text-start not found */">Translates program one statement at a time.</td>
+          <td class="/* text-end not found */">Scans the entire program and translates it as a whole into machine code.</td>
+        </tr>
+        <tr class="">
+          <td class="/* text-start not found */">
+            Interpreters usually take less amount of time to analyze the source code. However, the 
+            <strong class="">overall execution time is comparatively slower</strong> than compilers.
+          </td>
+          <td class="/* text-end not found */">
+            Compilers usually take a large amount of time to analyze the source code. However, the 
+            <strong class="">overall execution time is comparatively faster</strong> than interpreters.
+          </td>
+        </tr>
+        <tr class="">
+          <td class="/* text-start not found */">
+            <strong class="">No Object Code</strong> is generated, hence are <strong class="">memory efficient</strong>.
+          </td>
+          <td class="/* text-end not found */">
+            Generates Object Code which further requires linking, hence <strong class="">requires more memory</strong>.
+          </td>
+        </tr>
+        <tr class="">
+          <td class="/* text-start not found */">
+            Programming languages like <strong class="">JavaScript, Python, Ruby</strong> use interpreters.
+          </td>
+          <td class="/* text-end not found */">
+            Programming languages like <strong class="">C, C++, Java</strong> use compilers.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<h3 class="">New topic</h3>
+<!---new topic keyword-->
+<div class="flex justify-center items-center" style="height: 100vh;">
+  <div class="p-4" style="background: linear-gradient(to bottom, #ffffff, #99ccff); border: 2px solid black;">
+    <ul class="/* list-inline not found */ m-0">
+      <li class="/* list-inline-item not found */ mx-3" style="color: red; font-weight: bold; font-size: 1.5rem;">• Keywords</li>
+      <li class="/* list-inline-item not found */ mx-3" style="color: red; font-weight: bold; font-size: 1.5rem;">• Identifiers</li>
+      <li class="/* list-inline-item not found */ mx-3" style="color: red; font-weight: bold; font-size: 1.5rem;">• Variables</li>
+      <li class="/* list-inline-item not found */ mx-3" style="color: red; font-weight: bold; font-size: 1.5rem;">• Literals</li>
+      <li class="/* list-inline-item not found */ mx-3" style="color: red; font-weight: bold; font-size: 1.5rem;">• Casting</li>
+      <li class="/* list-inline-item not found */ mx-3" style="color: red; font-weight: bold; font-size: 1.5rem;">• Operators</li>
+    </ul>
+  </div>
+</div>
+
+
+<!------>
+<div class="container mx-auto mt-5 px-4">
+  <!-- Section 1: Keywords List with Description -->
+  <div class="overflow-x-auto rounded-lg shadow mb-6">
+    <h3 class="text-lg font-semibold mb-4">Python Reserved Keywords</h3>
+    <table class="min-w-full text-sm text-left border">
+      <thead class="bg-gray-100 text-gray-700">
+        <tr>
+          <th class="py-2 px-4 border">Keyword</th>
+          <th class="py-2 px-4 border">Description</th>
+        </tr>
+      </thead>
+      <tbody class="bg-white">
+        <tr><td class="py-2 px-4 border"><code>from</code></td><td class="py-2 px-4 border">To import specific parts of a module</td></tr>
+        <tr><td class="py-2 px-4 border"><code>global</code></td><td class="py-2 px-4 border">To declare a global variable</td></tr>
+        <tr><td class="py-2 px-4 border"><code>if</code></td><td class="py-2 px-4 border">To make a conditional statement</td></tr>
+        <tr><td class="py-2 px-4 border"><code>import</code></td><td class="py-2 px-4 border">To import a module</td></tr>
+        <tr><td class="py-2 px-4 border"><code>in</code></td><td class="py-2 px-4 border">To check if a value is present in a list, tuple, etc.</td></tr>
+        <tr><td class="py-2 px-4 border"><code>is</code></td><td class="py-2 px-4 border">To test if two variables are equal</td></tr>
+        <tr><td class="py-2 px-4 border"><code>lambda</code></td><td class="py-2 px-4 border">To create an anonymous function</td></tr>
+        <tr><td class="py-2 px-4 border"><code>None</code></td><td class="py-2 px-4 border">Represents a null value</td></tr>
+        <tr><td class="py-2 px-4 border"><code>nonlocal</code></td><td class="py-2 px-4 border">To declare a non-local variable</td></tr>
+        <tr><td class="py-2 px-4 border"><code>not</code></td><td class="py-2 px-4 border">A logical operator</td></tr>
+        <tr><td class="py-2 px-4 border"><code>or</code></td><td class="py-2 px-4 border">A logical operator</td></tr>
+        <tr><td class="py-2 px-4 border"><code>pass</code></td><td class="py-2 px-4 border">A null statement, does nothing</td></tr>
+        <tr><td class="py-2 px-4 border"><code>raise</code></td><td class="py-2 px-4 border">To raise an exception</td></tr>
+        <tr><td class="py-2 px-4 border"><code>return</code></td><td class="py-2 px-4 border">To exit a function and return a value</td></tr>
+        <tr><td class="py-2 px-4 border"><code>True</code></td><td class="py-2 px-4 border">Boolean value</td></tr>
+        <tr><td class="py-2 px-4 border"><code>try</code></td><td class="py-2 px-4 border">To make a try...except statement</td></tr>
+        <tr><td class="py-2 px-4 border"><code>while</code></td><td class="py-2 px-4 border">To create a while loop</td></tr>
+        <tr><td class="py-2 px-4 border"><code>with</code></td><td class="py-2 px-4 border">Used to simplify exception handling</td></tr>
+        <tr><td class="py-2 px-4 border"><code>yield</code></td><td class="py-2 px-4 border">To return from a generator</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Section 2: More Keywords -->
+  <div class="overflow-x-auto rounded-lg shadow">
+    <h4 class="text-lg font-semibold mb-4">Keyword Description</h4>
+    <table class="min-w-full text-sm text-left border">
+      <tbody class="bg-white">
+        <tr><td class="py-2 px-4 border"><code>and</code></td><td class="py-2 px-4 border">A logical operator</td></tr>
+        <tr><td class="py-2 px-4 border"><code>as</code></td><td class="py-2 px-4 border">To create an alias</td></tr>
+        <tr><td class="py-2 px-4 border"><code>assert</code></td><td class="py-2 px-4 border">For debugging</td></tr>
+        <tr><td class="py-2 px-4 border"><code>break</code></td><td class="py-2 px-4 border">To break out of a loop</td></tr>
+        <tr><td class="py-2 px-4 border"><code>class</code></td><td class="py-2 px-4 border">To define a class</td></tr>
+        <tr><td class="py-2 px-4 border"><code>continue</code></td><td class="py-2 px-4 border">To continue to next loop iteration</td></tr>
+        <tr><td class="py-2 px-4 border"><code>def</code></td><td class="py-2 px-4 border">To define a function</td></tr>
+        <tr><td class="py-2 px-4 border"><code>del</code></td><td class="py-2 px-4 border">To delete an object</td></tr>
+        <tr><td class="py-2 px-4 border"><code>elif</code></td><td class="py-2 px-4 border">Used like else if</td></tr>
+        <tr><td class="py-2 px-4 border"><code>else</code></td><td class="py-2 px-4 border">Used in conditional statements</td></tr>
+        <tr><td class="py-2 px-4 border"><code>except</code></td><td class="py-2 px-4 border">Used with exceptions</td></tr>
+        <tr><td class="py-2 px-4 border"><code>False</code></td><td class="py-2 px-4 border">Boolean value</td></tr>
+        <tr><td class="py-2 px-4 border"><code>finally</code></td><td class="py-2 px-4 border">Executes no matter what</td></tr>
+        <tr><td class="py-2 px-4 border"><code>for</code></td><td class="py-2 px-4 border">To create a for loop</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+  <!-- Section 3: Code Example -->
+  <div class="flex flex-wrap -mx-2 mt-5">
+  <div class="md:w-full px-2">
+    <h4 class="mb-3 text-lg font-semibold">Python Reserved Words</h4>
+
+    <p>Python has a set of keywords that are <strong class="text-red-500">reserved words</strong> that cannot be used as variable names, function names or any other identifiers:</p>
+
+    <!-- Python code block -->
+    <div class="bg-gray-200 p-3 rounded overflow-x-auto my-4">
+      <pre><code>import keyword
+k = keyword.kwlist
+print(k)</code></pre>
+    </div>
+
+    <p class="mt-2">Output:</p>
+
+    <!-- Output block -->
+    <div class="bg-gray-800 text-white p-3 rounded overflow-x-auto my-4">
+      <pre><code>[
+'False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class',
+'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global',
+'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise',
+'return', 'try', 'while', 'with', 'yield'
+]</code></pre>
+    </div>
+
+    <p class="">Use <code>len(k)</code> to get the total number of keywords (e.g., <strong class="text-blue-600">35</strong>).</p>
+  </div>
+</div>
+
+<!----identifiers-->
+<div class="container mx-auto mt-5">
+
+  <div class="flex flex-wrap -mx-2">
+    <div class="md:w-full px-2">
+      <h3 class="mb-3">Identifiers</h3>
+      <p class="">An Identifier is a <span class="text-red-500">user-defined name</span> given to variables, functions, classes, objects, etc.</p>
+      <h5 class="text-red-500 mt-4">Rules:</h5>
+      <ul class="">
+        <li class=""><span class="text-red-500">Keywords cannot be used</span> as identifier names. If you try, it will throw Syntax Error.</li>
+        <li class="">Python identifiers can contain letters in a <span class="text-red-500">small case</span> (a-z), <span class="text-red-500">upper case</span> (A-Z), <span class="text-red-500">digits</span> (0-9), and <span class="text-red-500">underscore (_)</span>.</li>
+        <li class="">Identifiers <span class="text-red-500">cannot begin</span> with a digit.</li>
+        <li class="">Python identifiers <span class="text-red-500">can’t contain only digits</span>.</li>
+        <li class="">Python identifier names can start with an <span class="text-red-500">underscore</span>.</li>
+        <li class="">There is <span class="text-red-500">no limit</span> on the length of the identifier name. But it is better kept short.</li>
+        <li class="">Python identifier names are <span class="text-red-500">case-sensitive</span>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section: Case Sensitivity -->
+  <div class="flex flex-wrap -mx-2 mt-5">
+    <div class="md:w-8/12 px-2">
+      <h3 class="mb-3">Case Sensitive</h3>
+      <p class="">• Python is a <span class="text-blue-500">case-sensitive language</span>.</p>
+      <p class="/* ms-4 not found */">This means, <code class="">Variable</code> and <code class="">variable</code> are not the same.</p>
+      <p class="text-red-500 /* fw-bold not found */ mt-3">• Remember this while naming identifiers:</p>
+      <p class="">Always give the identifiers a name that <span class="text-blue-500">makes sense</span>.</p>
+      <p class="">For example –</p>
+      <ul class="">
+        <li class=""><code class="">c = 10</code> is a valid name,</li>
+        <li class="">but writing <code class="">count = 10</code> would make more sense,<br class="">
+            and it would be easier to figure out what it represents when you look at your code after a long gap.</li>
+      </ul>
+    </div>
+    <div class="md:w-4/12 px-2 text-center">
+      <!-- Replace the src below with actual image path -->
+      <img src="../assets/caseS.png" alt="Case Sensitivity Example" class="/* img-fluid not found */ border rounded shadow-sm">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="container mx-auto my-4">
+  <h3 class="/* fw-bold not found */">Types of Literals</h3>
+  
+  <ol class="">
+    <li class="">
+      <span class="/* fw-bold not found */ bg-green-500 /* text-white not found */ px-2 py-1 rounded">String literals:</span>
+      <p class="mt-2">
+        A string is literal and can be created by 
+        <span class="text-red-500 /* fw-bold not found */">writing a text</span> 
+        (a group of Characters) surrounded by a single(‘), double(“), or triple quotes.
+      </p>
+    </li>
+  </ol>
+
+  <div class="flex flex-wrap -mx-2">
+    <div class="md:w-6/12 px-2">
+      <pre class="bg-gray-200 p-3 border rounded"># in single quote
+s = 'codewithankit'
+
+# in double quotes
+t = "codewithankit"
+
+# multi-line String
+m = """code
+with
+ankit"""
+
+print(s)
+print(t)
+print(m)
+      </pre>
+    </div>
+    <div class="md:w-6/12 px-2">
+      <strong class="">Output:</strong><br class="">
+      <code class="">codewithankit<br class="">codewithankit<br class="">code<br class="">with<br class="">ankit</code>
+    </div>
+  </div>
+</div>
+
+<div class="container mx-auto my-4">
+
+  <!-- Types of Literals -->
+  <h3 class="/* fw-bold not found */">Types of Literals</h3>
+
+  <!-- String Literal -->
+  <ol class="">
+    <li class="">
+      <span class="/* fw-bold not found */ bg-green-500 /* text-white not found */ px-2 py-1 rounded">String literals:</span>
+      <p class="">
+        A string is literal and can be created by 
+        <span class="text-red-500">writing a text</span> 
+        (a group of Characters) surrounded by a single(‘), double(“), or triple quotes.
+      </p>
+      <div class="flex flex-wrap -mx-2">
+        <div class="md:w-6/12 px-2">
+          <pre class="bg-gray-200 p-3 border rounded"># in single quote
+s = 'codewithankit'
+
+# in double quotes
+t = "codewithankit"
+
+# multi-line String
+m = """code
+with
+ankit"""
+
+print(s)
+print(t)
+print(m)
+          </pre>
+        </div>
+        <div class="md:w-6/12 px-2">
+          <strong class="">Output:</strong><br class="">
+          <code class="">codewithankit<br class="">codewithankit<br class="">code<br class="">with<br class="">ankit</code>
+        </div>
+      </div>
+    </li>
+
+    <!-- Numeric Literals -->
+    <li class="mt-4">
+      <span class="/* fw-bold not found */ bg-green-500 /* text-white not found */ px-2 py-1 rounded">Numeric literal:</span> 
+      <span class="">(Integer, Float, Complex)</span>
+
+      <p class="mt-2"><span class="text-red-500">• Integer</span>: Both <span class="text-red-500">positive and negative</span> numbers <span class="text-red-500">including 0</span>. There should not be any fractional part. We assigned integer literals (0b10100, 50, 0o320, 0x12b) into different variables. Here, ‘a‘ is a binary literal, ‘b’ is a decimal literal, ‘c‘ is an octal literal, and ‘d‘ is a hexadecimal literal.</p>
+
+      <div class="flex flex-wrap -mx-2">
+        <div class="md:w-6/12 px-2">
+          <pre class="bg-gray-200 p-3 border rounded"># integer literal
+
+# Binary Literals
+a = 0b10100
+
+# Decimal Literal
+b = 50
+
+# Octal Literal
+c = 0o320
+
+# Hexadecimal Literal
+d = 0x12b
+
+print(a, b, c, d)
+          </pre>
+        </div>
+        <div class="md:w-6/12 px-2">
+          <strong class="">Output:</strong><br class="">
+          <code class="">20 50 208 299</code>
+        </div>
+      </div>
+
+      <p class="mt-4"><span class="text-red-500">• Float</span>: These are <span class="text-red-500">real</span> numbers having both <span class="text-red-500">integer and fractional</span> parts.</p>
+
+      <div class="flex flex-wrap -mx-2">
+        <div class="md:w-6/12 px-2">
+          <pre class="bg-gray-200 p-3 border rounded"># Float Literal
+e = 24.8
+f = 45.0
+
+print(e, f)
+          </pre>
+        </div>
+        <div class="md:w-6/12 px-2">
+          <strong class="">Output:</strong><br class="">
+          <code class="">24.8 45.0</code>
+        </div>
+      </div>
+
+      <p class="mt-4"><span class="text-red-500">• Complex</span>: The numerals will be in the form of <b class="">a + bj</b>, where ‘a’ is the real part and ‘b’ is the complex part.</p>
+
+      <div class="flex flex-wrap -mx-2">
+        <div class="md:w-6/12 px-2">
+          <pre class="bg-gray-200 p-3 border rounded">z = 7 + 5j
+
+# real part is 0 here.
+k = 7j
+
+print(z, k)
+          </pre>
+        </div>
+        <div class="md:w-6/12 px-2">
+          <strong class="">Output:</strong><br class="">
+          <code class="">(7+5j) 7j</code>
+        </div>
+      </div>
+    </li>
+
+    <!-- Boolean Literal -->
+    <li class="mt-4">
+      <span class="/* fw-bold not found */ bg-green-500 /* text-white not found */ px-2 py-1 rounded">Boolean literals:</span>
+      <p class="">
+        • There are only <span class="text-red-500">two Boolean</span> literals in Python. They are true and false.<br class="">
+        • <span class="text-red-500">True</span> represents the value as <b class="">1</b>, and <span class="text-red-500">False</span> represents the value as <b class="">0</b>.
+      </p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Boolean-example.png" alt="Boolean True False" class="/* img-fluid not found */" style="max-width: 200px;">
+    </li>
+
+    <!-- Special Literal -->
+    <li class="mt-4">
+      <span class="/* fw-bold not found */ bg-green-500 /* text-white not found */ px-2 py-1 rounded">Special literal:</span>
+      <p class="">
+        Python contains one special literal (<b class="">None</b>). ‘None’ is used to define a null variable.<br class="">
+        If ‘None’ is compared with anything else other than a ‘None’, it will return false.
+      </p>
+      <div class="flex flex-wrap -mx-2">
+        <div class="md:w-6/12 px-2">
+          <pre class="bg-gray-200 p-3 border rounded">water_remain = None
+print(water_remain)
+          </pre>
+        </div>
+        <div class="md:w-6/12 px-2">
+          <strong class="">Output:</strong><br class="">
+          <code class="">None</code>
+        </div>
+      </div>
+    </li>
+  </ol>
+
+  <!-- Statement and Expression -->
+  <h3 class="/* fw-bold not found */ mt-5">Statement and Expression</h3>
+
+  <p class="">
+    <span class="text-red-500 /* fw-bold not found */">• Statement:</span><br class="">
+    A statement is an <span class="text-blue-500">instruction</span> that a Python interpreter can 
+    <span class="text-blue-500">execute</span>. So, in simple words, we can say anything written in Python is a statement.
+  </p>
+
+  <div class="flex flex-wrap -mx-2 mb-4">
+    <div class="md:w-6/12 px-2">
+      <pre class="/* bg-primary-subtle not found */ p-3 border rounded">a = 2
+print(a)
+      </pre>
+    </div>
+    <div class="md:w-6/12 px-2">
+      <strong class="">2</strong>
+    </div>
+  </div>
+
+  <p class="">
+    <span class="text-red-500 /* fw-bold not found */">• Expression:</span><br class="">
+    An expression is a combination of <span class="text-blue-500">operators</span> and 
+    <span class="text-blue-500">operands</span> that is <span class="text-blue-500">interpreted</span> 
+    to produce some other value.
+  </p>
+
+  <div class="flex flex-wrap -mx-2">
+    <div class="md:w-6/12 px-2">
+      <pre class="/* bg-primary-subtle not found */ p-3 border rounded">b = 2 + 4
+print(b)
+      </pre>
+    </div>
+    <div class="md:w-6/12 px-2">
+      <strong class="">6</strong>
+    </div>
+  </div>
+
+</div>
+<!-----Operator-->
+<!-- BEGIN main content between <body> and </body>, excluding header/footer -->
+
+<div class="container mx-auto my-4">
+
+  <!-- Section: Introduction to Operators -->
+  <section class="mb-5">
+    <h2 class="mb-3">Operators</h2>
+    <p class="">Operators in Python are <span class="text-red-500">special symbols</span> that carry arithmetic or logical operations. The value that the operator operates on is called the operand.</p>
+
+    <!-- Simple flowchart using Bootstrap grid and icons -->
+    <div class="flex items-center justify-center my-4 /* gap-3 not found */ flex-wrap">
+      <div class="text-center">
+        <h5 class="">Operand</h5>
+        <div class="/* fs-3 not found */ /* fw-bold not found */ border rounded-full p-3 bg-gray-200">3</div>
+      </div>
+
+      <div class="text-center">
+        <h5 class="">Operator</h5>
+        <div class="/* fs-3 not found */ /* fw-bold not found */ border rounded-full p-3 bg-gray-200">+</div>
+      </div>
+
+      <div class="text-center">
+        <h5 class="">Operand</h5>
+        <div class="/* fs-3 not found */ /* fw-bold not found */ border rounded-full p-3 bg-gray-200">2</div>
+      </div>
+
+      <div class="text-center">
+        <h5 class="">= Result</h5>
+        <div class="/* fs-3 not found */ /* fw-bold not found */ border rounded-full p-3 bg-gray-200">5</div>
+      </div>
+    </div>
+
+    <!-- Operator categories in row format -->
+    <div class="flex flex-wrap -mx-2 text-center">
+      <div class="flex border py-2">Assignment Operators</div>
+      <div class="flex border py-2">Arithmetic Operators</div>
+      <div class="flex border py-2">Comparison Operators</div>
+      <div class="flex border py-2">Logical Operators</div>
+      <div class="flex border py-2">Identity Operators</div>
+      <div class="flex border py-2">Membership Operators</div>
+      <div class="flex border py-2">Bitwise Operators</div>
+    </div>
+  </section>
+
+  <!-- Section 1: Arithmetic Operator -->
+  <section class="mb-5">
+    <h2 class="mb-3">1. ARITHMETIC OPERATOR</h2>
+    <p class="">Python Arithmetic operators are used to perform basic <span class="text-red-500">mathematical operations</span> like addition, subtraction, multiplication, and division.</p>
+
+    <div class="flex flex-wrap -mx-2">
+      <div class="md:w-6/12 px-2">
+        <pre class=""><code class="/* language-python not found */">
+a, b = 9, 4
+add = a + b
+sub = a - b
+mul = a * b
+mod = a % b
+p = a ** b
+print(add)
+print(sub)
+print(mul)
+print(mod)
+print(p)
+        </code></pre>
+      </div>
+
+      <div class="md:w-6/12 px-2">
+        <table class="/* table not found */ /* table-bordered not found */ /* table-striped not found */">
+          <thead class="/* table-primary not found */">
+            <tr class="">
+              <th class="">Operator</th>
+              <th class="">Operation</th>
+              <th class="">Example</th>
+              <th class="">Description</th>
+            </tr>
+          </thead>
+          <tbody class="">
+            <tr class=""><td class="">+</td><td class="">Addition</td><td class="">a+b</td><td class="">Adds a and b</td></tr>
+            <tr class=""><td class="">-</td><td class="">Subtraction</td><td class="">a-b</td><td class="">Subtracts b from a</td></tr>
+            <tr class=""><td class="">*</td><td class="">Multiplication</td><td class="">a*b</td><td class="">Multiplies a and b</td></tr>
+            <tr class=""><td class="">/</td><td class="">Division</td><td class="">a/b</td><td class="">Divides a and b</td></tr>
+            <tr class=""><td class="">%</td><td class="">Modulus</td><td class="">a%b</td><td class="">Gives remainder after dividing a from b</td></tr>
+            <tr class=""><td class="">**</td><td class="">Exponential</td><td class="">3**2=9</td><td class="">Ignores the decimal value if present</td></tr>
+            <tr class=""><td class="">//</td><td class="">Floor Division</td><td class="">15//2=7</td><td class="">Gives the result of 3 to the power of 2</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <strong class="">Output:</strong>
+      <pre class="">13
+5
+36
+1
+6561</pre>
+    </div>
+  </section>
+
+  <!-- Section 2: Assignment Operator -->
+  <section class="mb-5">
+    <h2 class="mb-3">2. ASSIGNMENT OPERATOR</h2>
+    <p class="">These are operators used for <span class="text-red-500">assigning values</span> to a variable. The values to be assigned must be on the right side, and the variable must be on the left-hand side of the operator.</p>
+
+    <div class="flex flex-wrap -mx-2">
+      <div class="md:w-6/12 px-2">
+        <pre class=""><code class="/* language-python not found */">
+a = 10
+b = a
+print(b)
+b += a
+print(b)
+b -= a
+print(b)
+b *= a
+print(b)
+b &lt;&lt;= a
+print(b)
+        </code></pre>
+      </div>
+
+      <div class="md:w-6/12 px-2">
+        <table class="/* table not found */ /* table-bordered not found */ /* table-striped not found */">
+          <thead class="/* table-primary not found */">
+            <tr class="">
+              <th class="">Operator</th>
+              <th class="">Description</th>
+              <th class="">Example</th>
+            </tr>
+          </thead>
+          <tbody class="">
+            <tr class=""><td class="">=</td><td class="">Assigns right side operands to left variable.</td><td class="">&gt;&gt;&gt;'number'=10</td></tr>
+            <tr class=""><td class="">+=</td><td class="">Added and assign back the result to left operand.</td><td class="">&gt;&gt;&gt;'number' += 20 # 'number'='number'+20</td></tr>
+            <tr class=""><td class="">-=</td><td class="">Subtracted and assign back the result to left operand.</td><td class="">&gt;&gt;&gt;'number' -= 5</td></tr>
+            <tr class=""><td class="">*=</td><td class="">Multiplied and assign back the result to left operand.</td><td class="">&gt;&gt;&gt;'number' *= 5</td></tr>
+            <tr class=""><td class="">/=</td><td class="">Divide and assign back the result to left operand.</td><td class="">&gt;&gt;&gt;'number' /= 2</td></tr>
+            <tr class=""><td class="">%=</td><td class="">Taken modulus (Remainder) using two operands and assign the result to left operand.</td><td class="">&gt;&gt;&gt;'number' %= 3</td></tr>
+            <tr class=""><td class="">**=</td><td class="">Performed exponential (power) calculation on operators and assign value to the left operand.</td><td class="">&gt;&gt;&gt;'number' **= 2</td></tr>
+            <tr class=""><td class="">//=</td><td class="">Performed floor division on operators and assign value to the left operand.</td><td class="">&gt;&gt;&gt;'number' //= 3</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <strong class="">Output:</strong>
+      <pre class="">10
+20
+10
+100
+102400</pre>
+    </div>
+  </section>
+
+  <!-- Section 3: Comparison Operator -->
+  <section class="mb-5">
+    <h2 class="mb-3">3. COMPARISON OPERATOR</h2>
+    <p class="">In Python, the comparison operators have <span class="text-red-500">lower precedence</span> than the arithmetic operators.</p>
+
+    <div class="flex flex-wrap -mx-2">
+      <div class="md:w-6/12 px-2">
+        <pre class=""><code class="/* language-python not found */">
+a = 13
+b = 33
+print(a &gt; b)
+print(a &lt; b)
+print(a == b)
+print(a != b)
+print(a &gt;= b)
+print(a &lt;= b)
+        </code></pre>
+      </div>
+
+      <div class="md:w-6/12 px-2">
+        <table class="/* table not found */ /* table-bordered not found */ /* table-striped not found */">
+          <thead class="/* table-primary not found */">
+            <tr class="">
+              <th class="">Operator</th>
+              <th class="">Description</th>
+              <th class="">Example</th>
+            </tr>
+          </thead>
+          <tbody class="">
+            <tr class=""><td class="">==</td><td class="">If the values of two operands are equal, then the condition becomes true.</td><td class="">(a==b) is not true.</td></tr>
+            <tr class=""><td class="">!=</td><td class="">If the values of two operands are not equal, then the condition becomes true.</td><td class="">(a!=b) is true.</td></tr>
+            <tr class=""><td class="">&lt;&gt;</td><td class="">If the values of two operands are not equal, then the condition becomes true.</td><td class="">(a&lt;&gt;b) is true. This is similar to != operator</td></tr>
+            <tr class=""><td class="">&gt;</td><td class="">If the values of left operand is greater than the value of right operand, the condition is true.</td><td class="">(a&gt;b) is not true.</td></tr>
+            <tr class=""><td class="">&lt;</td><td class="">If the values of left operand is less than the value of right operand, the condition is true.</td><td class="">(a&lt;b) is true.</td></tr>
+            <tr class=""><td class="">&gt;=</td><td class="">If the values of left operand is greater than or equal to the value of right operand, the condition is true.</td><td class="">(a&gt;=b) is not true.</td></tr>
+            <tr class=""><td class="">&lt;=</td><td class="">If the values of left operand is less than or equal to the value of right operand, the condition is true.</td><td class="">(a&lt;=b) is true.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <strong class="">Output:</strong>
+      <pre class="">False
+True
+False
+True
+False
+True</pre>
+    </div>
+  </section>
+
+  <!-- Section 4: Logical Operator -->
+  <section class="mb-5">
+    <h2 class="mb-3">4. LOGICAL OPERATOR</h2>
+    <p class="">Python logical operators are used to combine <span class="text-red-500">conditional statements</span>, allowing you to perform operations based on multiple conditions.</p>
+
+    <div class="flex flex-wrap -mx-2">
+      <div class="md:w-6/12 px-2">
+        <pre class=""><code class="/* language-python not found */">
+a = True
+b = False
+print(a and b)
+print(a or b)
+print(not a)
+        </code></pre>
+      </div>
+
+      <div class="md:w-6/12 px-2">
+        <table class="/* table not found */ /* table-bordered not found */ /* table-striped not found */ bg-teal-500 /* text-white not found */">
+          <thead class="">
+            <tr class="">
+              <th class="">Operator</th>
+              <th class="">Description</th>
+              <th class="">Syntax</th>
+            </tr>
+          </thead>
+          <tbody class="">
+            <tr class="">
+              <td class="">and</td>
+              <td class="">Logical AND: True if both the operands are true</td>
+              <td class="">x and y</td>
+            </tr>
+            <tr class="">
+              <td class="">or</td>
+              <td class="">Logical OR: True if either of the operands is true</td>
+              <td class="">x or y</td>
+            </tr>
+            <tr class="">
+              <td class="">not</td>
+              <td class="">Logical NOT: True if the operand is false</td>
+              <td class="">not x</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <strong class="">Output:</strong>
+      <pre class="">False
+True
+False</pre>
+    </div>
+  </section>
+
+</div>
+<div class="container mx-auto my-4">
+  <h4 class="text-green-500">5. BITWISE OPERATOR</h4>
+  <p class="">Bitwise operators are used to perform bit-level operations on integers.</p>
+  
+  <div class="flex flex-wrap -mx-2">
+    <div class="md:w-6/12 px-2">
+      <table class="/* table not found */ /* table-bordered not found */ /* table-striped not found */">
+        <thead class="/* table-primary not found */">
+          <tr class="">
+            <th class="">Operator</th>
+            <th class="">Description</th>
+            <th class="">Example</th>
+          </tr>
+        </thead>
+        <tbody class="">
+          <tr class="">
+            <td class="">&amp;</td>
+            <td class="">Bitwise AND: Sets each bit to 1 if both bits are 1</td>
+            <td class="">5 &amp; 3 = 1</td>
+          </tr>
+          <tr class="">
+            <td class="">|</td>
+            <td class="">Bitwise OR: Sets each bit to 1 if one of two bits is 1</td>
+            <td class="">5 | 3 = 7</td>
+          </tr>
+          <tr class="">
+            <td class="">^</td>
+            <td class="">Bitwise XOR: Sets each bit to 1 if only one of two bits is 1</td>
+            <td class="">5 ^ 3 = 6</td>
+          </tr>
+          <tr class="">
+            <td class="">~</td>
+            <td class="">Bitwise NOT: Inverts all the bits</td>
+            <td class="">~5 = -6</td>
+          </tr>
+          <tr class="">
+            <td class="">&lt;&lt;</td>
+            <td class="">Left Shift: Shifts bits to the left, adding zeros from right</td>
+            <td class="">5 &lt;&lt; 1 = 10</td>
+          </tr>
+          <tr class="">
+            <td class="">&gt;&gt;</td>
+            <td class="">Right Shift: Shifts bits to the right, discarding bits</td>
+            <td class="">5 &gt;&gt; 1 = 2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="md:w-6/12 px-2 flex items-center justify-center">
+      <div style="font-size: 14px; color: #444;" class="">
+        <p class=""><strong class="">Example Code:</strong></p>
+        <pre class="">a = 5  # 0b0101
+b = 3  # 0b0011
+
+print(a &amp; b)  # Output: 1 (0b0001)
+print(a | b)  # Output: 7 (0b0111)
+print(a ^ b)  # Output: 6 (0b0110)
+print(~a)     # Output: -6 (invert bits)
+print(a &lt;&lt; 1) # Output: 10 (shift left)
+print(a &gt;&gt; 1) # Output: 2 (shift right)
+        </pre>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Identity Operators Section -->
+<div class="container mx-auto my-4">
+  <h4 class="text-green-500">6. IDENTITY OPERATORS</h4>
+  <p class="">Identity operators are used to compare the memory locations of two objects.</p>
+  
+  <div class="flex flex-wrap -mx-2">
+    <div class="md:w-6/12 px-2">
+      <table class="/* table not found */ /* table-bordered not found */ /* table-striped not found */">
+        <thead class="/* table-primary not found */">
+          <tr class="">
+            <th class="">Operator</th>
+            <th class="">Description</th>
+            <th class="">Example</th>
+          </tr>
+        </thead>
+        <tbody class="">
+          <tr class="">
+            <td class="">is</td>
+            <td class="">Returns True if both variables point to the same object</td>
+            <td class="">a is b</td>
+          </tr>
+          <tr class="">
+            <td class="">is not</td>
+            <td class="">Returns True if both variables do not point to the same object</td>
+            <td class="">a is not b</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="md:w-6/12 px-2 flex items-center justify-center">
+      <div style="font-size: 14px; color: #444;" class="">
+        <p class=""><strong class="">Example Code:</strong></p>
+        <pre class="">a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+
+print(a is b)      # True
+print(a is c)      # False
+print(a is not c)  # True
+        </pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Membership Operators Section -->
+<div class="container mx-auto my-4">
+  <h4 class="text-green-500">7. MEMBERSHIP OPERATORS</h4>
+  <p class="">Membership operators test whether a value or variable is found in a sequence (string, list, tuple, set, etc.).</p>
+  
+  <div class="flex flex-wrap -mx-2">
+    <div class="md:w-6/12 px-2">
+      <table class="/* table not found */ /* table-bordered not found */ /* table-striped not found */">
+        <thead class="/* table-primary not found */">
+          <tr class="">
+            <th class="">Operator</th>
+            <th class="">Description</th>
+            <th class="">Example</th>
+          </tr>
+        </thead>
+        <tbody class="">
+          <tr class="">
+            <td class="">in</td>
+            <td class="">Returns True if a value is found in the sequence</td>
+            <td class="">5 in list</td>
+          </tr>
+          <tr class="">
+            <td class="">not in</td>
+            <td class="">Returns True if a value is not found in the sequence</td>
+            <td class="">5 not in list</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="md:w-6/12 px-2 flex items-center justify-center">
+      <div style="font-size: 14px; color: #444;" class="">
+        <p class=""><strong class="">Example Code:</strong></p>
+        <pre class="">list = [1, 2, 3, 4, 5]
+
+print(3 in list)       # True
+print(6 not in list)   # True
+        </pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    
+  <!---footer-->
+   <!-- foot -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="flex items-center space-x-2 mb-4">
+                        <img style="border-radius: 50%;" src="../assest/logo.jpg" alt="Logo" class="h-8">
+                        <span class="text-xl font-bold">CodeWithAnkit</span>
+                    </a>
+                    <p class="text-gray-400">Empowering students through technology and education.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="index.html#projects" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="all_notes.html" class="text-gray-400 hover:text-white transition">Study Notes</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on new resources and projects.</p>
+                    
+                </div>
+            </div>
+
+            <div  class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 CodeWithAnkit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+  
+
+
+
+   <script>
+ 
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+    
+   
+    const icon = this.querySelector('i');
+    if (icon.classList.contains('fa-bars')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+    } else {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
+  });
+  
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+        
+  
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          const menuToggle = document.getElementById('menu-toggle');
+          const icon = menuToggle.querySelector('i');
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      }
+    });
+  });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional portfolio of Ankit Singh, Web & AI Developer"
+    />
+    <title>FCPC Module1.2</title>
+    <link rel="stylesheet" href="../style.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "_xUgA3znBltIseVRM",
+        });
+      })();
+    </script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3B82F6",
+              secondary: "#10B981",
+              dark: "#1F2937",
+              light: "#F9FAFB",
+              accent: "#6366F1",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      .nav-link {
+        position: relative;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #3b82f6;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body class="bg-light text-dark">
+    <!-- header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="#" class="flex items-center space-x-2">
+            <img src="../assest/logo.jpg" alt="Logo" class="h-10" />
+            <span class="text-xl font-bold text-primary">CodeWithAnkit</span>
+          </a>
+
+          <nav class="hidden md:flex items-center space-x-8">
+            <a
+              href="../index.html#home"
+              class="nav-link text-gray-600 hover:text-primary transition"
+              >Home</a
+            >
+            <a
+              href="../index.html#about"
+              class="nav-link text-gray-600 hover:text-primary transition"
+              >About</a
+            >
+            <a
+              href="../index.html#projects"
+              class="nav-link text-gray-600 hover:text-primary transition"
+              >Projects</a
+            >
+            <a
+              href="../index.html#contact"
+              class="nav-link text-gray-600 hover:text-primary transition"
+              >Contact</a
+            >
+            <a
+              href="../index.html#notes"
+              class="nav-link text-gray-600 hover:text-primary transition"
+              >All notes</a
+            >
+          </nav>
+
+          <button class="md:hidden focus:outline-none" id="menu-toggle">
+            <i class="fas fa-bars text-2xl text-gray-600"></i>
+          </button>
+        </div>
+
+        <!-- mobile menu -->
+        <div class="md:hidden hidden mt-4 py-2" id="mobile-menu">
+          <a
+            href="index.html#home"
+            class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded"
+            >Home</a
+          >
+          <a
+            href="index.html#about"
+            class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded"
+            >About</a
+          >
+          <a
+            href="index.html#projects"
+            class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded"
+            >Projects</a
+          >
+          <a
+            href="index.html#contact"
+            class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded"
+            >Contact</a
+          >
+          <a
+            href="#notes"
+            class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded"
+            >All-notes</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <ul
+      class="flex px-3 mt-0 space-x-4 border-b border-gray-300 bg-white sticky top-[72px] z-40 shadow-sm"
+    >
+      <li>
+        <a
+          href="fcpc11.html"
+          class="inline-block px-4 py-2 text-blue-600 border-b-4 border-blue-600 font-semibold"
+        >
+          Module 1
+        </a>
+      </li>
+      <li>
+        <a
+          class="inline-block px-4 py-2 text-gray-600 hover:text-blue-600 hover:border-blue-600 border-b-4 border-transparent"
+        >
+          Module 2
+        </a>
+      </li>
+      <li>
+        <a
+          href="#module3"
+          class="inline-block px-4 py-2 text-gray-600 hover:text-blue-600 hover:border-blue-600 border-b-4 border-transparent"
+        >
+          Module 3
+        </a>
+      </li>
+      <li>
+        <a
+          href="#module4"
+          class="inline-block px-4 py-2 text-gray-600 hover:text-blue-600 hover:border-blue-600 border-b-4 border-transparent"
+        >
+          Module 4
+        </a>
+      </li>
+    </ul>
+    <!---notes section-->
+
+    <!-- Section: Classification of Computers -->
+    <section class="px-4 py-8 md:px-12 lg:px-24 bg-white text-gray-800">
+      <h1 class="text-2xl md:text-3xl font-bold mb-4">COMPUTER</h1>
+      <p class="mb-6">
+        A computer is an electronic device that can receive, store, process, and
+        output data. It is a machine that can perform a variety of tasks and
+        operations, ranging from simple calculations to complex simulations and
+        artificial intelligence.
+      </p>
+
+      <h2 class="text-xl md:text-2xl font-semibold mb-3">
+        Features Of Computer
+      </h2>
+      <ul class="list-disc pl-5 space-y-2 mb-6">
+        <li>
+          <strong>Processing Power:</strong> Computers can execute instructions
+          and perform calculations quickly.
+        </li>
+        <li>
+          <strong>Storage Capacity:</strong> They can store vast amounts of
+          data, from documents to multimedia files.
+        </li>
+        <li>
+          <strong>Memory (RAM):</strong> Temporary storage used for actively
+          running programs and processes.
+        </li>
+        <li>
+          <strong>Input Devices:</strong> Keyboards, mouse, and other
+          peripherals allow users to input data.
+        </li>
+        <li>
+          <strong>Output Data:</strong> Monitors, printers, and speakers display
+          or produce results.
+        </li>
+        <li>
+          <strong>Upgradability:</strong> Components like RAM, storage, and
+          graphics cards can be upgraded.
+        </li>
+        <li>
+          <strong>Portability:</strong> Laptops and tablets offer mobility
+          compared to desktop computers.
+        </li>
+        <li>
+          <strong>User Interface:</strong> Graphical user interfaces (GUIs) or
+          command-line interfaces for interaction.
+        </li>
+        <li>
+          <strong>Security Features:</strong> Passwords, firewalls, and
+          antivirus tools protect against unauthorized access.
+        </li>
+      </ul>
+
+      <h2 class="text-xl md:text-2xl font-semibold mb-3">
+        Basic Computer Operation
+      </h2>
+      <ol class="list-decimal pl-5 space-y-3">
+        <li>
+          <strong>Booting up:</strong> This is the process of starting up the
+          computer by loading the operating system (OS) into memory. The
+          computer runs a series of checks to ensure all hardware is working
+          correctly before loading the OS.
+        </li>
+        <li>
+          <strong>Logging in:</strong> After booting up, you will need to log in
+          to access your user account. This requires entering your username and
+          password.
+        </li>
+        <li>
+          <strong>Running programs:</strong> Once you have logged in, you can
+          run programs on your computer. Programs can include web browsers,
+          office applications, media players, and more.
+        </li>
+        <li>
+          <strong>Accessing data:</strong> You can access data stored on your
+          computer or other connected devices, such as external hard drives or
+          cloud storage services. This can include files, documents, photos, and
+          other media.
+        </li>
+        <li>
+          <strong>Connecting to the internet:</strong> You can connect to the
+          internet to access websites, download files, and communicate with
+          others online. This typically involves using a web browser to access
+          websites and other online services.
+        </li>
+        <li>
+          <strong>Communicating with other devices:</strong> You can communicate
+          with other devices connected to your computer, such as printers,
+          scanners, or other peripherals. This allows you to print documents,
+          scan images, and perform other tasks.
+        </li>
+        <li>
+          <strong>Saving and backing up data:</strong> It’s important to save
+          and back up your data regularly to avoid data loss. You can save data
+          to your local hard drive, external hard drives, or cloud storage
+          services.
+        </li>
+      </ol>
+
+      <ol class="list-decimal pl-5 space-y-3 mt-6">
+        <li>
+          <strong>Shutting down:</strong> When you’re finished using your
+          computer, you should shut it down properly. This involves closing all
+          programs and files, saving any changes, and shutting down the OS.
+        </li>
+        <li>
+          <strong>Troubleshooting:</strong> If you experience issues with your
+          computer, you may need to troubleshoot the problem. This can involve
+          diagnosing hardware or software issues, performing updates, or
+          reinstalling drivers.
+        </li>
+        <li>
+          <strong>Security:</strong> It’s important to keep your computer secure
+          by using antivirus software, firewalls, and other security measures.
+          This helps protect your data and prevent unauthorized access to your
+          system.
+        </li>
+      </ol>
+
+      <h2 class="text-xl md:text-2xl font-semibold mt-10 mb-4">
+        Classification of Computers
+      </h2>
+
+      <h3 class="text-lg md:text-xl font-semibold mt-6 mb-2">
+        1. Micro Computer:
+      </h3>
+      <p class="mb-4">
+        Micro Computers are mainly single-user computers and have comparatively
+        lesser storage and speed than other computers. The first microcomputer
+        was built with 8-bit microprocessor chips as these computers use
+        microprocessors as CPU. Laptops, smartphones, desktop computers, etc.
+        are all examples of microcomputers. These computers are made for
+        everyday tasks like browsing the web and using programs like Microsoft
+        Office MS Word etc.
+      </p>
+
+      <h3 class="text-lg md:text-xl font-semibold mt-6 mb-2">
+        2. Mini Computer:
+      </h3>
+      <p class="mb-4">
+        Midrange computers or Mini-computers are multi-user computers designed
+        in a way so as to entertain multiple users simultaneously. Small
+        businesses and firms use these computers for their specific purposes.
+        For example: a company or organization may use mini computers to look
+        after the employee directory which may handle the payment history of its
+        employees and any schools may use them to keep records of the students
+        or for admission purposes.
+      </p>
+
+      <h3 class="text-lg md:text-xl font-semibold mt-6 mb-2">
+        3. Mainframe Computer:
+      </h3>
+      <p class="mb-4">
+        Mainframe Computers are also not designed for single users, rather it is
+        a multi-user computer that can handle thousands of users all at once.
+        Large industries and government organizations utilize these computers to
+        facilitate their business operations by storing substantial volumes of
+        data. Banks and insurance companies use these computers to store the
+        data of their customers, their policies, etc.
+      </p>
+
+      <h3 class="text-lg md:text-xl font-semibold mt-6 mb-2">
+        4. Super Computer:
+      </h3>
+      <p>
+        Super Computer is the fastest type of computer amongst all and is also
+        the most expensive. They can store a large number of data and can
+        perform the most complex tasks within seconds. They can also execute
+        millions of instructions per second. These computers are designed
+        specifically to handle...
+      </p>
+
+      <p class="mt-4">
+        Supercomputers are also used by NASA for their Satellite launching and
+        specific tasks such as weather forecasting, space research, and more.
+      </p>
+
+      <h3 class="text-lg md:text-xl font-semibold mt-6 mb-2">
+        5. Work Stations:
+      </h3>
+      <p class="mb-4">
+        Workstations are single-user computers and have more powerful
+        microprocessors than a microcomputer. When it comes to speed and storage
+        capacity, it comes between a personal computer and a mini-computer. The
+        most common uses of a workstation are desktop publishing, engineering
+        designs.
+      </p>
+
+      <h3 class="text-lg md:text-xl font-semibold mt-6 mb-2">
+        6. Embedded Systems:
+      </h3>
+      <p class="mb-6">
+        These are specialized computers that are built into other devices such
+        as cars, appliances, and medical equipment to control their operations
+        and perform specific functions.
+      </p>
+
+      <h2 class="text-xl md:text-2xl font-semibold mt-10 mb-4">
+        5 Generations of Computers
+      </h2>
+      <ul class="list-disc pl-5 space-y-2 mb-8">
+        <li><strong>First Generation:</strong> Vacuum Tubes (1940–1956)</li>
+        <li><strong>Second Generation:</strong> Transistors (1956–1963)</li>
+        <li>
+          <strong>Third Generation:</strong> Integrated Circuits (1964–1971)
+        </li>
+        <li><strong>Fourth Generation:</strong> Microprocessors (1971–2010)</li>
+        <li><strong>Fifth Generation:</strong> Artificial Intelligence</li>
+      </ul>
+
+      <!-- Image: Generations of Computer -->
+      <div class="w-full max-w-3xl mx-auto mt-6">
+        <img
+          src="https://informationq.com/wp-content/uploads/2015/08/Computer-Generations-classified-into-five-types.jpg"
+          alt="Generations of Computer"
+          class="w-full rounded-lg shadow"
+        />
+        <!-- 🖼️ Replace # with your image path -->
+      </div>
+      <!-- 1st Generation -->
+      <h3 class="text-lg md:text-xl font-semibold mt-8 mb-2">
+        First Generation Computers
+      </h3>
+      <p class="mb-4">
+        The
+        <span class="text-blue-700 font-semibold"
+          >1st Generation Computers</span
+        >
+        were introduced using the technology of
+        <span class="text-blue-700 font-semibold">vacuum tubes</span> which can
+        control the flow of electronics in a vacuum. These tubes are usually
+        used in switches, amplifiers, radios, televisions, etc. These computers
+        were very heavy and large and were not ideal for programming. They used
+        <span class="text-blue-700 font-semibold">basic programming</span> and
+        didn’t have an
+        <span class="text-blue-700 font-semibold">operating system</span>, which
+        made it tough for users. These computers required a
+        <span class="text-blue-700 font-semibold">big room</span> and consumed a
+        lot of <span class="text-blue-700 font-semibold">electricity</span>.
+      </p>
+
+      <h4 class="font-semibold mb-2">
+        Characteristics of 1st Generation Computers
+      </h4>
+      <ul class="list-disc pl-5 mb-6 space-y-2">
+        <li>
+          These computers were designed using
+          <span class="text-blue-700 font-semibold">vacuum tubes</span>.
+        </li>
+        <li>
+          Programming was done using
+          <span class="text-blue-700 font-semibold">machine languages</span>.
+        </li>
+        <li>
+          Main memory:
+          <span class="text-blue-700 font-semibold">magnetic tapes</span> and
+          <span class="text-blue-700 font-semibold">magnetic drums</span>.
+        </li>
+        <li>
+          <span class="text-blue-700 font-semibold">Paper tapes</span> and
+          <span class="text-blue-700 font-semibold">punched cards</span> were
+          used for input/output.
+        </li>
+        <li>
+          They were <span class="text-blue-700 font-semibold">huge</span> but
+          worked <span class="text-blue-700 font-semibold">very slowly</span>.
+        </li>
+        <li>
+          Examples:
+          <span class="text-blue-700 font-semibold"
+            >IBM 650, IBM 701, ENIAC, UNIVAC I</span
+          >, etc.
+        </li>
+      </ul>
+
+      <!-- 2nd Generation -->
+      <h3 class="text-lg md:text-xl font-semibold mt-8 mb-2">
+        2. Second Generation Computers
+      </h3>
+      <p class="mb-4">
+        The
+        <span class="text-blue-700 font-semibold"
+          >2nd Generation of Computers</span
+        >
+        used
+        <span class="text-blue-700 font-semibold">transistors</span> instead of
+        bulky vacuum tubes. Transistors, made from
+        <span class="text-blue-700 font-semibold">semiconductor materials</span
+        >, control current flow. This made the computers
+        <span class="text-blue-700 font-semibold"
+          >smaller, faster, and cooler</span
+        >. The computers introduced
+        <span class="text-blue-700 font-semibold"
+          >CPU, memory, and input/output</span
+        >
+        units. Programming languages:
+        <span class="text-blue-700 font-semibold"
+          >FORTRAN (1956), ALGOL (1958), COBOL (1959)</span
+        >.
+      </p>
+
+      <h4 class="font-semibold mb-2">
+        Characteristics of Second-Generation Computers
+      </h4>
+      <ul class="list-disc pl-5 mb-6 space-y-2">
+        <li>
+          Used the technology of
+          <span class="text-blue-700 font-semibold">transistors</span>.
+        </li>
+        <li>
+          <span class="text-blue-700 font-semibold">Machine language</span> and
+          <span class="text-blue-700 font-semibold">assembly languages</span>
+          used.
+        </li>
+        <li>
+          Memory storage:
+          <span class="text-blue-700 font-semibold">magnetic core</span> and
+          <span class="text-blue-700 font-semibold">magnetic tape/disk</span>.
+        </li>
+        <li>
+          Smaller in size, consumed
+          <span class="text-blue-700 font-semibold">less power</span>.
+        </li>
+        <li>
+          Input/output:
+          <span class="text-blue-700 font-semibold">magnetic tape</span> and
+          <span class="text-blue-700 font-semibold">punched cards</span>.
+        </li>
+        <li>
+          Examples:
+          <span class="text-blue-700 font-semibold"
+            >PDP-8, IBM 7090/7094, UNIVAC 1107, CDC 3600</span
+          >
+        </li>
+      </ul>
+
+      <!-- 3rd Generation -->
+      <h3 class="text-lg md:text-xl font-semibold mt-8 mb-2">
+        3. Third Generation Computers
+      </h3>
+      <p class="mb-4">
+        The <span class="text-blue-700 font-semibold">3rd Generation</span> used
+        <span class="text-blue-700 font-semibold"
+          >integrated circuits (ICs)</span
+        >, made from silicon chips. These included transistors, registers, and
+        capacitors. Programming languages like
+        <span class="text-blue-700 font-semibold">BASIC</span> were introduced.
+        This generation brought
+        <span class="text-blue-700 font-semibold"
+          >speed, reliability, and compact size</span
+        >.
+      </p>
+
+      <h4 class="font-semibold mb-2">
+        Characteristics of Third-Generation Computers
+      </h4>
+      <ul class="list-disc pl-5 mb-6 space-y-2">
+        <li>
+          Used
+          <span class="text-blue-700 font-semibold"
+            >Integrated Circuits (ICs)</span
+          >.
+        </li>
+        <li>
+          Used
+          <span class="text-blue-700 font-semibold"
+            >high-level programming languages</span
+          >.
+        </li>
+        <li>
+          Memory:
+          <span class="text-blue-700 font-semibold">magnetic core</span> and
+          <span class="text-blue-700 font-semibold">magnetic tape/disk</span>.
+        </li>
+        <li>
+          Input/output:
+          <span class="text-blue-700 font-semibold">magnetic tape</span>,
+          <span class="text-blue-700 font-semibold">monitor</span>,
+          <span class="text-blue-700 font-semibold">keyboard</span>,
+          <span class="text-blue-700 font-semibold">printer</span>, etc.
+        </li>
+        <li>
+          Examples:
+          <span class="text-blue-700 font-semibold"
+            >IBM 360, IBM 370, PDP-11, NCR 395, B6500, UNIVAC 1108</span
+          >
+        </li>
+      </ul>
+
+      <!-- 4th Generation -->
+      <h3 class="text-lg md:text-xl font-semibold mt-8 mb-2">
+        4. Fourth Generation Computers
+      </h3>
+      <p class="mb-4">
+        From <span class="text-blue-700 font-semibold">1972 to 2010</span>,
+        computers used
+        <span class="text-blue-700 font-semibold">microprocessors</span> — a
+        chip containing all circuits for
+        <span class="text-blue-700 font-semibold"
+          >arithmetic, logic, and control</span
+        >. Computers became
+        <span class="text-blue-700 font-semibold">small and portable</span>.
+        Concepts like
+        <span class="text-blue-700 font-semibold"
+          >multiprocessing, time-sharing, virtual memory</span
+        >
+        were introduced. Private computers and networks became a reality.
+      </p>
+
+      <h4 class="font-semibold mb-2">
+        Characteristics of Fourth-Generation Computers
+      </h4>
+      <ul class="list-disc pl-5 mb-6 space-y-2">
+        <li>
+          Developed using
+          <span class="text-blue-700 font-semibold">VLSI</span>
+          (Very-large-scale integration).
+        </li>
+        <li>
+          Used
+          <span class="text-blue-700 font-semibold">semiconductor memory</span>:
+          RAM, ROM, etc.
+        </li>
+        <li>
+          Input/output:
+          <span class="text-blue-700 font-semibold">keyboard</span>,
+          <span class="text-blue-700 font-semibold">monitor</span>,
+          <span class="text-blue-700 font-semibold">scanner</span>,
+          <span class="text-blue-700 font-semibold">optical devices</span>.
+        </li>
+        <li>
+          Examples:
+          <span class="text-blue-700 font-semibold"
+            >IBM PC, STAR 1000, APPLE II, Apple Macintosh, Alter 8800</span
+          >
+        </li>
+      </ul>
+
+      <!-- 5th Generation -->
+      <!-- 5th Generation of Computers Section -->
+
+      <h3 class="text-2xl font-bold text-blue-700 mb-4">
+        🖥️ 5th Generation of Computers
+      </h3>
+      <p class="text-gray-700 mb-3">
+        The
+        <span class="font-semibold text-blue-600"
+          >Fifth Generation of Computers</span
+        >
+        has been built using the technology called
+        <span class="text-green-600 font-semibold"
+          >Artificial Intelligence (AI)</span
+        >. This technology encourages computers to behave like humans.
+      </p>
+      <p class="text-gray-700 mb-3">
+        Some applications of AI can be seen in features like
+        <span class="font-medium text-purple-600">voice recognition</span>,
+        <span class="font-medium text-purple-600">entertainment</span>, etc.
+      </p>
+      <p class="text-gray-700 mb-3">
+        The <span class="font-semibold text-blue-600">speed</span> of the Fifth
+        Generation of Computers is the
+        <span class="text-red-600 font-bold">highest</span> while the
+        <span class="font-semibold text-blue-600">size</span> is the
+        <span class="text-red-600 font-bold">smallest</span>.
+      </p>
+      <p class="text-gray-700">
+        A big improvement has been noticed over the years in various generations
+        of computers in aspects of
+        <span class="text-green-700 font-semibold">speed</span>,
+        <span class="text-green-700 font-semibold">accuracy</span>,
+        <span class="text-green-700 font-semibold">dimensions</span>, etc.
+      </p>
+
+      <!---some went worng-->
+
+      <!-- Title -->
+      <h2 class="text-2xl font-bold mb-4 text-blue-700">
+        Characteristics of Fifth Generation of Computers
+      </h2>
+
+      <ul class="list-disc ml-6 space-y-2">
+        <li>
+          Built on artificial intelligence, using ULSI and parallel processing.
+        </li>
+        <li>Understand natural language (human language).</li>
+        <li>Portable and smaller in size.</li>
+        <li>
+          Devices used: Trackpad, touchscreen, pen, speech input, light scanner,
+          printer, keyboard, monitor, mouse, etc.
+        </li>
+        <li>Examples: Laptop, Desktop, Tablet etc.</li>
+      </ul>
+
+      <!-- Computer Hardware -->
+      <h2 class="text-2xl font-bold mt-8 mb-4 text-blue-700">
+        Computer Hardware
+      </h2>
+      <p>
+        Computer hardware includes the physical parts of a computer, such as a
+        case, CPU, RAM, monitor, and mouse which processes input and gives
+        desired output.
+      </p>
+
+      <!-- Hardware Parts -->
+      <h3 class="text-xl font-semibold mt-6 mb-2 text-blue-600">
+        Computer Hardware Parts
+      </h3>
+      <p>These hardware components are divided into:</p>
+      <ol class="list-decimal ml-6 mt-2 space-y-1">
+        <li>Input Devices</li>
+        <li>Output Devices</li>
+      </ol>
+
+      <!-- Input Devices -->
+      <h4 class="text-lg font-semibold mt-6 text-blue-600">Input Devices</h4>
+      <p>
+        These allow user interaction with the computer, entering data or
+        information.
+      </p>
+
+      <div class="mt-2">
+        <span class="font-semibold">Examples:</span>
+        <ul class="list-disc ml-6 space-y-1 mt-1">
+          <li>Keyboard</li>
+          <li>Mouse</li>
+          <li>Scanner</li>
+          <li>Track Ball</li>
+          <li>Microphone</li>
+        </ul>
+      </div>
+
+      <!-- Output Devices -->
+      <h4 class="text-lg font-semibold mt-6 text-blue-600">Output Devices</h4>
+      <p>
+        These display the output of any task given to the computer in
+        human-readable form.
+      </p>
+
+      <span class="font-semibold">Examples:</span>
+      <ul class="list-disc ml-6 space-y-1 mt-1">
+        <li>Monitor</li>
+        <li>Printer</li>
+        <li>Plotter – for large images, architectural designs</li>
+        <li>Speakers</li>
+      </ul>
+
+      <!-- CPU Heading Placeholder -->
+
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">
+        CPU (Central Processing Unit)
+      </h2>
+      <p class="mb-4">
+        CPU (Central Processing Unit), it is the brain of the computer. It is
+        the part that does most of the work in a computer system. Just like how
+        our brain controls our body and processes information, the CPU carries
+        out instructions from programs and performs calculations. It’s made up
+        of smaller components that work together to execute tasks, making it the
+        heart of any computing device.
+      </p>
+      <p class="mb-4">
+        All types of data processing operations from simple arithmetic to
+        complex tasks and all the important functions of a computer are
+        performed by the CPU. It helps input and output devices to communicate
+        with each other and perform their respective operations. It also stores
+        data which is input, intermediate results in between processing, and
+        instructions. The CPU’s job is to make sure everything runs smoothly and
+        efficiently. In this article, we are going to discuss CPU in detail.
+      </p>
+      <h2 class="text-xl font-semibold mt-8 mb-3">What is a CPU?</h2>
+      <p class="mb-4">
+        A
+        <span class="font-bold text-indigo-700"
+          >Central Processing Unit (CPU)</span
+        >
+        is the most important component of a
+        <a href="#" class="text-blue-600 underline font-semibold"
+          >computer system</a
+        >. A CPU is hardware that performs
+        <span class="font-semibold text-indigo-700"
+          >data input/output, processing, and storage functions</span
+        >
+        for a computer system. A CPU can be installed into a
+        <span class="font-semibold">CPU socket</span>. These sockets are
+        generally located on the
+        <a href="#" class="text-blue-600 underline font-semibold">motherboard</a
+        >. CPU can perform various
+        <span class="font-semibold text-indigo-700"
+          >data processing operations</span
+        >. It can
+        <span class="font-semibold text-indigo-700"
+          >store data, instructions, programs, and intermediate results</span
+        >.
+        <span class="bg-yellow-100 font-semibold"
+          >CPU works like the brain of the computer.</span
+        >
+      </p>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">Different Parts of CPU</h2>
+      <p class="mb-4">
+        Now, the CPU consists of
+        <span class="font-semibold text-indigo-700">3 major units</span>, which
+        are:
+      </p>
+      <ul class="list-disc pl-6 mb-4 text-gray-800">
+        <li class="font-semibold">Memory or Storage Unit</li>
+        <li class="font-semibold">Control Unit</li>
+        <li class="font-semibold">ALU (Arithmetic Logical Unit)</li>
+      </ul>
+
+      <!-- Image here -->
+      <img
+        src="https://www.tutorialspoint.com/computer_fundamentals/images/computer_architecture.jpg"
+        alt="CPU diagram"
+        class="w-full md:w-2/3 mx-auto my-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+      />
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">Memory or Storage Unit</h2>
+      <p class="mb-4">
+        As the name suggests, this unit can
+        <span class="font-semibold text-indigo-700"
+          >store instructions, data, and intermediate results</span
+        >. The memory unit is responsible for
+        <span class="font-semibold">transferring information</span> to other
+        units of the computer when needed. It is also known as
+        <span class="italic text-blue-700 font-medium"
+          >internal storage unit</span
+        >, <span class="italic">main memory</span>, or
+        <span class="italic">primary storage</span> or
+        <span class="font-semibold text-indigo-700"
+          >Random Access Memory (RAM)</span
+        >.
+      </p>
+      <p class="mb-4">
+        Its size affects <span class="font-semibold">speed</span>,
+        <span class="font-semibold">power</span>, and
+        <span class="font-semibold">performance</span>. There are two types of
+        memory in the computer:
+        <a href="#" class="text-blue-600 underline font-semibold"
+          >primary memory</a
+        >
+        and
+        <a href="#" class="text-blue-600 underline font-semibold"
+          >secondary memory</a
+        >.
+        <span class="block mt-2 font-semibold text-indigo-700"
+          >Some main functions of memory units are listed below:</span
+        >
+      </p>
+
+      <ul class="list-disc pl-6 text-gray-800">
+        <li>
+          <span class="font-medium">Data and instructions</span> are stored in
+          memory units which are required for processing.
+        </li>
+        <li>
+          It also stores the
+          <span class="font-medium text-indigo-700">intermediate results</span>
+          of any calculation or task when they are in process.
+        </li>
+        <li>
+          The <span class="font-medium text-indigo-700">final results</span> of
+          processing are stored in the memory units before these results are
+          released to an output device for giving the output to the user.
+        </li>
+        <li>
+          All sorts of <span class="font-medium">inputs and outputs</span> are
+          transmitted through the memory unit.
+        </li>
+      </ul>
+
+      <!-- Control Unit -->
+      <div>
+        <h2 class="text-2xl font-bold text-blue-700 mb-4">🧠 Control Unit</h2>
+        <p class="mb-2">
+          As the name suggests, a
+          <span class="font-semibold text-gray-800">control unit</span> controls
+          the operations of all parts of the computer but it does not carry out
+          any data processing operations. Executing already stored instructions,
+          it instructs the computer by using the electrical signals to instruct
+          the computer system. It takes instructions from the memory unit and
+          then decodes the instructions after that it executes those
+          instructions. So, it controls the functioning of the computer. Its
+          main task is to maintain the flow of information across the processor.
+        </p>
+        <p class="mb-2 font-semibold text-gray-800">
+          Some main functions of the control unit are listed below:
+        </p>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>
+            Controlling of data and transfer of data and instructions is done by
+            the control unit among other parts of the computer.
+          </li>
+          <li>
+            The control unit is responsible for managing all the units of the
+            computer.
+          </li>
+          <li>
+            The main task of the
+            <span class="text-blue-600 underline">control unit</span> is to
+            obtain the instructions or data that is input from the memory unit,
+            interpret them, and then direct the operation of the computer
+            according to that.
+          </li>
+          <li>
+            The control unit is responsible for communication with Input and
+            output devices for the transfer of data or results from memory.
+          </li>
+          <li class="text-red-500 font-medium">
+            The control unit is not responsible for the processing of data or
+            storing data.
+          </li>
+        </ul>
+      </div>
+
+      <!-- ALU -->
+      <div>
+        <h2 class="text-2xl font-bold text-green-700 mb-4">
+          🔢 ALU (Arithmetic Logic Unit)
+        </h2>
+        <p class="mb-2 text-gray-800">
+          <span class="font-semibold">ALU (Arithmetic Logic Unit)</span> is
+          responsible for performing arithmetic and logical functions or
+          operations. It consists of two subsections, which are:
+        </p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+          <li>
+            <span class="font-bold text-gray-800">Arithmetic Section:</span>
+            By arithmetic operations, we mean operations like addition,
+            subtraction, multiplication, and division, and all these operations
+            and functions are performed by
+            <span class="text-blue-600 underline">ALU</span>. Also, all the
+            complex operations are done by making repetitive use of the
+            mentioned operations by ALU.
+          </li>
+          <li>
+            <span class="font-bold text-gray-800">Logic Section:</span>
+            By Logical operations, we mean operations or functions like
+            <span class="text-purple-700 font-medium"
+              >selecting, comparing, matching, and merging the data</span
+            >, and all these are performed by ALU.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Memory -->
+      <div>
+        <h2 class="text-2xl font-bold text-pink-700 mb-4">💾 Memory</h2>
+        <p class="text-gray-800">
+          <span class="font-semibold">Memory</span> is a storage part in a
+          computer system. It is used to store the data, information, and
+          programs at the time of processing on the computer. It stores data
+          either temporarily or permanently.
+          <span class="text-green-700 font-semibold"
+            >The main use of memory is saving and retrieving data.</span
+          >
+        </p>
+      </div>
+      <img
+        src="https://i.ytimg.com/vi/Sdj_IcMH3W8/maxresdefault.jpg"
+        alt="CPU diagram"
+        class="w-full md:w-2/3 mx-auto my-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+      />
+      <h2 class="text-2xl font-bold mb-4 text-blue-700">🧠 Types of Memory</h2>
+      <p class="mb-4">
+        Generally, a computer system consists of two types of memory:
+      </p>
+
+      <h3 class="text-xl font-semibold text-gray-800 mt-4 mb-2">
+        1. <span class="text-blue-600">Primary Memory</span> or
+        <span class="text-blue-600">Volatile Memory</span>
+      </h3>
+      <p class="mb-2">
+        It is called the
+        <span class="font-semibold text-purple-700">internal memory</span> of
+        the computer, also known as
+        <span class="text-purple-700 font-semibold">main memory</span> or
+        <span class="text-purple-700 font-semibold">temporary memory</span>. It
+        holds data and instructions currently being used by the CPU.
+      </p>
+      <p class="mb-2">
+        <span class="text-red-500 font-semibold">Volatile memory</span> loses
+        all stored data when power is turned off.
+      </p>
+
+      <p class="font-semibold mt-2 mb-1">
+        Primary memory is generally of two types:
+      </p>
+      <ul class="list-disc list-inside pl-4 text-gray-700">
+        <li>
+          <span class="font-semibold text-green-600">RAM</span> (Random Access
+          Memory)
+        </li>
+        <li>
+          <span class="font-semibold text-green-600">ROM</span> (Read Only
+          Memory)
+        </li>
+      </ul>
+
+      <h4 class="text-lg font-semibold mt-4 text-gray-800">
+        🔹 RAM (Random Access Memory)
+      </h4>
+      <p class="mb-2">
+        It is a
+        <span class="text-purple-700 font-semibold">read/write</span> memory and
+        referred as the
+        <span class="text-purple-700 font-semibold">main memory</span> of the
+        system. It is <span class="text-red-500 font-semibold">temporary</span>,
+        and the data is lost when the power is switched off.
+      </p>
+
+      <p class="font-semibold mt-2 mb-1">Types of RAM:</p>
+      <ul class="list-disc list-inside pl-4 text-gray-700">
+        <li>
+          <span class="text-green-600 font-semibold">Static RAM (SRAM):</span>
+          Stores information as long as power is ON. It is faster, more
+          expensive, and consumes more power.
+        </li>
+        <li>
+          <span class="text-green-600 font-semibold">Dynamic RAM (DRAM):</span>
+          Stores information for a very short time (few milliseconds), even when
+          power is ON. It is cheaper, slower, and consumes less power.
+        </li>
+      </ul>
+
+      <h4 class="text-lg font-semibold mt-4 text-gray-800">
+        🔹 ROM (Read Only Memory)
+      </h4>
+      <p class="mb-2">
+        ROM is a <span class="text-blue-700 font-semibold">permanent</span> type
+        of memory. It
+        <span class="text-green-600 font-semibold">does not lose data</span>
+        when power is turned off. Its content is written by the manufacturer and
+        <span class="text-purple-700 font-semibold">cannot be overwritten</span
+        >.
+      </p>
+      <p class="mb-2">
+        It is also called
+        <span class="text-red-500 font-semibold">Non-Volatile Memory</span>.
+      </p>
+
+      <p class="font-semibold mt-2 mb-1">Types of ROM:</p>
+      <ul class="list-disc list-inside pl-4 text-gray-700">
+        <li>
+          <span class="text-green-600 font-semibold"
+            >PROM (Programmable Read Only Memory):</span
+          >
+          Can be written once and read many times. Once programmed, data cannot
+          be changed.
+        </li>
+        <li>
+          <span class="text-green-600 font-semibold"
+            >EPROM (Erasable Programmable Read Only Memory):</span
+          >
+          − EPROM chip can be programmed by erasing the information stored
+          earlier in it. Information stored in EPROM exposing the chip for
+          ultraviolet light.
+        </li>
+        <li>
+          <span class="text-green-600 font-semibold"
+            >EEPROM (Electrically Erasable Programmable Read Only Memory):</span
+          >
+          EEPROM (Electrically Erasable Programmable Read Only Memory) − It is
+          programmed and erased by special electrical waves in milliseconds. A
+          single byte of data or the entire contents of the device can be
+          erased.
+        </li>
+      </ul>
+    </section>
+
+    <!-- MODULE TABS (Now positioned below header correctly) -->
+
+    <!--notes section-->
+    <h1 class="text-4xl font-bold text-center text-primary mb-4">
+      <b>Working....</b>
+    </h1>
+
+    <!---footer-->
+    <!-- foot -->
+    <footer class="bg-dark text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <a href="#" class="flex items-center space-x-2 mb-4">
+              <img
+                style="border-radius: 50%"
+                src="../assest/logo.jpg"
+                alt="Logo"
+                class="h-8"
+              />
+              <span class="text-xl font-bold">CodeWithAnkit</span>
+            </a>
+            <p class="text-gray-400">
+              Empowering students through technology and education.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="index.html#home"
+                  class="text-gray-400 hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#about"
+                  class="text-gray-400 hover:text-white transition"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#projects"
+                  class="text-gray-400 hover:text-white transition"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#contact"
+                  class="text-gray-400 hover:text-white transition"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Resources</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="all_notes.html"
+                  class="text-gray-400 hover:text-white transition"
+                  >Study Notes</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+            <p class="text-gray-400 mb-4">
+              Subscribe to get updates on new resources and projects.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 mb-4 md:mb-0">
+            © 2025 CodeWithAnkit. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+
+          const icon = this.querySelector("i");
+          if (icon.classList.contains("fa-bars")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-times");
+          } else {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+          }
+        });
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (!mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+              const menuToggle = document.getElementById("menu-toggle");
+              const icon = menuToggle.querySelector("i");
+              icon.classList.remove("fa-times");
+              icon.classList.add("fa-bars");
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

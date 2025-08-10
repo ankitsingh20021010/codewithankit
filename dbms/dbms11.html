@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of Ankit Singh, Web & AI Developer">
+    <title>DBMS Module-1.1</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "_xUgA3znBltIseVRM",
+      });
+   })();
+</script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1F2937',
+                        light: '#F9FAFB',
+                        accent: '#6366F1',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3B82F6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-light text-dark">
+    <!-- header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="flex items-center space-x-2">
+                    <img src="../assest/logo.jpg" alt="Logo" class="h-10">
+                    <span class="text-xl font-bold text-primary">CodeWithAnkit</span>
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#home" class="nav-link text-gray-600 hover:text-primary transition">Home</a>
+                    <a href="../index.html#about" class="nav-link text-gray-600 hover:text-primary transition">About</a>
+                    <a href="../index.html#projects" class="nav-link text-gray-600 hover:text-primary transition">Projects</a>
+                    <a href="../index.html#contact" class="nav-link text-gray-600 hover:text-primary transition">Contact</a>
+                    <a href="../index.html#notes" class="nav-link text-gray-600 hover:text-primary transition">All notes</a>
+                    
+                </nav>
+
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <i class="fas fa-bars text-2xl text-gray-600"></i>
+                </button>
+            </div>
+
+            <!-- mobile menu -->
+            <div class="md:hidden hidden mt-4 py-2" id="mobile-menu">
+                <a href="index.html#home" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">Home</a>
+                <a href="index.html#about" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">About</a>
+                <a href="index.html#projects" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">Projects</a>
+                <a href="index.html#contact" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">Contact</a>
+                <a href="#notes" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">All-notes</a>
+                
+            </div>
+        </div>
+    </header>
+<!---notes section-->
+
+<!-- MODULE TABS (Now positioned below header correctly) -->
+<ul class="flex px-3 mt-0 space-x-4 border-b border-gray-300 bg-white sticky top-[72px] z-40 shadow-sm">
+  <li>
+    <a href="#module1"
+       class="inline-block px-4 py-2 text-blue-600 border-b-4 border-blue-600 font-semibold">
+      Module 1
+    </a>
+  </li>
+  <li>
+    <a href="dbms12.html"
+       class="inline-block px-4 py-2 text-gray-600 hover:text-blue-600 hover:border-blue-600 border-b-4 border-transparent">
+      Module 2
+    </a>
+  </li>
+  <li>
+    <a href="#module3"
+       class="inline-block px-4 py-2 text-gray-600 hover:text-blue-600 hover:border-blue-600 border-b-4 border-transparent">
+      Module 3
+    </a>
+  </li>
+  <li>
+    <a href="#module4"
+       class="inline-block px-4 py-2 text-gray-600 hover:text-blue-600 hover:border-blue-600 border-b-4 border-transparent">
+      Module 4
+    </a>
+  </li>
+</ul>
+
+
+
+<!--notes section-->
+
+
+<section class="container">
+  
+    <h1  class="text-4xl font-bold text-center text-primary mb-4"><b>Database Management System</b></h1>
+    <h1 class="text-4xl font-bold text-center text-primary mb-4"><b>Module-1</b></h1>
+  <h1></h1>
+
+  <h2  class="text-2xl font-semibold text-dark mb-2">Data</h2>
+  <p>Raw, unprocessed facts or details without context or meaning. Data is unorganized and often collected from observations, measurements, or recordings.</p>
+  <p><B>Examples:</B> Numbers, dates, text, images, or symbols that need interpretation (e.g., "25," "2023-09-04," or "John").</p>
+
+  <h2  class="text-2xl font-semibold text-dark mb-2">Information</h2>
+  <p>Processed, organized, or structured data that is meaningful and useful for decision-making or understanding. Information is data that has been
+interpreted, giving it context and significance.</p>
+  <p><B>Examples:</B> A report showing the average temperature, a summarized sales report, or an analyzed dataset showing trends.</p>
+<h2  class="text-2xl font-semibold text-dark mb-2">Record</h2><p>Record is the collection of various types of data of similar field.</p>
+<h2  class="text-2xl font-semibold text-dark mb-2">Data file:-</h2><p>Data file is the collection of record some time called table.</p>
+
+  <h2  class="text-2xl font-semibold text-dark mb-2">Data Persistent </h2>
+  <p>Persistent data is information that is stored in a way that it
+remains available even after the system or device that created it is turned off or
+restarted.<br>
+Persistent data doesn't disappear when you turn off your computer or close an
+app. It's saved on storage devices like hard drives, SSDs, or databases.<br>
+Persistent data is crucial for things you need to keep over time, like files,
+settings, or records in a business..</p>
+
+  <h2  class="text-2xl font-semibold text-dark mb-2">Database</h2>
+  <p>A database is an organized collection of data. The data can be anything
+from a list of names and phone numbers to detailed records of transactions in a
+company. Databases are structured to allow easy retrieval, insertion, updating, and
+deletion of data.</p>
+
+  <h2  class="text-2xl font-semibold text-dark mb-2">File</h2>
+  <p>A file is a collection of data stored on a computer or other devices. Files can contain
+different types of data, such as text, images, videos, or software programs. Each file
+has a name and usually an extension that indicates the type of data it holds (e.g., .txt
+for text files, .jpg for images, .mp4 for videos).</p>
+
+  <h2  class="text-2xl font-semibold text-dark mb-2">File Management System</h2>
+  <p>A file management system is a software that helps you organize, store, retrieve, and
+manage files on your computer or device. It provides tools to perform tasks like:</p>
+<ul>
+    <li><b>Creating file:</b><p>You can create new files for storing information.</p></li>
+    <li><b>Organizing files:</b><p>Files can be grouped into folders or directories, making them
+easier to find and manage.</p></li>
+    <li><b>Editing files:</b><p>You can open and make changes to the content of files.</p></li>
+    <li><b>Saving files:</b><p>Changes made to files can be saved to keep the information up to
+date.</p></li>
+    <li><b>Deletinf files:</b><p>You can remove files you no longer need.</p></li>
+    <li><b>Searching for files:</b><p>The system allows you to search for files by name, type, or
+other criteria.</p></li>
+    <li><b>Backing up files:</b><p>Important files can be copied to another location to prevent
+loss.</p></li>
+</ul>
+
+  <h2  class="text-2xl font-semibold text-dark mb-2">File Structure</h2>
+  <p>File structure refers to the way data is arranged within a file. This arrangement can
+vary depending on the file type, but it typically involves a combination of headers,
+metadata, and data content.</p>
+<ul>
+    <li><b>Text Files:</b><p>Typically organized as a sequence of lines, each ending with a
+newline character.</p></li>
+    <li><b>Database Files:</b><p>Often have a structured format, such as a relational database
+that stores data in tables with rows and columns.</p></li>
+</ul>
+
+  <h2  class="text-2xl font-semibold text-dark mb-2">File Organization</h2>
+  <p>File Structure refers to the way files are arranged on a storage device. This
+organization is often hierarchical, with files grouped into directories (or folders).</p>
+
+  <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Types of File Organization</h3>
+  <p>There are several types of file organization in database management systems (DBMS), each
+with its own advantages and disadvantages depending on the specific application
+requirements. Here are some of the most common types:</p>
+  <ul>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2"><i>Sequential File Organization</i></h3>
+    <ul>
+        <li><b>Description</b><p>Records are stored in a sequential order based on a primary key.</p></li>
+        <li><b>Advantages:</b><p>Simple to implement and efficient for sequential access.</p></li>
+        <li><b>Disadvantages:</b><p>Inefficient for random access, insertions, and deletions.</p></li>
+    </ul>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2"><i>Indexed Sequential File Organization:</i></h3>
+    <ul>
+        <li><b>Description:</b><p>Records are stored in a sequential order, but an index is maintained to
+provide efficient random access.</p></li>
+        <li><b>Advantages:</b><p>Efficient for both sequential and random access.</p></li>
+        <li><b>Disadvantages:</b><p>More complex to implement and requires additional storage for the
+index.</p></li>
+    </ul>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2"><i>Direct File Organization:</i></h3>
+    <ul>
+        <li><b>Description:</b><p>Records are stored based on a calculated address using a hashing
+function.</p></li>
+        <li><b>Advantages:</b><p>Very efficient for random access.</p></li>
+        <li><b>Disadvantages:</b><p>Can suffer from collisions, which can lead to inefficient access.</p></li>
+        
+    </ul>
+     <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2"><i>Clustered File Organization:</i></h3>
+    <ul>
+        <li><b>Description:</b><p>Records are grouped together based on a common attribute.</p></li>
+        <li><b>Advantages:</b><p>Efficient for queries involving the clustering attribute.</p></li>
+        <li><b>Disadvantages:</b><p>Less efficient for queries involving other attributes.</p></li>
+        
+    </ul>
+     <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2"><i>Hash File Organization:</i></h3>
+    <ul>
+        <li><b>Description:</b><p>Similar to direct file organization, but uses a more complex hashing
+function to reduce collisions.</p></li>
+        <li><b>Advantages:</b><p>Very efficient for random access and has fewer collisions than direct file
+organization.</p></li>
+        <li><b>Disadvantages:</b><p>More complex to implement.</p></li>
+        
+    </ul>
+     <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2"><i>Multi-level Indexing:</i></h3>
+    <ul>
+        <li><b>Description:</b><p>Uses multiple levels of indexes to provide efficient access to large
+datasets.</p></li>
+        <li><b>Advantages:</b><p>Can handle very large datasets efficiently.</p></li>
+        <li><b>Disadvantages:</b><p>More complex to implement and requires additional storage for the
+indexes.</p></li>
+        
+    </ul>
+<div style="margin-left: 2%;">
+  <h2  class="text-2xl font-semibold text-dark mb-2">Database Management System (DBMS)</h2>
+  <p>It's like a digital librarian that helps you organize, store, and retrieve information
+efficiently. Imagine a library with countless books. A DBMS is the system that helps
+you find the exact book you need, even if it's buried among millions of others.</p>
+
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">How a DBMS Works:-</h3>
+    <ol type="numbers">
+        <li><b>Data Storage:</b><p>The DBMS stores data in a structured format, often using tables.
+Each table has rows (records) and columns (fields).</p></li>
+        <li><b>Data Manipulation:</b><p>You can use the DBMS to add, delete, or modify data. For
+instance, you could add a new customer to the customer table.</p></li>
+        <li><b>Data Retrieval:</b><p>The DBMS allows you to query the data to find specific
+information. For example, you could search for all customers living in a
+particular city.</p></li>
+        <li><b>Data Security:</b><p>The DBMS ensures that your data is protected from
+unauthorized access. It includes features like user authentication and data
+encryption.</p></li>
+    </ol>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Why Use a DBMS?</h3>
+<ul>
+    <li><b>Efficiency:</b><p>DBMSs are designed to handle large amounts of data efficiently,
+making it easy to find and manage information.</p></li>
+    <li><b>Consistency:</b><p>DBMSs help maintain data consistency, ensuring that information
+is accurate and up-to-date.</p></li>
+    <li><b>Security:</b><p>DBMSs provide security features to protect your data from
+unauthorized access and corruption.</p></li>
+    <li><b>Data Sharing:</b><p>DBMSs allow multiple users to access and share data
+simultaneously.</p></li>
+</ul>
+
+
+  <h2  class="text-2xl font-semibold text-dark mb-2">Evolution of Databases and DBMS</h2>
+  <p>Databases have been around for centuries, but the way we manage and interact with
+them has evolved significantly over time.</p>
+<h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Early Days: Manual Systems</h3>
+<ul>
+    <li><b>Physical Records:</b><p>The earliest databases were physical records, like ledgers
+and card catalogs. Information was stored on paper or cards.</p></li>
+    <li><b>Manual Management:</b><p>Data was accessed and updated manually, which was
+time-consuming and prone to errors.</p></li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Relational Databases: A Revolution</h3>
+<ul>
+    <Li><b>Relational Model:</b><p>The relational model, introduced by Edgar F. Codd in the
+1970s, revolutionized database management. It represented data as tables,
+with rows and columns.</p></Li>
+    <Li><b>SQL:</b><p>The Structured Query Language (SQL) was developed to interact with
+relational databases. It provided a standardized way to query, update, and
+manage data.</p></Li>
+</ul>
+  <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">NoSQL Databases: Scalability and Flexibility</h3>
+    <ul>
+        <li><b>NoSQL:</b><p>NoSQL databases, also known as "Not Only SQL," emerged to address
+the limitations of relational databases for large-scale, distributed applications.
+They offer flexibility, scalability, and high performance.</p></li>
+        <li><b>Types of NoSQL:</b><p>Document databases (e.g., MongoDB), key-value stores (e.g.,
+Redis), wide-column databases (e.g., Cassandra), and graph databases (e.g.,
+Neo4j) are common types of NoSQL databases.</p></li>
+      
+    </ul>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Cloud-Based Databases: The Future</h3>
+    <ul>
+        <li><b>Cloud Databases:</b><p>The rise of cloud computing has led to the popularity of
+cloud-based databases. These databases are hosted and managed in the
+cloud, offering scalability, accessibility, and reduced maintenance costs.</p></li>
+    </ul>
+
+  <h2  class="text-2xl font-semibold text-dark mb-2">Characteristics of Databases</h2>
+  <p>A database is a structured collection of data. Here are some key characteristics:</p>
+      <ol type="1">
+        <li>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Organization:</h3>
+            <ul>
+                <li ><b>Structured Data:</b><p>Data is organized in a systematic manner, often using tables,
+rows, and columns.</p></li>
+                <li><b>Relationships:</b><p>Data can be related to each other through defined
+relationships, such as one-to-one, one-to-many, or many-to-many.</p></li>
+            </ul>
+        </li>
+        <li>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Consistency:</h3>
+            <ul>
+                <li><b>Data Integrity:</b><p>Databases maintain data integrity, ensuring that data is
+accurate, consistent, and free from errors.</p></li>
+                <li><b>Data Validation:</b><p>Rules and constraints can be applied to validate data,
+preventing invalid or inconsistent entries.</p></li>
+            </ul>
+        </li>
+        <li>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2"> Efficiency:</h3>
+            <ul>
+                <li><b>Fast Access:</b><p>Databases are designed to provide efficient access to data,
+allowing users to retrieve information quickly.</p></li>
+                <li><b>Indexing:</b><p>Indexes can be created to speed up data retrieval by organizing data
+in a specific way.</p></li>
+            </ul>
+        </li>
+        <li>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Security:</h3>
+            <ul>
+                <li><b>Access Control:</b><p>Databases implement access control mechanisms to protect
+data from unauthorized access.</p></li>
+                <li><b>Encryption:</b><p>Sensitive data can be encrypted to ensure confidentiality.</p></li>
+            </ul>
+        </li>
+        <li>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2"> Reliability:</h3>
+            <ul>
+                <li><b>Backup and Recovery:</b><p>Databases often have built-in backup and recovery
+mechanisms to protect data from loss or corruption.</p></li>
+                <li><b>Redundancy:</b><p>Data can be replicated to ensure availability in case of failures.</p></li>
+            </ul>
+        </li>
+        <li>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Scalability:</h3>
+             <ul>
+                <li><b>Growth:</b><p>Databases can be scaled to accommodate increasing amounts of data
+and users.</p></li>
+                <li><b>Performance:</b><p>Scalability ensures that the database can maintain performance
+as it grows.</p></li>
+            </ul>
+        </li>
+        <li>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Data Independence:</h3>
+             <ul>
+                <li><b>Logical and Physical Independence:</b><p>Data independence allows changes to the
+physical storage of data without affecting the logical view of the data.</p></li>
+             
+            </ul>
+        </li>
+        <li>
+            <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Concurrency:</h3>
+             <ul>
+                <li><b>Multiple Users:</b><p>Databases support concurrent access, allowing multiple users
+to access and modify data simultaneously.</p></li>
+                <li><b>Concurrency Control:</b><p>Mechanisms are in place to prevent conflicts and ensure
+data consistency.</p></li>
+            </ul>
+        </li>
+      </ol>
+      </div>
+
+  <h2  class="text-2xl font-semibold text-dark mb-2">Approaches of DBMS</h2>
+  <p>Database approaches are the different strategies employed to organize,
+manage, and access data. Each approach has its own unique characteristics,
+which influence its suitability for various applications. Here are some of the key
+characteristics to consider:</p>
+<!---------all above notes are completed-------------------->
+
+
+
+<!----------------------------------------------------------->
+<ol>
+    <li>
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Data Model:</h3>
+        <ul>
+            <li>
+                <b>Relational: </b>
+                <P>Data is organized into tables, where each table represents an entity
+(e.g., customer, order). Tables are linked using relationships (e.g., one-to-one,
+one-to-many).</P>
+               
+            </li>
+            <li>
+                <b>Object-Relational:</b> <p>Combines features of relational and object-oriented
+databases.</p>
+              
+            </li>
+            <li>
+                <b>NoSQL:</b>
+                 <p>Offers various data models such as document, key-value, graph, and
+wide-column.</p>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2"> Data Consistency:</h3>
+        <ul>
+            <li>
+                <b>Strong Consistency:</b>
+                <p>Ensures that all copies of data are always identical.</p>
+            </li>
+            <li>
+                <b>Eventual Consistency:</b>
+                <p>Data may be temporarily inconsistent, but eventually all
+copies will converge.</p>
+            </li>
+            <li>
+                <b>Weak Consistency:</b>
+                <p>Provides no guarantees about data consistency.</p>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Scalability:</h3>
+        <UL>
+          <LI>
+            <b>Horizontal Scalability:</b>
+            <p>The ability to add more nodes to a distributed system to
+handle increased load.</p>
+          </LI>
+          <LI>
+            <b>Vertical Scalability:</b>
+            <p>The ability to increase the capacity of a single node to
+handle increased load.</p>
+          </LI>
+        </UL>
+    </li>
+    <li>
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Performance:</h3>
+        <ul>
+          <li>
+            <b>Query Performance:</b>
+            <p>How quickly the DBMS can execute queries.</p>
+          </li>
+          <li>
+            <b>Transaction Performance:</b>
+            <p>How quickly the DBMS can process transactions.</p>
+          </li>
+          <li>
+            <b>Concurrency Control:</b>
+            <p>How well the DBMS handles concurrent access to data.</p>
+          </li>
+        </ul>
+    </li>
+    <li>
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Flexibility:</h3>
+        <ul>
+          <li>
+            <b>Schema Flexibility:</b>
+            <p>How easily the DBMS can accommodate changes to the
+data structure.</p>
+          </li>
+          <li>
+            <b>Data Type Flexibility:</b>
+            <p>How well the DBMS can handle different types of data
+(e.g., structured, semi-structured, unstructured).</p>
+          </li>
+        </ul>
+    </li>
+    <li>
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2"> Reliability:</h3>
+        <ul>
+          <li>
+            <b>Fault Tolerance:</b>
+            <p>The ability of the DBMS to continue functioning even if
+components fail.</p>
+          </li>
+          <li>
+            <b>Data Durability: </b>
+            <p>The ability of the DBMS to protect data from loss in the event
+of a system failure.</p>
+          </li>
+        </ul>
+    </li>
+    <li>
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Security:</h3>
+        <ul>
+          <li>
+            <b>Access Control:</b>
+            <p>The ability to restrict access to data based on user roles and
+permissions.</p>
+          </li>
+          <li>
+            <b>Encryption:</b>
+            <p>The ability to encrypt data to protect it from unauthorized access.</p>
+          </li>
+        </ul>
+    </li>
+    <li>
+        <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2"> Cost:</h3>
+        <ul>
+          <li>
+            <b>Licensing Costs:</b>
+            <p>The cost of obtaining and using the DBMS software.</p>
+          </li>
+          <li>
+            <b>Hardware Costs:</b>
+            <p>The cost of the hardware required to run the DBMS.</p>
+          </li>
+          <li>
+            <b>Maintenance Costs:</b>
+            <p>The cost of maintaining and updating the DBMS.</p>
+          </li>
+        </ul>
+    </li>
+</ol>
+  <h2  class="text-2xl font-semibold text-dark mb-2">Components of a DBMS (Database Management System):-</h2>
+  <p>A DBMS is like a digital librarian that helps you organize, store, and retrieve
+information efficiently. It consists of several key components:</p>
+
+
+
+<!---------above -->
+
+
+
+<!----------- html comments -->
+
+  <ol>
+    <li><b>Data</b><p>This is the raw information you want to store, like customer details, product
+information, or sales records.</p></li>
+    <Li>
+      <b>Schema:</b>
+      <p> This is the blueprint or structure of the data. It defines how the data is
+organized and related to each other.</p>
+    </Li>
+    <Li>
+      <b>Software:</b>
+      <p>This is the actual DBMS system, which provides tools to interact with the
+data. It includes features like data entry, retrieval, and modification.</p>
+    </Li>
+    <Li>
+      <b>Hardware:</b>
+      <p>This refers to the physical components of the system, such as servers,
+storage devices, and networking equipment.</p>
+    </Li>
+    <Li>
+      <b>User:</b>
+      <p>These are the people who interact with the DBMS. They can be database
+administrators, developers, or end-users.</p>
+    </Li>
+    <Li>
+      <b>Produres:</b>
+      <p>These are the rules and guidelines that govern how the DBMS is used.
+They include things like data security protocols and backup procedures.</p>
+    </Li>
+  </ol>
+
+  <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Advantages of DBMS</h3>
+  <ul>
+    <li><b>Controls redundancy</b>
+      <p> It can control data redundancy because it
+stores all the data in one single database file and that recorded data is placed
+in the database.</p></li>
+    <li><b>Data sharing</b>
+    <p>In DBMS, the authorized users of an organization can share the
+data among multiple users.</p></li>
+    <li><b>Easy maintenance</b>
+    <p>It can be easily maintainable due to the centralized
+nature of the database system.</p></li>
+    <li><b>Reduced development time</b>
+    <p>It reduces development time and maintenance need.</p></li>
+    <li><b>Backup and recovery support</b>
+    <p> It provides backup and recovery subsystems which create automatic
+backup of data from hardware and software failures and restores the data if
+required.</p></li>
+    <li><b>Multiple user interfaces</b>
+    <p>It provides different types of user interfaces like
+graphical user interfaces, application program interfaces</p></li>
+  </ul>
+<h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Disadvantages of DBMS</h3>
+<ul>
+  <li><b>Cost of Hardware and Software</b>
+    <p>It requires a high speed of data processor and large memory size to run DBMS software.</p>
+  </li>
+  <li><b>Size</b>
+    <p>It occupies a large space of disks and large memory to run them efficiently.</p>
+  </li>
+  <li><b>Complexity</b>
+    <p>Database system creates additional complexity and requirements.</p>
+  </li>
+  <li><b>Higher impact of failure</b>
+    <p>Failure is highly impacted the database because in most of the organization, all the data stored in a single database and if the database is damaged due to electric failure or database corruption then the data may be lost forever.</p>
+  </li>
+</ul>
+
+
+<!-----create a table -->
+<h2  class="text-2xl font-semibold text-dark mb-2">DBMS vs. File System</h2>
+<table class="table table-bordered">
+
+  <thead>
+    <tr>
+      <th><b>Basics</b></th>
+      <th><b>File System</b></th>
+      <th><b>DBMS</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Structure</b></td>
+      <td>The file system is a way of arranging the files in a storage medium within a computer.</td>
+      <td>DBMS is software for managing the database.</td>
+    </tr>
+    <tr>
+      <td><b>Data Redundancy</b></td>
+      <td>Redundant data can be present in a file system.</td>
+      <td>In DBMS there is no redundant data.</td>
+    </tr>
+    <tr>
+      <td><b>Backup and Recovery</b></td>
+      <td>It doesn’t provide inbuilt mechanism for backup and recovery of data if it is lost.</td>
+      <td>It provides in house tools for backup and recovery of data even if it is lost.</td>
+    </tr>
+    <tr>
+      <td><b>Query processing</b></td>
+      <td>There is no efficient query processing in the file system.</td>
+      <td>Efficient query processing is there in DBMS.</td>
+    </tr>
+    <tr>
+      <td><b>Consistency</b></td>
+      <td>There is less data consistency in the file system.</td>
+      <td>There is more data consistency because of the process of normalization.</td>
+    </tr>
+    <tr>
+      <td><b>Complexity</b></td>
+      <td>It is less complex as compared to DBMS.</td>
+      <td>It has more complexity in handling as compared to the file system.</td>
+    </tr>
+    <tr>
+      <td><b>Security Constraints</b></td>
+      <td>File systems provide less security in comparison to DBMS.</td>
+      <td>DBMS has more security mechanisms as compared to file systems.</td>
+    </tr>
+    <tr>
+      <td><b>Cost</b></td>
+      <td>It is less expensive than DBMS.</td>
+      <td>It has a comparatively higher cost than a file system.</td>
+    </tr>
+    <tr>
+      <td><b>User Access</b></td>
+      <td>Only one user can access data at a time.</td>
+      <td>Multiple users can access data at a time.</td>
+    </tr>
+    <tr>
+      <td><b>Sharing</b></td>
+      <td>Data is distributed in many files. So, it is not easy to share data.</td>
+      <td>Due to centralized nature data sharing is easy.</td>
+    </tr>
+    <tr>
+      <td><b>Attributes</b></td>
+      <td>To access data in a file, user requires attributes such as file name, file location.</td>
+      <td>No such attributes are required.</td>
+    </tr>
+    <tr>
+      <td><b>Example</b></td>
+      <td>Cobol, C++</td>
+      <td>Oracle, SQL Server</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-----DBMS USER-->
+<div style="margin-left: 5%;">
+<h2  class="text-2xl font-semibold text-dark mb-2">DBMS Users</h2>
+<p>A Database Management System (DBMS) is a software application that helps you manage data efficiently. To use a DBMS, there are different types of users, each with specific roles and responsibilities.</p>
+
+<ol>
+  <li>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Database Administrator (DBA)</h3>
+    <b>Role:</b>
+    <p>The primary person responsible for managing the DBMS.</p>
+    <b>Responsibilities:</b>
+    <ul>
+      <li>Designing and creating databases</li>
+      <li>Ensuring data security and integrity</li>
+      <li>Optimizing database performance</li>
+      <li>Troubleshooting database issues</li>
+      <li>Implementing backup and recovery procedures</li>
+    </ul>
+  </li>
+
+  <li>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Application Developers</h3>
+    <b>Role:</b>
+    <p>Create software applications that interact with the database.</p>
+    <b>Responsibilities:</b>
+    <ul>
+      <li>Designing and coding application logic</li>
+      <li>Writing SQL queries to retrieve, insert, update, and delete data</li>
+      <li>Integrating the application with the DBMS</li>
+    </ul>
+  </li>
+
+  <li>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">End Users</h3>
+    <b>Role:</b>
+    <p>People who use the applications created by developers to access and manipulate data.</p>
+    <b>Responsibilities:</b>
+    <ul>
+      <li>Entering data into the system</li>
+      <li>Retrieving information from the database</li>
+      <li>Making decisions based on the data</li>
+    </ul>
+  </li>
+
+  <li>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Data Analysts</h3>
+    <b>Role:</b>
+    <p>Analyze data to extract meaningful insights.</p>
+    <b>Responsibilities:</b>
+    <ul>
+      <li>Using SQL and data analysis tools to query and manipulate data</li>
+      <li>Creating reports and visualizations</li>
+      <li>Identifying trends and patterns in the data</li>
+    </ul>
+  </li>
+
+  <li>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">System Administrators</h3>
+    <b>Role:</b>
+    <p>Responsible for the overall IT infrastructure, including the DBMS.</p>
+    <b>Responsibilities:</b>
+    <ul>
+      <li>Installing and configuring the DBMS</li>
+      <li>Managing system resources</li>
+      <li>Ensuring system security</li>
+    </ul>
+  </li>
+</ol>
+</div>
+
+<h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Example:</h3>
+
+<p>Imagine a bank. The DBA would be responsible for creating and maintaining the bank's
+database, ensuring data security, and optimizing performance. The application developers
+would create the online banking system. End users would be the customers who use the
+online banking system to check balances, transfer funds, and pay bills. Data analysts would
+analyze customer behavior to identify trends and improve marketing strategies. System
+administrators would ensure the overall stability and security of the bank's IT infrastructure,
+including the DBMS.</p>
+<!----DBMS Architecture-->
+
+<div class="container mt-4">
+  <h2  class="text-2xl font-semibold text-dark mb-2"><strong>DBMS Architecture</strong></h2>
+  <p>A Database store a lot of critical information to access data quickly and securely. Hence it is important to select the correct architecture for efficient data management. DBMS Architecture helps users to get their requests done while connecting to the database. We choose database architecture depending on several factors like the size of the database, number of users, and relationships between the users. There are two types of database models that we generally use, are logical model and physical model.</p>
+
+  <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2"><strong>Types of DBMS Architecture</strong></h3>
+  <p>There are several types of DBMS Architecture that we use according to the usage requirements. Types of DBMS Architecture are discussed here.</p>
+  <ul> <b>
+    <li>1-Tier Architecture</li>
+    <li>2-Tier Architecture</li>
+    <li>3-Tier Architecture</li>
+    </b>
+  </ul>
+
+  <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">1-Tier Architecture</h3>
+  <p>In 1-Tier Architecture the database is directly available to the user, the user can directly sit on the DBMS and use it that is, the client, server, and Database are all present on the same machine. For Example: to learn SQL we set up an SQL server and the database on the local system. This enables us to directly interact with the relational database and execute operations. The industry won’t use this architecture they logically go for 2-Tier and 3-Tier Architecture.</p>
+  <!-- Image s--><img 
+  src="https://media.geeksforgeeks.org/wp-content/uploads/20230509110722/DBMS-1-Tier-Architecture-660.webp"
+  class="custom-img img-fluid"
+  alt="DBMS 1-Tier Architecture">
+
+            <figcaption>This is 1-Tier Architecture diagram.</figcaption><br>
+
+  <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Advantages of 1-Tier Architecture</h3>
+  <p><strong>Simple Architecture:</strong> 1-Tier Architecture is the most simple architecture to set up, as only a single machine is required to maintain it.</p>
+  <p><strong>Cost-Effective:</strong> No additional hardware is required for implementing 1-Tier Architecture, which makes it cost-effective.</p>
+  <p><strong>Easy to Implement:</strong> 1-Tier Architecture can be easily deployed, and hence it is mostly used in small projects.</p>
+<h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">2-Tier Architecture:-</h3>
+<p>The 2-tier architecture is similar to a basic client-server model. The application at the client
+end directly communicates with the database on the server side. APIs like ODBC and JDBC
+are used for this interaction. The server side is responsible for providing query processing
+and transaction management functionalities. On the client side, the user interfaces and
+application programs are run. The application on the client side establishes a connection
+with the server side in order to communicate with the DBMS. An advantage of this type is
+that maintenance and understanding are easier, and compatible with existing systems.
+However, this model gives poor performance when there are a large number of users.</p>
+ <img
+            src="https://files.codingninjas.in/article_images/two-tier-architecture-0-1648535544.webp"
+            class="custom-img img-fluid" alt="DBMS 1-Tier Architecture">
+            <figcaption>This is 2-Tier Architecture diagram.</figcaption><br><br>
+<h3 class="text-xl font-semibold text-gray-800 mt-6 mb-2">Advantages of 2-Tier Architecture:-</h3>
+
+<ul>
+  <li><p><strong>Easy to Access:</strong> 2-Tier Architecture makes easy access to the database, which makes fast retrieval.</p></li>
+  <li><p><strong>Scalable:</strong> We can scale the database easily, by adding clients or by upgrading hardware.</p></li>
+  <li><p><strong>Low Cost:</strong> 2-Tier Architecture is cheaper than 3-Tier Architecture and Multi-Tier Architecture.</p></li>
+  <li><p><strong>Easy Deployment:</strong> 2-Tier Architecture is easy to deploy than 3-Tier Architecture.</p></li>
+  <li><p><strong>Simple:</strong> 2-Tier Architecture is easily understandable as well as simple because of only two components.</p></li>
+</ul>
+
+<h2  class="text-2xl font-semibold text-dark mb-2">3-Tier Architecture</h2>
+<p>
+  In 3-Tier Architecture, there is another layer between the client and the server. The client does not directly communicate with the server. Instead, it interacts with an application server which further communicates with the database system and then the query processing and transaction management takes place. This intermediate layer acts as a medium for the exchange of partially processed data between the server and the client. This type of architecture is used in the case of large web applications.
+</p>
+
+</div>
+
+
+
+
+
+
+
+  <!---footer-->
+   <!-- foot -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="flex items-center space-x-2 mb-4">
+                        <img style="border-radius: 50%;" src="../assest/logo.jpg" alt="Logo" class="h-8">
+                        <span class="text-xl font-bold">CodeWithAnkit</span>
+                    </a>
+                    <p class="text-gray-400">Empowering students through technology and education.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="index.html#projects" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="all_notes.html" class="text-gray-400 hover:text-white transition">Study Notes</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on new resources and projects.</p>
+                    
+                </div>
+            </div>
+
+            <div  class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 CodeWithAnkit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+  
+
+
+
+   <script>
+ 
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+    
+   
+    const icon = this.querySelector('i');
+    if (icon.classList.contains('fa-bars')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+    } else {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
+  });
+  
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+        
+  
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          const menuToggle = document.getElementById('menu-toggle');
+          const icon = menuToggle.querySelector('i');
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      }
+    });
+  });
+  </script>
+</body>
+
+</html>

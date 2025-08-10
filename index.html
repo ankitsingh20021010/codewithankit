@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of Ankit Singh, Web & AI Developer">
+    <title>Ankit Singh | Web & AI Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "bqgiq0YWYUOt3QKni",
+      });
+   })();
+</script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1F2937',
+                        light: '#F9FAFB',
+                        accent: '#6366F1',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3B82F6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-light text-dark">
+    <!-- header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="flex items-center space-x-2">
+                    <img src="assest/logo.jpg" alt="Logo" class="h-10">
+                    <span class="text-xl font-bold text-primary">CodeWithAnkit</span>
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-600 hover:text-primary transition">Home</a>
+                    <a href="#about" class="nav-link text-gray-600 hover:text-primary transition">About</a>
+                    <a href="#projects" class="nav-link text-gray-600 hover:text-primary transition">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-600 hover:text-primary transition">Contact</a>
+                    <a href="all_notes.html"
+                        class="flex items-center space-x-1 bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                        
+                        <span>Study Resources</span>
+                 <a href="loging.html"
+   id="authLink"
+   class="flex items-center space-x-1 bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+   <span id="authText">Sign-up</span>
+</a>
+
+                </nav>
+                </nav>
+
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <i class="fas fa-bars text-2xl text-gray-600"></i>
+                </button>
+            </div>
+
+            <!-- mobile menu -->
+            <div class="md:hidden hidden mt-4 py-2" id="mobile-menu">
+                <a href="#home" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">Home</a>
+                <a href="#about" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">About</a>
+                <a href="#projects" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">Projects</a>
+                <a href="#contact" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">Contact</a>
+                <a href="all_notes.html"
+                    class="flex items-center space-x-2 py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">
+                    <i class="fas fa-book"></i>
+                    <span>Study Resources</span>
+                </a>
+                 <a href="loging.html"
+                    class="flex items-center space-x-2 py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">
+                    <i class="fas fa-book"></i>
+                    <span>Sign-up</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- <script type='text/javascript' src='//pl27242231.profitableratecpm.com/11/0b/b1/110bb1230558f9966c668ea5f52133bb.js'></script> -->
+
+    <!-- top -->
+    <section id="home" class="py-20 bg-gradient-to-r from-primary to-accent text-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="text-secondary">Ankit Singh</span>
+                </h1>
+                <p class="text-xl mb-8 opacity-90">Web & AI Developer | Founder of CodeWithAnkit</p>
+                <p class="mb-8 text-gray-200">Creating innovative solutions through code and artificial intelligence.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="all_notes.html"
+                        class="bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition shadow-lg text-center">
+                        Study Notes <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-white bg-opacity-10 rounded-full absolute -top-6 -left-6">
+                    </div>
+                    <div
+                        class="w-64 h-64 md:w-80 md:h-80 bg-white bg-opacity-5 rounded-full absolute -bottom-6 -right-6">
+                    </div>
+                    <img src="assest/logo.jpg" alt="Ankit Singh"
+                        class="relative z-10 w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
+                    <p class="text-gray-600 mb-6">
+                        I'm a BCA (Data Science & Artificial Intelligence) student passionate about building innovative
+                        solutions that bridge technology and human needs.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        My journey in tech began with simple websites and has evolved into complex AI systems. I believe
+                        in continuous learning and sharing knowledge with others.
+                    </p>
+
+                    <h3 class="text-2xl font-semibold mb-4 mt-8">What I Offer</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                            <span class="text-gray-600">Comprehensive <a href="all_notes.html"
+                                    class="text-primary hover:underline">study materials</a> for students</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                            <span class="text-gray-600">Concise, exam-focused notes and resources</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                            <span class="text-gray-600">Practical projects with real-world applications</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6">My Skills</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <div class="flex items-center mb-2">
+                                <div
+                                    class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-code text-primary"></i>
+                                </div>
+                                <h4 class="font-medium">Web Development</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">HTML, CSS, JavaScript, React, Node.js</p>
+                        </div>
+
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <div class="flex items-center mb-2">
+                                <div
+                                    class="w-10 h-10 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-brain text-secondary"></i>
+                                </div>
+                                <h4 class="font-medium">AI & ML</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">Python, TensorFlow, Scikit-learn, NLP</p>
+                        </div>
+
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <div class="flex items-center mb-2">
+                                <div
+                                    class="w-10 h-10 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-database text-accent"></i>
+                                </div>
+                                <h4 class="font-medium">Data Science</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">Pandas, NumPy, Data Visualization</p>
+                        </div>
+
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <div class="flex items-center mb-2">
+                                <div
+                                    class="w-10 h-10 bg-yellow-500 bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-tools text-yellow-500"></i>
+                                </div>
+                                <h4 class="font-medium">Tools</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">Git, Docker, VS Code, Jupyter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- my projects -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">My Projects</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Here are some of my recent projects that showcase my skills
+                    in web development and digital solutions.</p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- project 1 - boostify -->
+                <div
+                    class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Traffic Booster" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Traffic Booster</h3>
+                        <p class="text-gray-600 mb-4">A digital marketing solution designed to increase website traffic
+                            and improve online visibility through strategic campaigns.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">HTML/CSS</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">SEO</span>
+                        </div>
+                        <a href="https://growbyni.github.io/Boostify/" target="_blank"
+                            class="text-primary font-medium hover:underline flex items-center">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- project 2 - V-chat -->
+                <div
+                    class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-secondary to-green-400 flex items-center justify-center">
+                        <img src="https://previews.123rf.com/images/ferart88/ferart881703/ferart88170300506/74772143-online-chat-logo.jpg"
+                            alt="V-Chat" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">V-Chat</h3>
+                        <p class="text-gray-600 mb-4">A modern video chat application that enables seamless
+                            communication with features like screen sharing and virtual backgrounds.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">WebRTC</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">React</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Node.js</span>
+                        </div>
+                        <a href="https://growbyni.github.io/V-Chat/" target="_blank"
+                            class="text-primary font-medium hover:underline flex items-center">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- project 3 - AdSphere -->
+                <div
+                    class="project-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-accent flex items-center justify-center">
+                        <img src="https://static.wixstatic.com/media/092418_ee0c35cd7ce34ab7a3a1e90726a302d6~mv2.jpg/v1/fit/w_2500,h_1330,al_c/092418_ee0c35cd7ce34ab7a3a1e90726a302d6~mv2.jpg"
+                            alt="Ad Network" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">AdSphere Network</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive advertising platform connecting publishers with
+                            advertisers for targeted digital campaigns.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">HTML/CSS</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Digital
+                                Ads</span>
+                        </div>
+                        <a href="https://adsphers.github.io" target="_blank"
+                            class="text-primary font-medium hover:underline flex items-center">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- contact  -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have a project in mind or want to collaborate? Feel free to
+                    reach out!</p>
+                <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                        <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-700">Email</h4>
+                                    <a href="mailto:ankitsingh20021010@gmail.com"
+                                        class="text-gray-600 hover:text-primary transition">ankitsingh20021010@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-secondary bg-opacity-10 p-3 rounded-full mr-4">
+                                    <i class="fab fa-github text-secondary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-700">GitHub</h4>
+                                    <a href="https://github.com/ankitsingh20021010" target="_blank"
+                                        class="text-gray-600 hover:text-primary transition">github.com/ankitsingh20021010</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-10">
+                            <h3 class="text-xl font-semibold mb-4">Follow Me</h3>
+                            <div class="flex space-x-4">
+                                <a href="#"
+                                    class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2">
+                    <form id="contact-form" class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Name *</label>
+                                <input type="text" id="name" name="name"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email *</label>
+                                <input type="email" id="email" name="email"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject *</label>
+                            <input type="text" id="subject" name="subject"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                required>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="5"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-600 transition flex items-center justify-center">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- foot -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="flex items-center space-x-2 mb-4">
+                        <img style="border-radius: 50%;" src="assest/logo.jpg" alt="Logo" class="h-8">
+                        <span class="text-xl font-bold">CodeWithAnkit</span>
+                    </a>
+                    <p class="text-gray-400">Empowering students through technology and education.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="all_notes.html" class="text-gray-400 hover:text-white transition">Study Notes</a>
+                        </li>
+                      
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on new resources and projects.</p>
+                    
+                </div>
+            </div>
+
+            <div  class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 CodeWithAnkit. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+
+    <script src="script.js">
+
+    </script>
+    </body>
+
+    </html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>python - Notes</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <style>
+      .notes-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .note-folder {
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: 0.3s ease;
+      }
+
+      .note-folder:hover {
+        transform: scale(1.05);
+        background: #f0fff0;
+      }
+
+      .note-folder a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        display: block;
+      }
+
+      .note-folder img {
+        width: 50px;
+        margin-bottom: 9px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <img src="../../assets/logo.jpg" alt="Logo" class="logo" />
+        <ul class="nav-links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../index.html#about">About</a></li>
+          <li><a href="../../index.html#projects">Projects</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+          <li><a href="#">📚 python</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- python Subfolders -->
+    <section class="section">
+      <div class="container">
+        <h2>📁 python - All Materials</h2>
+
+        <div class="notes-container">
+          <div class="note-folder">
+            <a href="python/python_notes.html">
+              <img src="folder.jpg" alt="Folder Icon" />
+              Notes
+            </a>
+          </div>
+          <div class="note-folder">
+            <a href=" shortnotes.html">
+              <img src="folder.jpg" alt="Folder Icon" />
+              Short Notes
+            </a>
+          </div>
+          <div class="note-folder">
+            <a href="important.html">
+              <img src="folder.jpg" alt="Folder Icon" />
+              Important
+            </a>
+          </div>
+          <div class="note-folder">
+            <a href="sessional.html">
+              <img src="folder.jpg" alt="Folder Icon" />
+              Sessional Paper
+            </a>
+          </div>
+          <div class="note-folder">
+            <a href="questions.html">
+              <img src="folder.jpg" alt="Folder Icon" />
+              Question Paper
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 CodeWithAnkit. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
