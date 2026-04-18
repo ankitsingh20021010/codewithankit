@@ -1,1 +1,549 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of Ankit Singh, Web & AI Developer">
+    <title>DAA </title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "_xUgA3znBltIseVRM",
+      });
+   })();
+</script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        dark: '#1F2937',
+                        light: '#F9FAFB',
+                        accent: '#6366F1',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3B82F6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-light text-dark">
+    <!-- header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="flex items-center space-x-2">
+                    <img src="../assest/logo.jpg" alt="Logo" class="h-10">
+                    <span class="text-xl font-bold text-primary">CodeWithAnkit</span>
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#home" class="nav-link text-gray-600 hover:text-primary transition">Home</a>
+                    <a href="../index.html#about" class="nav-link text-gray-600 hover:text-primary transition">About</a>
+                    <a href="../index.html#projects" class="nav-link text-gray-600 hover:text-primary transition">Projects</a>
+                    <a href="../index.html#contact" class="nav-link text-gray-600 hover:text-primary transition">Contact</a>
+                    <a href="../all_notes.html" class="nav-link text-gray-600 hover:text-primary transition">All notes</a>
+                    <a href="DAA.html" class="nav-link text-gray-600 hover:text-primary transition">DAA</a>
+                    
+                </nav>
+
+                <button class="md:hidden focus:outline-none" id="menu-toggle">
+                    <i class="fas fa-bars text-2xl text-gray-600"></i>
+                </button>
+            </div>
+
+            <!-- mobile menu -->
+            <div class="md:hidden hidden mt-4 py-2" id="mobile-menu">
+                <a href="index.html#home" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">Home</a>
+                <a href="index.html#about" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">About</a>
+                <a href="index.html#projects" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">Projects</a>
+                <a href="index.html#contact" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">Contact</a>
+                <a href="#notes" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded">All-notes</a>
+                
+            </div>
+        </div>
+    </header>
+
+
+
+<!--notes section-->
+<section id="notes" class="py-12 px-6">
+  <div class="max-w-5xl mx-auto">
+
+    <h1 class="text-3xl font-bold text-center text-primary mb-10">
+      Basic Concepts of Algorithms
+    </h1>
+
+    <!-- Definition -->
+    <div class="bg-white shadow-md rounded-2xl p-6 mb-6 border-l-4 border-primary">
+      <h2 class="text-xl font-bold text-primary mb-2">
+        1. Definition of Algorithm
+      </h2>
+      <p class="text-gray-600">
+        An <span class="font-semibold text-dark">algorithm</span> is a 
+        <span class="font-semibold">step-by-step procedure</span> used to solve a problem.
+        It takes <span class="text-primary font-semibold">input</span>, processes it, 
+        and produces the desired <span class="text-primary font-semibold">output</span>.
+      </p>
+      <p class="text-gray-600 mt-2">
+        Algorithms are the <span class="font-semibold">foundation of programming</span> 
+        and are used in solving real-world computational problems efficiently.
+      </p>
+    </div>
+
+    <!-- Characteristics -->
+    <div class="bg-white shadow-md rounded-2xl p-6 mb-6 border-l-4 border-green-500">
+      <h2 class="text-xl font-bold text-green-600 mb-3">
+        2. Characteristics of Algorithm
+      </h2>
+      <ul class="list-disc ml-6 text-gray-600 space-y-2">
+        <li><b>Input:</b> Accepts zero or more inputs</li>
+        <li><b>Output:</b> Produces at least one result</li>
+        <li><b>Definiteness:</b> Each step must be <span class="font-semibold">clear and unambiguous</span></li>
+        <li><b>Finiteness:</b> Must terminate after a <span class="font-semibold">finite number of steps</span></li>
+        <li><b>Effectiveness:</b> Steps must be <span class="font-semibold">simple and feasible</span></li>
+      </ul>
+    </div>
+
+    <!-- Pseudocode -->
+    <div class="bg-white shadow-md rounded-2xl p-6 mb-6 border-l-4 border-purple-500">
+      <h2 class="text-xl font-bold text-purple-600 mb-3">
+        3. Pseudo Code & Control Structures
+      </h2>
+
+      <p class="text-gray-600 mb-2">
+        <span class="font-semibold">Pseudo code</span> is a simple way of writing algorithm logic 
+        using plain English-like statements.
+      </p>
+
+      <p class="text-gray-600 mb-2">Example (If-Else):</p>
+      <pre class="bg-gray-100 p-3 rounded-lg text-sm">
+IF number > 0
+  PRINT "Positive"
+ELSE
+  PRINT "Negative"
+END IF
+      </pre>
+
+      <p class="text-gray-600 mt-3 mb-2">Example (Loop):</p>
+      <pre class="bg-gray-100 p-3 rounded-lg text-sm">
+FOR i = 1 TO n
+  PRINT i
+END FOR
+      </pre>
+
+      <p class="mt-3 font-semibold text-dark">Time Complexity:</p>
+      <ul class="text-gray-600 list-disc ml-6">
+        <li>Sequence → <span class="font-semibold">O(1)</span></li>
+        <li>Loop → <span class="font-semibold">O(n)</span></li>
+        <li>Nested Loop → <span class="font-semibold">O(n²)</span></li>
+      </ul>
+    </div>
+
+    <!-- Sorting -->
+    <div class="bg-white shadow-md rounded-2xl p-6 mb-6 border-l-4 border-yellow-500">
+      <h2 class="text-xl font-bold text-yellow-600 mb-3">
+        4. Sorting Algorithms
+      </h2>
+
+      <p class="text-gray-600 mb-3">
+        Sorting algorithms arrange data in a particular order (ascending or descending).
+      </p>
+
+      <ul class="text-gray-600 space-y-2">
+        <li>
+          <span class="font-semibold">Insertion Sort:</span> Inserts elements at correct position  
+          <br><span class="text-sm">Best: O(n), Worst: O(n²)</span>
+        </li>
+
+        <li>
+          <span class="font-semibold">Selection Sort:</span> Selects minimum element each time  
+          <br><span class="text-sm">Time Complexity: O(n²)</span>
+        </li>
+
+        <li>
+          <span class="font-semibold">Bubble Sort:</span> Swaps adjacent elements  
+          <br><span class="text-sm">Best: O(n), Worst: O(n²)</span>
+        </li>
+
+        <li>
+          <span class="font-semibold">Heap Sort:</span> Uses heap data structure  
+          <br><span class="text-sm">Time Complexity: O(n log n)</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Time & Space -->
+    <div class="bg-white shadow-md rounded-2xl p-6 mb-6 border-l-4 border-blue-500">
+      <h2 class="text-xl font-bold text-blue-600 mb-3">
+        5. Time & Space Complexity
+      </h2>
+      <ul class="list-disc ml-6 text-gray-600 space-y-2">
+        <li>
+          <b>Time Complexity:</b> Measures how execution time grows with input size
+        </li>
+        <li>
+          <b>Space Complexity:</b> Measures memory used by the algorithm
+        </li>
+        <li>
+          Helps in choosing the <span class="font-semibold">most efficient algorithm</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Asymptotic -->
+    <div class="bg-white shadow-md rounded-2xl p-6 border-l-4 border-red-500">
+      <h2 class="text-xl font-bold text-red-600 mb-3">
+        6. Asymptotic Notations
+      </h2>
+      <p class="text-gray-600 mb-3">
+        Used to analyze performance of algorithms for large inputs.
+      </p>
+
+      <ul class="list-disc ml-6 text-gray-600 space-y-2">
+        <li>
+          <b>Big-O (O):</b> Represents <span class="font-semibold">worst case</span>
+        </li>
+        <li>
+          <b>Omega (Ω):</b> Represents <span class="font-semibold">best case</span>
+        </li>
+        <li>
+          <b>Theta (Θ):</b> Represents <span class="font-semibold">average case</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<h1 >UNIT - 2 </h1>
+
+<section id="unit2" class="py-14 px-6 bg-gray-50">
+  <div class="max-w-6xl mx-auto">
+
+    <h1 class="text-3xl font-bold text-center text-primary mb-12">
+      Unit 2: Divide & Conquer and Greedy Method
+    </h1>
+
+    <!-- ================= DIVIDE & CONQUER ================= -->
+    <h2 class="text-2xl font-bold text-blue-600 mb-6">
+      Divide and Conquer Technique
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-10">
+
+      <!-- Binary Search -->
+      <div class="bg-white p-6 rounded-xl shadow border-l-4 border-blue-500">
+        <h3 class="font-bold text-lg mb-2">Binary Search</h3>
+        <p class="text-gray-600 mb-2">
+          Works on <b>sorted array</b>. Divide array into halves.
+        </p>
+
+        <p class="font-semibold">Steps:</p>
+        <ol class="list-decimal ml-5 text-gray-600">
+          <li>Find middle element</li>
+          <li>If key == mid → return</li>
+          <li>If key < mid → search left</li>
+          <li>If key > mid → search right</li>
+        </ol>
+
+        <p class="mt-2 text-sm"><b>Time:</b> O(log n)</p>
+      </div>
+
+      <!-- Max Min -->
+      <div class="bg-white p-6 rounded-xl shadow border-l-4 border-blue-500">
+        <h3 class="font-bold text-lg mb-2">Maximum & Minimum</h3>
+        <p class="text-gray-600">
+          Divide array into parts and compare results.
+        </p>
+
+        <p class="font-semibold mt-2">Steps:</p>
+        <ol class="list-decimal ml-5 text-gray-600">
+          <li>Divide array into two halves</li>
+          <li>Find max & min of both halves</li>
+          <li>Compare results</li>
+        </ol>
+      </div>
+
+      <!-- Merge Sort -->
+      <div class="bg-white p-6 rounded-xl shadow border-l-4 border-blue-500">
+        <h3 class="font-bold text-lg mb-2">Merge Sort</h3>
+
+        <p class="font-semibold">Steps:</p>
+        <ol class="list-decimal ml-5 text-gray-600">
+          <li>Divide array into halves</li>
+          <li>Sort each half recursively</li>
+          <li>Merge sorted halves</li>
+        </ol>
+
+        <p class="mt-2 text-sm"><b>Time:</b> O(n log n)</p>
+      </div>
+
+      <!-- Quick Sort -->
+      <div class="bg-white p-6 rounded-xl shadow border-l-4 border-blue-500">
+        <h3 class="font-bold text-lg mb-2">Quick Sort</h3>
+
+        <p class="font-semibold">Steps:</p>
+        <ol class="list-decimal ml-5 text-gray-600">
+          <li>Select pivot</li>
+          <li>Partition array</li>
+          <li>Apply recursively</li>
+        </ol>
+
+        <p class="mt-2 text-sm"><b>Best:</b> O(n log n), <b>Worst:</b> O(n²)</p>
+      </div>
+
+      <!-- Strassen -->
+      <div class="bg-white p-6 rounded-xl shadow border-l-4 border-blue-500 md:col-span-2">
+        <h3 class="font-bold text-lg mb-2">Strassen’s Matrix Multiplication</h3>
+        <p class="text-gray-600">
+          Efficient matrix multiplication using divide & conquer.
+        </p>
+
+        <p class="font-semibold mt-2">Steps:</p>
+        <ol class="list-decimal ml-5 text-gray-600">
+          <li>Divide matrices into sub-matrices</li>
+          <li>Compute 7 multiplications</li>
+          <li>Combine results</li>
+        </ol>
+
+        <p class="mt-2 text-sm"><b>Time:</b> O(n^2.81)</p>
+      </div>
+
+    </div>
+
+    <!-- ================= GREEDY ================= -->
+    <h2 class="text-2xl font-bold text-green-600 mb-6">
+      Greedy Method
+    </h2>
+
+    <div class="bg-white p-6 rounded-xl shadow border-l-4 border-green-500 mb-8">
+      <p class="text-gray-600">
+        Greedy algorithm selects the <b>best choice at each step</b> 
+        without considering future consequences.
+      </p>
+    </div>
+
+    <!-- Greedy Problems Grid -->
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Knapsack -->
+      <div class="bg-white p-6 rounded-xl shadow border-l-4 border-green-500">
+        <h3 class="font-bold text-lg mb-2">Knapsack Problem</h3>
+
+        <p class="font-semibold">Steps:</p>
+        <ol class="list-decimal ml-5 text-gray-600">
+          <li>Calculate profit/weight ratio</li>
+          <li>Sort items</li>
+          <li>Pick highest ratio first</li>
+        </ol>
+
+        <p class="mt-2 text-sm"><b>Type:</b> Fractional</p>
+      </div>
+
+      <!-- Activity -->
+      <div class="bg-white p-6 rounded-xl shadow border-l-4 border-green-500">
+        <h3 class="font-bold text-lg mb-2">Activity Selection</h3>
+
+        <p class="font-semibold">Steps:</p>
+        <ol class="list-decimal ml-5 text-gray-600">
+          <li>Sort by finish time</li>
+          <li>Select first activity</li>
+          <li>Pick next non-overlapping</li>
+        </ol>
+      </div>
+
+      <!-- Job -->
+      <div class="bg-white p-6 rounded-xl shadow border-l-4 border-green-500">
+        <h3 class="font-bold text-lg mb-2">Job Sequencing</h3>
+
+        <p class="font-semibold">Steps:</p>
+        <ol class="list-decimal ml-5 text-gray-600">
+          <li>Sort jobs by profit</li>
+          <li>Schedule within deadline</li>
+        </ol>
+      </div>
+
+      <!-- Huffman -->
+      <div class="bg-white p-6 rounded-xl shadow border-l-4 border-green-500">
+        <h3 class="font-bold text-lg mb-2">Huffman Coding</h3>
+
+        <p class="font-semibold">Steps:</p>
+        <ol class="list-decimal ml-5 text-gray-600">
+          <li>Create nodes of frequency</li>
+          <li>Combine lowest frequencies</li>
+          <li>Build tree</li>
+        </ol>
+      </div>
+
+      <!-- TSP -->
+      <div class="bg-white p-6 rounded-xl shadow border-l-4 border-green-500">
+        <h3 class="font-bold text-lg mb-2">Travelling Salesman</h3>
+        <p class="text-gray-600">
+          Find shortest route visiting all cities once.
+        </p>
+      </div>
+
+      <!-- Tape -->
+      <div class="bg-white p-6 rounded-xl shadow border-l-4 border-green-500">
+        <h3 class="font-bold text-lg mb-2">Optimal Storage on Tapes</h3>
+        <p class="text-gray-600">
+          Store programs in increasing order of length.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+  <!---footer-->
+   <!-- foot -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="flex items-center space-x-2 mb-4">
+                        <img style="border-radius: 50%;" src="../assest/logo.jpg" alt="Logo" class="h-8">
+                        <span class="text-xl font-bold">CodeWithAnkit</span>
+                    </a>
+                    <p class="text-gray-400">Empowering students through technology and education.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="index.html#projects" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="all_notes.html" class="text-gray-400 hover:text-white transition">Study Notes</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on new resources and projects.</p>
+                    
+                </div>
+            </div>
+
+            <div  class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 CodeWithAnkit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+  
+
+
+
+   <script>
+ 
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+    
+   
+    const icon = this.querySelector('i');
+    if (icon.classList.contains('fa-bars')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+    } else {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
+  });
+  
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+        
+  
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          const menuToggle = document.getElementById('menu-toggle');
+          const icon = menuToggle.querySelector('i');
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      }
+    });
+  });
+  </script>
+</body>
+
+</html>
