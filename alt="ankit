@@ -152,7 +152,7 @@ class="flex items-center space-x-2 bg-red-600 text-white px-4 py-2 rounded-lg ho
                     <div
                         class="w-64 h-64 md:w-80 md:h-80 bg-white bg-opacity-5 rounded-full absolute -bottom-6 -right-6">
                     </div>
-                    <img src="assest/ankit.jpg" alt="Ankit kumar"
+                    <img src="assest/ankit.png" alt="Ankit kumar"
                         class="relative z-10 w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white shadow-xl">
                 </div>
             </div>
