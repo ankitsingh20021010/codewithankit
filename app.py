@@ -25,7 +25,7 @@ def note3():
 # dot means current dir (public_html)
 @app.route('/home')
 def home_page():
-    return render_template('/index.html')  # ✅ correct
+    return render_template('/index.html')  # ✅ correct 
 
 
 
